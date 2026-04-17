@@ -1,0 +1,146 @@
+[
+  {
+    "id": "curriculum_cn_syllabus",
+    "category": "curriculum",
+    "query": "What is the syllabus of Computer Networks?",
+    "expected_query_type": "curriculum_query",
+    "expected_retrieval_method": "Curriculum",
+    "expected_subject": null,
+    "expected_contains": ["UNIT I", "UNIT II", "L-T-P-C"]
+  },
+  {
+    "id": "curriculum_cn_labs",
+    "category": "curriculum",
+    "query": "List all labs under Computer Networks.",
+    "expected_query_type": "curriculum_query",
+    "expected_retrieval_method": "Curriculum",
+    "expected_subject": null,
+    "expected_contains": ["lab", "experiment"]
+  },
+  {
+    "id": "curriculum_dbms_prereq",
+    "category": "curriculum",
+    "query": "What are the prerequisites of Database Management Systems?",
+    "expected_query_type": "curriculum_query",
+    "expected_retrieval_method": "Curriculum",
+    "expected_subject": null,
+    "expected_contains": ["data structures"]
+  },
+  {
+    "id": "dbms_normalization",
+    "category": "subject",
+    "query": "What is normalization in DBMS?",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Vector",
+    "expected_subject": "dbms",
+    "expected_contains": ["normalization"]
+  },
+  {
+    "id": "oops_inheritance",
+    "category": "subject",
+    "query": "Explain inheritance in OOPS.",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Vector",
+    "expected_subject": "oops",
+    "expected_contains": ["inheritance"]
+  },
+  {
+    "id": "os_process_sync",
+    "category": "subject",
+    "query": "Explain process synchronization in OS.",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Vector",
+    "expected_subject": "os",
+    "expected_contains": ["process synchronization"]
+  },
+  {
+    "id": "ds_linked_list",
+    "category": "subject",
+    "query": "What is a linked list in Data Structures?",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Vector",
+    "expected_subject": "ds",
+    "expected_contains": ["linked list"]
+  },
+  {
+    "id": "cn_osi",
+    "category": "subject",
+    "query": "Explain the OSI model in Computer Networks.",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Vector",
+    "expected_subject": "cn",
+    "expected_contains": ["osi"]
+  },
+  {
+    "id": "dbms_bcnf_prereq",
+    "category": "graph",
+    "query": "What should I study before BCNF in DBMS?",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Graph-assisted",
+    "expected_subject": "dbms",
+    "expected_contains": ["BCNF"]
+  },
+  {
+    "id": "os_deadlock_relation",
+    "category": "graph",
+    "query": "How is deadlock related to process synchronization in OS?",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Graph-assisted",
+    "expected_subject": "os",
+    "expected_contains": ["deadlock"]
+  },
+  {
+    "id": "oops_related_topics",
+    "category": "graph",
+    "query": "Which topics are related to inheritance in OOPS?",
+    "expected_query_type": "supported_subject_content",
+    "expected_retrieval_method": "Graph-assisted",
+    "expected_subject": "oops",
+    "expected_contains": ["inheritance"]
+  },
+  {
+    "id": "pyq_dbms_broad",
+    "category": "pyq",
+    "query": "pyqs of dbms",
+    "expected_query_type": "pyq_query",
+    "expected_retrieval_method": "PYQ",
+    "expected_subject": "dbms",
+    "expected_contains": ["previous questions"]
+  },
+  {
+    "id": "pyq_os_deadlock",
+    "category": "pyq",
+    "query": "previous questions on deadlock in os",
+    "expected_query_type": "pyq_query",
+    "expected_retrieval_method": "PYQ",
+    "expected_subject": "os",
+    "expected_contains": ["deadlock"]
+  },
+  {
+    "id": "pyq_dbms_topic_miss",
+    "category": "pyq",
+    "query": "Show pyqs on normalization in DBMS",
+    "expected_query_type": "pyq_query",
+    "expected_retrieval_method": "PYQ",
+    "expected_subject": "dbms",
+    "expected_contains": ["general previous questions"]
+  },
+  {
+    "id": "unsupported_compiler",
+    "category": "unsupported",
+    "query": "Explain compiler design.",
+    "expected_query_type": "unsupported_subject",
+    "expected_retrieval_method": "Unsupported Subject",
+    "expected_subject": null,
+    "expected_contains": ["not included"]
+  },
+  {
+    "id": "gibberish_query",
+    "category": "no_source",
+    "query": "@@@ ### ???",
+    "expected_query_type": "no_source",
+    "expected_retrieval_method": "No Source",
+    "expected_subject": null,
+    "expected_contains": ["no relevant information source"]
+  }
+]

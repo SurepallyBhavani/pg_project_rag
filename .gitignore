@@ -1,0 +1,29 @@
+# Pycache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables
+.env
+.env.local
+
+# Databases and Local Storage
+chroma_store/
+chroma_store_pyq_test*/
+
+# VS Code / IDEs
+.vscode/
+.idea/
+
+# Benchmark Evaluation Specifics
+comparison-benchmark-2026-04-16/gold_pipeline_three_way/*
+comparison-benchmark-2026-04-16/comparison_results/*
+comparison-benchmark-2026-04-16/gold_pipeline_results/*
+comparison-benchmark-2026-04-16/evaluation_cache.json
+*.docx
+*.csv
+!comparison-benchmark-2026-04-16/external_outputs_template.csv

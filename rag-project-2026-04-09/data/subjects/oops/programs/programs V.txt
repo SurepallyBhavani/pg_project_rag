@@ -1,0 +1,387 @@
+//excepction handling
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a;
+	cout <<"enter values for a\t";
+	cin>>a;
+	try
+	{
+	    cout << "entered into try block"<<endl;
+		if (a != 0)
+			cout << "a = "<<a<<"\n";
+		else
+			throw(a);
+		cout << "Try ended" <<endl;
+	}
+	catch(int i)
+	{
+		cout << "exception caught\n";
+	}
+	cout << "end of main";
+}
+
+
+// exception raised in fn and caught in main
+#include <iostream>
+using namespace std;
+
+void div(int x,int y, int z)
+{
+	cout << "inside function\n";
+	if((x-y) != 0)
+	{
+		int r = z/(x-y);
+		cout << "R= "<<r<<"\n";
+	}
+	else
+		throw(x-y);
+	cout << "ending of function"<<endl;
+}
+int main()
+{
+	try
+	{
+		cout << "inside try\n";
+		//div(10,20,30);
+		div(5,5,10);
+		cout << "try ended" << endl;
+	}
+	catch(int i)
+	{
+		cout << "exception caught\n";
+	}
+	cout << "end of amain"<< endl;
+}
+
+// try in main and funciton
+// exception raised in fn and caught in main
+#include <iostream>
+using namespace std;
+
+void div(int x,int y, int z)
+{
+	cout << "inside function\n";
+	
+	try
+	{
+	   if((x-y) != 0)
+	    {
+		    int r = z/(x-y);
+		    cout << "R= "<<r<<"\n";
+	    }
+	    else
+		    throw(x-y);
+	}
+	catch (float i)
+	{
+	    cout << "exception caught in funciton" << endl;
+	}
+	cout << "ending of function"<<endl;
+}
+int main()
+{
+	cout << "inside main\n";
+	try
+	{
+	    cout << " Try in main"<< endl;
+	    //div(10,20,30);
+	    div(5,5,10);
+	}
+	catch (double i)
+	{
+	    cout << "caught in main" << endl;
+	}
+	cout << "end of main"<< endl;
+}
+
+
+//multiple catch
+#include <iostream>
+using namespace std;
+
+void test(int x)
+{
+	try
+	{	
+		if (x==1)	throw x;
+		else if (x==0) throw 1.9;
+		else if (x==2) throw 2.1f;
+		cout<< "end of try block"<<endl;
+	}
+	catch(int i)
+	{
+		cout << "caught integer"<<endl;
+	}
+	catch(double f)
+	{
+		cout << "caught double"<<endl;
+	}
+	catch(float f)
+	{
+		cout << "caught float"<< endl;
+	}
+	cout<<"end of try catch"<<endl;
+
+}
+int main()
+{
+	test(1);
+	test(0);
+	test(2);
+	test(3);	//try block does not throw any exception
+	cout << "end of main";
+}
+
+//rethrowing an exception
+#include <iostream>
+using namespace std;
+
+void test(int x)
+{
+	try
+	{	
+		if (x==1)	throw x;
+	}
+	catch(int i)
+	{
+		cout<<"caught inside function"<<endl;
+		throw;
+	}
+
+}
+int main()
+{
+	try
+	{
+		test(1);
+		test(0);
+		test(2);	
+	}
+	catch(int i)
+	{
+		cout << "caught inside main"<<endl;
+	}
+	cout<<"end of main"<<endl;
+}
+
+
+//specifying exceptions
+#include <iostream>
+using namespace std;
+
+void test(int x) throw(int,char)
+{
+		
+		if (x==1)	throw 1;
+		if (x==2) throw 'x';
+	
+}
+int main()
+{
+	try
+	{
+		test(1);
+		test(0);
+		test(2);	
+	}
+	catch(int i)
+	{
+		cout << "caught int inside main"<<endl;
+	} 
+	catch(char c)
+	{
+		cout << "caught char inside main"<<endl;
+	}
+
+	cout<<"end of main";
+}
+
+
+// Catching  classes.
+#include <iostream>
+using namespace std;
+class B 
+{ int a;
+    public :
+        void disp()
+        {
+            cout << "disp fn";
+        }
+};
+
+int main()
+{
+    B b;
+    int a;
+    cout << "enter a value " ;
+    cin >> a;
+    try 
+    {
+        if (a==1)
+        throw b;
+        else throw 1;
+    }
+    catch (int i)
+    {
+        cout << "caught int" << endl;
+    }
+    catch(B obj) 
+    {
+        cout << "Caught a class object.\n";
+    }
+
+    return 0;
+}
+
+//catching derived class exception
+// Catching derived classes.
+#include <iostream>
+using namespace std;
+class B {
+};
+class D: public B {
+};
+int main()
+{
+D derived;
+try {
+throw derived;
+}
+catch(B b) {
+cout << "Caught a base class.\n";
+}
+catch(D d) {
+cout << "This won't execute.\n";
+}
+return 0;
+}
+
+
+
+//stack unwinding example
+#include <iostream> 
+
+using namespace std; 
+
+// A sample function f1() that throws an int exception 
+void f1() throw (int)
+{ 
+    cout<<"\n f1() Start "; 
+    throw 100; 
+    cout<<"\n f1() End "; 
+} 
+
+// Another sample function f2() that calls f1() 
+void f2() throw (int) 
+{ 
+    cout<<"\n f2() Start "; 
+    f1(); 
+    cout<<"\n f2() End "; 
+} 
+
+// Another sample function f3() that calls f2() and handles exception thrown by f1() 
+void f3() 
+{ 
+    cout<<"\n f3() Start "; 
+    try 
+    { 
+	    f2(); 
+    } 
+    catch(int i) 
+    { 
+        cout<<"\n Caught Exception: "<<i; 
+    } 
+    cout<<"\n f3() End"; 
+} 
+
+// A driver function to demonstrate Stack Unwinding process 
+int main() { 
+f3(); 
+
+getchar(); 
+return 0; 
+} 
+
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+class MyException 
+{
+    public:
+        char str_what[80];
+        int what;
+    MyException() 
+    {  *str_what=0; what = 0; }
+    MyException(char *s, int e)
+    {
+        strcpy(str_what, s);
+        what = e;
+    }
+};
+int main()
+{
+    int i;
+    try {
+            cout << "Enter a positive number: ";
+            cin >> i;
+            if(i<0)
+                throw MyException("Not Positive", i);
+        }
+        catch (MyException e) 
+        { // catch an error
+            cout << e.str_what << ": ";
+            cout << e.what << "\n";
+        }
+    return 0;
+}
+
+
+// Catching derived classes.
+#include <iostream>
+using namespace std;
+class B {
+};
+class D: public B {
+};
+int main()
+{
+D derived;
+try {
+throw derived;
+}
+catch(D d) {
+cout << "caught derived class\n";
+}
+catch(B b) {
+cout << "Caught a base class.\n";
+}
+return 0;
+}
+
+
+//catching derived class exception
+// Catching derived classes.
+#include <iostream>
+using namespace std;
+class B {
+};
+class D: public B {
+};
+int main()
+{
+D derived;
+try {
+throw derived;
+}
+catch(B b) {
+cout << "Caught a base class.\n";
+}
+catch(D d) {
+cout << "This won't execute.\n";
+}
+return 0;
+}

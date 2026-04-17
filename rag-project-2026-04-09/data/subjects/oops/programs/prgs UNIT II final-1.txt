@@ -1,0 +1,693 @@
+﻿// objects and class in C++ Programming
+
+#include <iostream>
+using namespace std;
+
+// create a class
+class Room {
+
+   public:
+    double length;
+    double breadth;
+    double height;
+
+    double calculateArea() {
+        return length * breadth;
+    }
+
+    double calculateVolume() {
+        return length * breadth * height;
+    }
+};
+
+
+
+int main() {
+
+    // create object of Room class
+    Room room1;
+
+    // assign values to data members
+    room1.length = 42.5;
+    room1.breadth = 30.8;
+    room1.height = 19.2;
+
+    // calculate and display the area and volume of the room
+    cout << "Area of Room =  " << room1.calculateArea() << endl;
+    cout << "Volume of Room =  " << room1.calculateVolume() << endl;
+
+    return 0;
+}
+
+
+// public and private in C++ Class
+
+#include <iostream>
+using namespace std;
+
+class Room {
+
+   private:
+    double length;
+    double breadth;
+    double height;
+
+   public:
+
+    // function to initialize private variables
+    void initData(double len, double brth, double hgt) {
+        length = len;
+        breadth = brth;
+        height = hgt;
+    }
+
+    double calculateArea() {
+        return length * breadth;
+    }
+
+    double calculateVolume() {
+        return length * breadth * height;
+    }
+};
+
+int main() {
+
+    // create object of Room class
+    Room room1;
+
+    // pass the values of private variables as arguments
+    room1.initData(42.5, 30.8, 19.2);
+
+    cout << "Area of Room =  " << room1.calculateArea() << endl;
+    cout << "Volume of Room =  " << room1.calculateVolume() << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+//static variable example
+#include <iostream>
+using namespace std;
+class item
+{
+	static int count;
+	int number;
+    public:
+	void getdata(int a)
+	{
+		number=a;
+		count++;
+	}
+	void getcount(void)
+	{
+		cout<<"count = "<<count<<"\n";
+	}
+};
+int item :: count;
+int main()
+{
+	item a,b;
+	a.getcount();
+	b.getcount();
+	a.getdata(10);
+	b.getdata(20);
+	a.getcount();
+	b.getcount();
+	return 0;
+}
+
+//static function example
+#include <iostream>
+using namespace std;
+class stateg
+{
+	static int count;
+	int code;
+	int number;
+    public:
+	void setcode(void)
+	{
+		code = ++count;
+	}
+	static void showcount(void)
+	{
+		cout<<"count = "<<count<<"\n";
+	}
+};
+int stateg :: count;
+int main()
+{
+	stateg a,b;
+	a.setcode();
+	a.showcount();
+	b.setcode();
+	stateg::showcount();    //b::showcount() illegal
+	return 0;
+}
+
+//Array of Objects example
+#include <iostream>
+using namespace std;
+class AOO
+{
+    int i;
+    public:
+        void geti(int a)
+        {
+            i=a;
+        }
+        void disp()
+        {
+            cout << " i=" << i;
+        }
+};
+
+int main()
+{
+    AOO arr[5];
+    for (int l=0;l<5;l++)
+    {
+        arr[l].geti(l*10);
+        arr[l].disp();
+    }
+}
+
+//passing object as argument to funtion
+#include<iostream>
+using namespace std;
+class mytime
+{
+		int hrs;
+		int mins;
+	public:
+		void gettime(int h, int m)
+		{
+			hrs=h;	mins=m;
+		}
+		void puttime(void)
+		{
+			cout <<hrs<<" hours and "<<mins<<" minutes"<<"\n";
+		}
+		void addtimes(mytime,mytime);
+};
+void mytime :: addtimes(mytime t1, mytime t2)
+{
+	mins = t1.mins+t2.mins;	
+	hrs=mins/60;	
+	mins=mins%60;	
+	hrs=hrs+t1.hrs+t2.hrs;
+}
+
+main()
+{
+	mytime t1, t2, t3;
+	t1.gettime(3,40);	
+	t2.gettime(2,50);	
+	t3.addtimes(t1,t2);
+	cout << "t1="; 	t1.puttime();
+	cout << "t2=";	t2.puttime();
+	cout << "t3=";	t3.puttime();
+	return 0;
+}
+
+//returning object
+#include<iostream>
+using namespace std;
+class mytime
+{
+		int hrs;
+		int mins;
+	public:
+		void gettime(int h, int m)
+		{
+			hrs=h;	mins=m;
+		}
+		void puttime(void)
+		{
+			cout <<hrs<<" hours and "<<mins<<" minutes"<<"\n";
+		}
+		mytime addtimes(mytime,mytime);
+};
+mytime mytime :: addtimes(mytime t1, mytime t2)
+{
+	mytime t;
+	t.mins = t1.mins+t2.mins;	
+	t.hrs=t.mins/60;	
+	t.mins=t.mins%60;	
+	t.hrs=t.hrs+t1.hrs+t2.hrs;
+	return t;
+}
+
+main()
+{
+	mytime t1, t2, t3;
+	t1.gettime(3,40);	
+	t2.gettime(2,50);	
+	t3=t3.addtimes(t1,t2);
+	cout << "t1="; 	t1.puttime();
+	cout << "t2=";	t2.puttime();
+	cout << "t3=";	t3.puttime();
+	return 0;
+}
+
+//friend function example
+#include <iostream>
+using namespace std;
+class sample
+{
+	int a;
+	int b;
+public:
+	void setVal() 
+	{
+	    a=10;
+	    b=15;
+	}
+	friend float mean(sample s);
+};
+float mean(sample s)
+{
+	return float(s.a+s.b)/2.0;
+}
+int main()
+{
+	sample X;
+	X.setVal();
+	cout<<"mean value = "<<mean(X) << endl;
+	return 0;
+}
+
+//friendship between classes
+#include <iostream>
+using namespace std;
+class class2;
+class class1
+{
+	int v1;
+public:
+	void setVal(int a) {v1=a;}
+	void disp(void){cout<<v1<<endl;}
+	friend void exchange(class1 &, class2 &);
+};
+class class2
+{
+	int v2;
+public:
+	void setVal(int a) {v2=a;}
+	void disp(void){cout<<v2<<endl;}
+	friend void exchange(class1 &, class2 &);
+};
+void exchange(class1 &x, class2 &y)
+{
+	int t = x.v1;	x.v1 = y.v2;	y.v2=t;
+}
+
+int main()
+{
+	class1 C1;
+	class2 C2;
+	C1.setVal(10);
+	C2.setVal(20);
+	cout << "values before exchange  " << endl;
+	C1.disp();
+	C2.disp();
+	exchange(C1,C2);
+	cout << "values after exchange " << endl;
+	C1.disp();
+	C2.disp();
+	return 0;
+}
+
+//constant member function
+#include<iostream> 
+using namespace std; 
+
+class Test { 
+	int value; 
+public: 
+	void getv(int v) {value = v;} 
+	
+	// We get compiler error if we add a line like "value = 100;" 
+	// in this function. 
+	int getValue() const 
+	{ 
+	    //this fn can use the data but can's modify
+	    return value;
+	 } 
+}; 
+
+int main() { 
+	Test t;
+	t.getv(20); 
+	cout<<t.getValue(); 
+	return 0; 
+} 
+
+//constant object example
+#include<iostream> 
+using namespace std; 
+
+class Test { 
+	int value; 
+public: 
+	getv(int v = 0) {value = v;} 
+	int getValue() const {return value;} 
+}; 
+
+int main() { 
+	const Test t;  //constant object can call constant fun only
+	Test t1;
+//	t.getv();   // cant call getv because it is nonconstant fn
+	t1.getv(100);
+	cout <<t1.getValue() << endl;
+	cout << t.getValue(); 
+	return 0; 
+} 
+//constant member function
+#include<iostream> 
+using namespace std; 
+
+class Test { 
+	//int value; 
+public: 
+    
+	void getv()  //non constant function
+	{
+	    cout << "non constant function" << endl;
+	}    
+	 void getValue(void) const //constant funciton
+	{ 
+	   cout << "constant function :" << endl;
+	 } 
+}; 
+
+int main() { 
+	Test t2; //non constant object
+	const Test t1;  //constant object
+	
+	t2.getv(); 
+	t2.getValue();
+	t1.getValue();
+	t1.getv();
+	return 0; 
+} 
+//solution is constructor
+
+//method overloading
+#include <iostream>
+using namespace std;
+
+int add(int x, int y)
+{
+	return (x+y);
+}
+int add(int x, int y, int z)
+{
+	return (x+y+z);
+}
+double add(double x, double y)
+{
+    return (x+y);
+}
+
+int main()
+{
+	cout<<add(3,2) << endl;   // call fn1
+	cout<<add(8,9,2) << endl;  // call fn2
+	cout<<add(5.5,2.8) << endl;  //call fn3
+	
+	return 0;
+}
+
+
+
+// simple constructor
+#include <iostream>
+using namespace std;
+class T 
+{
+    int x;
+    public:
+    T() 
+    {
+        x=100;
+        cout <<" default constructor   " <<"x="<<x <<endl;
+    };
+    T(int i)
+    {
+        x=i;
+        cout <<" one parameter constructor   " <<"x="<<x <<endl;
+    }
+};
+int main()
+{
+	T t;
+	T t1(20);
+	return 0;
+}
+
+class complex
+{
+	float x,y;
+	public:
+		complex(){ }
+		complex(float a) { x=y=a;}
+		complex(float r, float i) {x=r;y=I;}
+		friend complex sum(complex, complex);
+		friend void show(complex);
+};
+complex sum(complex c1, complex c2)
+{
+	complex c3;
+	c3.x=c1.x+c2.x;
+	c3.y=c1.y+c2.y;
+	return (c3);
+}
+void show(complex c){
+	cout << c.x <<“+ J” <<c.y <<“\n”;
+}
+int main()
+{
+	complex A,B,C; 
+	A=complex(4.2,2.1);
+	B=complex(6.3);
+	C=sum(A,B);
+	cout < “A = “; show(A);
+	cout < “B = “; show(B);
+	cout < “C = “; show(C);
+	return 0;
+}
+
+//destructor example
+#include <iostream>
+using namespace std;
+int objcount=0;
+class A
+{
+	public:
+		A()
+		{
+			objcount++;
+			cout<<"\n number of objects created "<<objcount;
+		}
+		~A()
+		{
+			cout<<"\n object destroyed "<<objcount;
+			objcount--;
+		}
+};
+int main()
+{
+	cout<<"\n main enter\n";
+	A a1,a2,a3;
+	{
+		cout <<"\n enter block1\n";
+		A a4;
+	}
+	{
+		cout <<"\n enter block2\n";
+		A a5;
+	}
+	cout << "\n re-enter main\n";
+	return 0;
+}
+
+// function overloading
+	
+// function overloading example 2
+#include <iostream>
+using namespace std;
+
+int add(int x, int y)
+{
+	return (x+y);
+}
+int add(int x, int y, int z)
+{
+	return (x+y+z);
+}
+double add(double x, double y)
+{
+    return (x+y);
+}
+
+int main()
+{
+	cout<<add(3,2) << endl;   // call fn1
+	cout<<add(8,9,2) << endl;  // call fn2
+	cout<<add(5.5,2.8) << endl;  //call fn3
+	
+	return 0;
+}
+
+
+
+
+non constant object ---constant and non constant mehtods
+constant object ----constant methods only
+
+// unary operator overloading with non static member function
+
+#include <iostream>
+using namespace std;
+class unaryopex
+{
+	int x,y;
+	public:
+		void getdata(int a,int b);
+		void disp();
+		void operator-();	//overload unaryminus
+};
+void unaryopex :: getdata(int a,int b)
+{
+	x=a; y=b;
+}
+void unaryopex :: disp()
+{
+	cout << "x = "<<x<<endl;
+	cout << "y = "<<y<<endl;
+}
+void unaryopex :: operator-()
+{
+	x=-x; 	y=-y;
+}
+int main()
+{
+	unaryopex u,v;
+	u.getdata(10,20);
+	u.disp();
+	v=-u;
+	u.disp();
+}
+
+// unary operator with non static member function and return obj
+#include <iostream>
+using namespace std;
+class unaryopex
+{
+	int x,y;
+	public:
+		void getdata(int a,int b);
+		void disp();
+		unaryopex operator-();	//overload unaryminus
+};
+void unaryopex :: getdata(int a,int b)
+{
+	x=a; y=b;
+}
+void unaryopex :: disp()
+{
+	cout << "x = "<<x<<endl;
+	cout << "y = "<<y<<endl;
+}
+unaryopex unaryopex :: operator-()
+{
+    unaryopex z;
+	z.x=-x; 	z.y=-y;
+	return z;
+}
+int main()
+{
+	unaryopex u,v;
+	u.getdata(10,20);
+	u.disp();
+	u=-u;
+	u.disp();
+}
+
+//unary operator overloading using friend funciton
+#include <iostream>
+using namespace std;
+class unaryopex
+{
+	int x,y;
+	public:
+		void getdata(int a,int b);
+		void disp();
+		friend void operator-(unaryopex &u);	//overload unaryminus
+};
+void unaryopex :: getdata(int a,int b)
+{
+	x=a; y=b;
+}
+void unaryopex :: disp()
+{
+	cout << "x = "<<x<<"\n";
+	cout << "y = "<<y<<"\n";
+}
+void operator-(unaryopex &u)
+{
+	u.x=-u.x; 	u.y=-u.y;
+}
+int main()
+{
+	unaryopex u;
+	u.getdata(10,20);
+	u.disp();
+	-u;
+	u.disp();
+}
+
+// binary + overloading with friend
+#include <iostream>
+using namespace std;
+class complex
+{
+	float real,img; //real and imaginary parts
+	public:
+	void getData(float r, float i)
+	{
+	    real = r;
+	    img = i;
+	}
+			void disp(void);
+		friend complex operator+(complex,complex);	//overload binaryplus
+};
+void complex :: disp(void)
+{
+	cout << real << "+J"<<img<<"\n";
+}
+complex operator+(complex a,complex b)
+{
+    complex t;
+	t.real = a.real + b.real;
+	t.img = a.img + b.img;
+	return t;
+}
+int main()
+{
+	complex c1,c2,c3;
+	c1.getData(1.2, 3.5);
+	c2.getData (2.4, 2.5);
+	c3=c1+c2;
+	cout << "c1=";	c1.disp();
+	cout << "c2=";	c2.disp();
+	cout << "c3=";	c3.disp();
+}
+

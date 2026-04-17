@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid RAG Academic Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #374151;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    
+    .header-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Chat Area */
+    .chat-area {
+      flex: 1;
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    /* Message Bubbles */
+    .message {
+      display: flex;
+      gap: 1rem;
+      max-width: 100%;
+    }
+    
+    .message-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    
+    .user-avatar {
+      background: #111827;
+      color: #ffffff;
+    }
+    
+    .assistant-avatar {
+      background: #f3f4f6;
+      color: #374151;
+      border: 1px solid #e5e7eb;
+    }
+    
+    .message-content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .user-message .message-content {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      font-weight: 500;
+    }
+    
+    .assistant-message .message-content {
+      padding: 0.5rem 0;
+    }
+
+    /* Input Area */
+    .input-area {
+      position: sticky;
+      bottom: 0;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem 0;
+      margin: 0 -1.5rem;
+    }
+    
+    .input-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .input-form {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+    
+    .input-wrapper {
+      flex: 1;
+      position: relative;
+    }
+    
+    .message-input {
+      width: 100%;
+      min-height: 52px;
+      max-height: 200px;
+      padding: 1rem 3rem 1rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 1.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+      line-height: 1.5;
+      resize: none;
+      outline: none;
+      transition: all 0.2s ease;
+      background: #ffffff;
+    }
+    
+    .message-input:focus {
+      border-color: #111827;
+      box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.1);
+    }
+    
+    .message-input::placeholder {
+      color: #9ca3af;
+    }
+    
+    .send-button {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 0.5rem;
+      width: 36px;
+      height: 36px;
+      background: #111827;
+      border: none;
+      border-radius: 50%;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      font-size: 1.125rem;
+    }
+    
+    .send-button:hover:not(:disabled) {
+      background: #374151;
+      transform: scale(1.05);
+    }
+    
+    .send-button:disabled {
+      background: #d1d5db;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Answer Content */
+    .answer-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+    
+    .answer-text h1, .answer-text h2, .answer-text h3, .answer-text h4 {
+      font-weight: 600;
+      margin: 1.5rem 0 1rem 0;
+      color: #111827;
+    }
+    
+    .answer-text p {
+      margin: 1rem 0;
+    }
+    
+    .answer-text ul, .answer-text ol {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    .answer-text li {
+      margin: 0.5rem 0;
+    }
+    
+    .answer-text code {
+      background: #f3f4f6;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 0.875rem;
+    }
+    
+    .answer-text strong {
+      font-weight: 600;
+      color: #111827;
+    }
+    
+    /* Metadata Cards */
+    .metadata-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+    
+    .metadata-title {
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .metadata-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+    }
+    
+    .metadata-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #6b7280;
+    }
+    
+    /* Classification Badges */
+    .classification-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0;
+    }
+    
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+    
+    .badge-simple {
+      background: #dcfce7;
+      color: #166534;
+    }
+    
+    .badge-complex {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    
+    .badge-vector {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    
+    .badge-graph {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+    
+    /* Error States */
+    .error-message {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      color: #dc2626;
+      margin: 1rem 0;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #6b7280;
+    }
+    
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Loading States */
+    .loading {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    
+    .loading-dots {
+      display: inline-flex;
+      gap: 0.25rem;
+    }
+    
+    .loading-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #6b7280;
+      animation: loadingPulse 1.4s ease-in-out infinite both;
+    }
+    
+    .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+    
+    @keyframes loadingPulse {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        padding: 0 1rem;
+      }
+      
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .input-container {
+        padding: 0 1rem;
+      }
+      
+      .message {
+        gap: 0.75rem;
+      }
+      
+      .message-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+      }
+      
+      .metadata-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .status-indicator {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.25rem;
+      }
+      
+      .message-input {
+        padding: 0.75rem 2.75rem 0.75rem 0.75rem;
+        min-height: 44px;
+      }
+      
+      .send-button {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+      }
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message {
+      animation: fadeIn 0.3s ease-out;
+    }
+  </style>
+  
+
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span>🧠</span>
+        <span>Hybrid RAG Assistant</span>
+      </div>
+      {% if current_system_info %}
+      <div class="status-indicator">
+        <div class="status-dot"></div>
+        <span>{{ current_system_info.documents_loaded }} documents loaded</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Chat Area -->
+    <div class="chat-area">
+    
+    <!-- System Status Display -->
+    {% if current_system_info %}
+    <div class="system-status">
+      <h3>� System Status</h3>
+      <div class="status-grid">
+        <div class="status-item">
+          <span class="status-icon">{% if current_system_info.vector_db_active %}✅{% else %}❌{% endif %}</span>
+          <span>Vector Database</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">{% if current_system_info.graph_db_active %}✅{% else %}❌{% endif %}</span>
+          <span>Graph Database</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">{% if current_system_info.query_classifier_active %}✅{% else %}❌{% endif %}</span>
+          <span>Query Classifier</span>
+        </div>
+      </div>
+      
+      {% if current_system_info.documents_loaded > 0 %}
+      <div class="data-stats">
+        <span>📄 Documents: {{ current_system_info.documents_loaded }}</span>
+        {% if current_system_info.total_entities > 0 %}
+        <span>🏷️ Entities: {{ current_system_info.total_entities }}</span>
+        {% endif %}
+        {% if current_system_info.total_relationships > 0 %}
+        <span>🔗 Relations: {{ current_system_info.total_relationships }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- System Status Display -->
+    {% if current_system_info %}
+    <div class="system-status">
+      <h3>🚀 Hybrid RAG System Status</h3>
+      <div class="status-grid">
+        <div class="status-item">
+          <span class="status-icon">{% if current_system_info.vector_db_active %}✅{% else %}❌{% endif %}</span>
+          <span>Vector Database</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">{% if current_system_info.graph_db_active %}✅{% else %}❌{% endif %}</span>
+          <span>Graph Database</span>
+        </div>
+        <div class="status-item">
+          <span class="status-icon">{% if current_system_info.query_classifier_active %}✅{% else %}❌{% endif %}</span>
+          <span>Query Classifier</span>
+        </div>
+      </div>
+      
+      {% if current_system_info.documents_available %}
+      <div class="data-stats">
+        <span>📚 Documents: {{ current_system_info.documents_loaded }}</span>
+        <span>🏷️ Entities: {{ current_system_info.total_entities }}</span>
+        <span>� Relationships: {{ current_system_info.total_relationships }}</span>
+      </div>
+      {% else %}
+      <div style="margin-top: 15px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 8px; color: #fca5a5;">
+        <strong>⚠️ No documents loaded</strong><br>
+        <span style="font-size: 0.85rem;">Add PDF files to the data/ folder and restart the application</span>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Document Status -->
+    {% if uploaded_filenames %}
+    <div class="file-info">
+      <strong>� Loaded Documents:</strong><br>
+      {% for filename in uploaded_filenames %}
+        <span style="font-size: 0.9rem;">• {{ filename }}</span><br>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Query Interface -->
+    {% if current_system_info.documents_available %}
+      {% if not answer %}
+      <form method="POST" class="query-box">
+        <input type="text" name="query" placeholder="Ask any question about your syllabus, notes, or textbooks..." required value="{{ request.form.query if request.form.get('query') else '' }}">
+        <button type="submit">🧠 Ask Question</button>
+      </form>
+      {% else %}
+      <div class="query-box" style="margin-bottom: 0;">
+        <strong>🤔 Question:</strong> {{ request.form.query }}
+      </div>
+      
+      <!-- Query Classification Information -->
+      {% if query_info and query_info.classification %}
+      <div class="query-classification">
+        <h4>🧠 Query Analysis</h4>
+        <div>
+          <span class="classification-badge {% if query_info.classification.classification == 'simple' %}badge-simple{% else %}badge-complex{% endif %}">
+            {{ query_info.classification.classification.upper() }} QUERY
+          </span>
+          <span class="classification-badge {% if query_info.source_type == 'vector' %}badge-vector{% else %}badge-graph{% endif %}">
+            {{ query_info.source_type.upper() }} SEARCH
+          </span>
+        </div>
+        <div class="processing-info">
+          <span>📊 Confidence: {{ "%.1f"|format(query_info.confidence * 100) }}%</span>
+          <span>⚡ Processing: {{ "%.3f"|format(query_info.processing_time) }}s</span>
+          <span>🔧 Method: {{ query_info.classification.method }}</span>
+          {% if query_info.entities_found %}
+          <span>🏷️ Entities: {{ query_info.entities_found|length }}</span>
+          {% endif %}
+        </div>
+        
+        <!-- Classification Explanation -->
+        {% if query_info.classification_explanation %}
+        <div style="margin-top: 15px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px; font-size: 0.85rem;">
+          {{ query_info.classification_explanation|safe }}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+      
+      <!-- Processing Stats (if available) -->
+      {% if system_info %}
+      <div class="processing-stats">
+        <strong>📈 Processing Statistics:</strong><br>
+        Processing Time: {{ "%.2f"|format(system_info.processing_time) }}s | 
+        Documents: {{ system_info.total_documents }} | 
+        Entities Extracted: {{ system_info.total_entities }} | 
+        Relationships Found: {{ system_info.total_relationships }}
+      </div>
+      {% endif %}
+      
+      <div class="answer"><strong>💡 Answer:</strong><br> {{ answer|safe }}</div>
+      
+      {% if sources %}
+        <div class="file-info" style="margin-top:-12px; margin-bottom:24px;">
+          <strong>📚 Sources:</strong> 
+          {% for source in sources %}
+            {{ source }}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+      <form method="GET" class="query-box" style="margin-top: 0;">
+        <button type="submit">🔄 Ask Another Question</button>
+      </form>
+      {% endif %}
+    {% else %}
+    <!-- No Documents Available -->
+    <div class="error">
+      <strong>📂 No Documents Available</strong><br>
+      To start using the Hybrid RAG System:
+      <ol style="margin: 15px 0; padding-left: 20px; color: #fca5a5;">
+        <li>Add PDF files to the <code>data/</code> folder</li>
+        <li>Organize them in subfolders: syllabus/, notes/, textbooks/, assignments/</li>
+        <li>Restart the application</li>
+      </ol>
+      <p style="font-size: 0.85rem; color: #a5f3fc;">
+        💡 The system will automatically process all PDFs and create both vector and graph embeddings on startup.
+      </p>
+    </div>
+    {% endif %}
+    {% if error %}
+      <div class="error"><strong>Error:</strong> {{ error }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>

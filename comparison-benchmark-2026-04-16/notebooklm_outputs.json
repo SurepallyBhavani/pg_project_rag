@@ -1,0 +1,302 @@
+[
+  {
+    "id": "curriculum_01",
+    "category": "curriculum",
+    "query": "What is the syllabus of Computer Networks?",
+    "notebooklm_output": "The syllabus of Computer Networks includes an introduction to network hardware, software, and the OSI and TCP/IP reference models. It covers the Physical Layer (guided transmission media and wireless transmission), Data Link Layer (framing, error detection and correction, sliding window protocols, and MAC sublayer concepts like ALOHA and CSMA), and Network Layer (routing algorithms, congestion control, QoS, and internetworking). Additionally, it covers Transport Layer elements (TCP, UDP, connection management) and Application Layer protocols (DNS, SNMP, E-mail, HTTP, and streaming media)."
+  },
+  {
+    "id": "curriculum_02",
+    "category": "curriculum",
+    "query": "What is the syllabus of Compiler Design?",
+    "notebooklm_output": "The Compiler Design syllabus introduces the structure of a compiler and the science of building one. It covers Lexical Analysis (finite automata, tokens, Lex), Syntax Analysis (context-free grammars, top-down and bottom-up parsing, LR parsers), and Syntax-Directed Translation (SDD, intermediate-code generation, and type checking). It also includes Run-Time Environments (stack and heap management), Code Generation (basic blocks, flow graphs, register allocation), and Machine-Independent Optimization (data-flow analysis and partial-redundancy elimination)."
+  },
+  {
+    "id": "curriculum_03",
+    "category": "curriculum",
+    "query": "List all labs under Computer Networks.",
+    "notebooklm_output": ""
+  },
+  {
+    "id": "curriculum_04",
+    "category": "curriculum",
+    "query": "What are the textbooks for Software Engineering?",
+    "notebooklm_output": "The prescribed textbooks for Software Engineering are \"Software Engineering, A practitioner’s Approach\" by Roger S. Pressman, \"Software Engineering\" by Ian Sommerville, and \"The Unified Modeling Language user guide\" by Grady Booch, James Rambaugh, and Ivar Jacobson."
+  },
+  {
+    "id": "curriculum_05",
+    "category": "curriculum",
+    "query": "What are the textbooks for Computer Networks?",
+    "notebooklm_output": "The prescribed textbook for Computer Networks is \"Computer Networks\" by Andrew S. Tanenbaum and David J. Wetherall (5th Edition)."
+  },
+  {
+    "id": "curriculum_06",
+    "category": "curriculum",
+    "query": "In which semester is Machine Learning placed according to the course structure?",
+    "notebooklm_output": "According to the course structure, Machine Learning is placed in the III Year I Semester."
+  },
+  {
+    "id": "curriculum_07",
+    "category": "curriculum",
+    "query": "What are the prerequisites for Database Management Systems?",
+    "notebooklm_output": "The prerequisite for Database Management Systems is a course on \"Data Structures\"."
+  },
+  {
+    "id": "curriculum_08",
+    "category": "curriculum",
+    "query": "What are the prerequisites for Compiler Design?",
+    "notebooklm_output": "The prerequisites for Compiler Design are courses on \"Formal Languages and Automata Theory\", \"Computer Organization and architecture\", and \"Computer Programming and Data Structures\"."
+  },
+  {
+    "id": "curriculum_09",
+    "category": "curriculum",
+    "query": "In which semester is Operating Systems placed according to the course structure?",
+    "notebooklm_output": "Operating Systems is placed in the II Year II Semester of the course structure."
+  },
+  {
+    "id": "curriculum_10",
+    "category": "curriculum",
+    "query": "What is the L-T-P-C structure for Software Engineering?",
+    "notebooklm_output": "The L-T-P-C (Lecture-Tutorial-Practical-Credits) structure for Software Engineering is 3-0-0-"
+  },
+  {
+    "id": "subject_01",
+    "category": "subject",
+    "query": "What is normalization in DBMS?",
+    "notebooklm_output": "Normalization is a schema refinement process used in relational database design to eliminate redundancy and prevent insertion, deletion, and update anomalies. It involves analyzing functional dependencies and decomposing relations into various normal forms, such as 1NF, 2NF, 3NF, BCNF, 4NF, and 5NF, ensuring lossless-join and dependency-preserving decompositions."
+  },
+  {
+    "id": "subject_02",
+    "category": "subject",
+    "query": "Explain inheritance in OOPS.",
+    "notebooklm_output": "Explain inheritance in OOPS. Inheritance is an object-oriented programming principle that allows developers to define a class hierarchy consisting of base and derived classes. It supports different forms of inheritance, dictates access rules to base class members, utilizes mechanisms like super and final, and enables data abstraction and polymorphism."
+  },
+  {
+    "id": "subject_03",
+    "category": "subject",
+    "query": "Explain process synchronization in OS.",
+    "notebooklm_output": "Explain process synchronization in OS. Process synchronization in operating systems involves coordinating the execution of cooperating processes to avoid data inconsistencies and manage shared resources. It addresses the Critical Section Problem using tools like synchronization hardware, semaphores, critical regions, and monitors, and includes classic synchronization challenges like the readers-writers problem."
+  },
+  {
+    "id": "subject_04",
+    "category": "subject",
+    "query": "What is a linked list in Data Structures?",
+    "notebooklm_output": "A linked list is a linear data structure that stores similar data elements across random memory locations. It consists of a collection of elements called nodes, where each node contains one field with the data item and another field containing a link or address pointing to the successor element in the list."
+  },
+  {
+    "id": "subject_05",
+    "category": "subject",
+    "query": "Explain the OSI model in Computer Networks.",
+    "notebooklm_output": "Explain the OSI model in Computer Networks. The OSI Reference Model is a layered network architecture framework used to organize and standardize communication protocols. It is divided into layers (such as physical, data link, network, transport, and application), where each layer offers specific services to the layer above it while shielding higher layers from the complex implementation details of those services."
+  },
+  {
+    "id": "subject_06",
+    "category": "subject",
+    "query": "What is deadlock in Operating Systems?",
+    "notebooklm_output": "Deadlock in operating systems is a state where a set of processes are permanently blocked because they are waiting for resources held by one another. Operating systems handle deadlocks using techniques grouped into Deadlock Prevention, Deadlock Avoidance (such as the Banker's algorithm), Deadlock Detection, and Recovery from Deadlock."
+  },
+  {
+    "id": "subject_07",
+    "category": "subject",
+    "query": "Explain encapsulation in OOPS.",
+    "notebooklm_output": "Explain encapsulation in OOPS. Encapsulation is a fundamental object-oriented programming concept that separates the interface (specification) of an Abstract Data Type (ADT) from its implementation details. By encapsulating data, the system ensures that programmers using the class do not have direct access to the internal data representations and operations, effectively hiding the complexity."
+  },
+  {
+    "id": "subject_08",
+    "category": "subject",
+    "query": "What is functional dependency in DBMS?",
+    "notebooklm_output": "Functional dependencies are integrity constraints over relational schemas that define the relationship between attributes and help identify primary keys. They are heavily used in dependency analysis and schema refinement to check whether a decomposition is lossless and to normalize relations into 3NF or BCNF."
+  },
+  {
+    "id": "subject_09",
+    "category": "subject",
+    "query": "Explain binary search tree in Data Structures.",
+    "notebooklm_output": "Explain binary search tree in Data Structures. A Binary Search Tree (BST) is an Abstract Data Type and search structure that allows for organized data storage. It supports fundamental operations such as Searching, Insertion, and Deletion, and features various representations and tree traversals where nodes strictly maintain a hierarchical order."
+  },
+  {
+    "id": "subject_10",
+    "category": "subject",
+    "query": "What is congestion control in Computer Networks?",
+    "notebooklm_output": "Congestion control is a mechanism designed to regulate the entry of data packets into a network to prevent congestive collapse when heavy message traffic slows down response times. It employs algorithms like the Leaky Bucket to shape traffic bursts and utilizes transport layer protocols like TCP, which dynamically adjust transmission rates to avoid network overload."
+  },
+  {
+    "id": "subject_11",
+    "category": "subject",
+    "query": "Explain paging in Operating Systems.",
+    "notebooklm_output": "Explain paging in Operating Systems. Paging is a memory management scheme that maps a process's logical address space to physical address space, enabling non-contiguous memory allocation. Often implemented as Demand Paging, it relies on page replacement algorithms such as First In First Out (FIFO), Least Recently Used (LRU), and Optimal Replacement to manage limited memory frames effectively."
+  },
+  {
+    "id": "subject_12",
+    "category": "subject",
+    "query": "What is polymorphism in OOPS?",
+    "notebooklm_output": "Polymorphism is an object-oriented concept that allows classes to be used polymorphically through static and dynamic binding. It is implemented using virtual functions, pure virtual functions, and abstract classes, enabling a single interface to execute different underlying methods dynamically at runtime."
+  },
+  {
+    "id": "subject_13",
+    "category": "subject",
+    "query": "Explain stack and its operations in Data Structures.",
+    "notebooklm_output": "Explain stack and its operations in Data Structures. A stack is a linear data structure that follows a Last-In-First-Out (LIFO) protocol, where elements are inserted and deleted exclusively at one end called the top. The two essential operations performed on a stack are Push (adding a new element to the top) and Pop (deleting the element from the top)."
+  },
+  {
+    "id": "subject_14",
+    "category": "subject",
+    "query": "What is transaction management in DBMS?",
+    "notebooklm_output": "Transaction management governs the execution of transactions, which are logical units of work in a database, ensuring they meet ACID properties (Atomicity, Consistency, Isolation, Durability). It manages concurrent executions through serializability, lock-based and timestamp-based protocols, and oversees system recovery using log-based crash recovery methods."
+  },
+  {
+    "id": "subject_15",
+    "category": "subject",
+    "query": "Explain transport layer responsibilities in Computer Networks.",
+    "notebooklm_output": "Explain transport layer responsibilities in Computer Networks. The transport layer builds upon the network layer to provide data transport services from a source process to a destination process with a desired level of reliability. Its responsibilities include connection management, providing abstractions like reliable byte streams, and implementing transport protocols such as TCP (which handles congestion control) and UDP."
+  },
+  {
+    "id": "graph_01",
+    "category": "graph",
+    "query": "What should I study before BCNF in DBMS?",
+    "notebooklm_output": "Before studying BCNF, you should learn about redundancy and the anomalies it causes, decompositions (including lossless-join decomposition), and functional dependencies (FDs). Additionally, you should understand primary keys, Armstrong's Axioms, and earlier normal forms such as 1NF, 2NF, and 3NF."
+  },
+  {
+    "id": "graph_02",
+    "category": "graph",
+    "query": "How is deadlock related to process synchronization in OS?",
+    "notebooklm_output": "Deadlock and process synchronization are intricately linked because synchronization mechanisms (like monitors, semaphores, and critical regions) are used to manage cooperating processes sharing resources. However, incorrect application of these synchronization tools can result in processes waiting indefinitely for resources held by one another, thereby creating a deadlock."
+  },
+  {
+    "id": "graph_03",
+    "category": "graph",
+    "query": "Which topics are related to inheritance in OOPS?",
+    "notebooklm_output": "Topics related to inheritance include class hierarchies, base and derived classes, forms of inheritance (specialization, specification, extension), and access control for base class members. It also involves base and derived class constructors/destructors, virtual base classes, the super and final keywords, method overriding, and polymorphism."
+  },
+  {
+    "id": "graph_04",
+    "category": "graph",
+    "query": "What concepts are connected to trees in Data Structures?",
+    "notebooklm_output": "Concepts connected to trees include Binary Search Trees, AVL trees, Red-Black trees, Splay trees, B-trees, and tries. It also involves fundamental tree operations such as insertion, deletion, searching, and various tree traversal methods."
+  },
+  {
+    "id": "graph_05",
+    "category": "graph",
+    "query": "What should I learn before routing in Computer Networks?",
+    "notebooklm_output": "Before learning about routing algorithms, you should understand network layer design issues, the concept of store-and-forward packet switching, and the topology of networks. It is also helpful to distinguish between connection-oriented (virtual-circuit) and connectionless (datagram) network services."
+  },
+  {
+    "id": "graph_06",
+    "category": "graph",
+    "query": "Which topics are related to normalization in DBMS?",
+    "notebooklm_output": "Topics related to normalization include schema refinement, identifying problems caused by redundancy (insertion, deletion, and update anomalies), functional and multi-valued dependencies, and dependency-preserving or lossless-join decompositions. It heavily relies on evaluating normal forms including 1NF, 2NF, 3NF, BCNF, 4NF, and 5NF."
+  },
+  {
+    "id": "graph_07",
+    "category": "graph",
+    "query": "How is paging related to memory management in OS?",
+    "notebooklm_output": "Paging is a primary memory management scheme that maps a process's logical address space to physical address space, avoiding contiguous allocation constraints. Memory management implementations utilize techniques like Demand Paging and Segmentation with Paging, relying on page replacement algorithms such as FIFO, LRU, and Optimal replacement to handle page faults."
+  },
+  {
+    "id": "graph_08",
+    "category": "graph",
+    "query": "What topics are linked to encapsulation in OOPS?",
+    "notebooklm_output": "Topics linked to encapsulation include data abstraction, Abstract Data Types (ADTs), information hiding, class scopes, and access specifiers. It also ties directly into how a class's public interface is separated from its internal implementation details."
+  },
+  {
+    "id": "graph_09",
+    "category": "graph",
+    "query": "What concepts are related to graph traversal in Data Structures?",
+    "notebooklm_output": "Graph traversal concepts involve Depth First Search (DFS) and Breadth First Search (BFS). Related topics include graph implementation methods (like adjacency matrices and adjacency lists), shortest path algorithms (like Dijkstra's), topological sorting, and minimum spanning trees."
+  },
+  {
+    "id": "graph_10",
+    "category": "graph",
+    "query": "How is TCP related to congestion control in Computer Networks?",
+    "notebooklm_output": "TCP (Transmission Control Protocol) is deeply tied to congestion control because it provides a reliable, congestion-controlled byte stream over the internet. It uses specialized algorithms (developed by Nagle, Clark, Jacobson, and others) to adjust transmission rates, avoid congestive network collapse, and optimize overall performance."
+  },
+  {
+    "id": "pyq_01",
+    "category": "pyq",
+    "query": "pyqs of dbms",
+    "notebooklm_output": "Explain Relational Model and E-R model. Explain the ACID Properties of transactions. What is normalization? Explain 2NF, 3NF and BCNF Normal forms with example. Explain log-Based Recovery in detail. What are the differences between tree based and Hash based indexes?"
+  },
+  {
+    "id": "pyq_02",
+    "category": "pyq",
+    "query": "pyqs of operating systems",
+    "notebooklm_output": "Give a classic Peterson’s solution to the critical-section problem. Explain the concept of Least Recently Used memory page replacement method. What is a System call? Discuss major System calls of Operating Systems. Explain Banker’s algorithm for deadlock avoidance with an example."
+  },
+  {
+    "id": "pyq_03",
+    "category": "pyq",
+    "query": "previous questions on deadlock in os",
+    "notebooklm_output": "Explain various deadlock prevention strategies with brief illustrations. What is Deadlock? List the condition that leads to deadlock. How deadlock can be prevented. Explain Banker’s algorithm for deadlock avoidance with an example. Write about deadlock conditions and bankers algorithm in detail. Is it possible to have a deadlock involving only a single process? Explain."
+  },
+  {
+    "id": "pyq_04",
+    "category": "pyq",
+    "query": "previous questions on inheritance in oops",
+    "notebooklm_output": "previous questions on inheritance in oops Previous questions on inheritance in OOPS include: Explain the types of inheritance in Java with examples. Write a Java program that uses the final keyword in the context of inheritance."
+  },
+  {
+    "id": "pyq_05",
+    "category": "pyq",
+    "query": "important questions in computer networks",
+    "notebooklm_output": "Discuss in detail. Differentiate between TCP/IP network model and ISO-OSI reference model. What are the design issues of Data Link Layer? Explain in detail. Explain Distance Vector Routing Algorithm with an example. Compare and contrast TCP and UDP Protocols. What is framing? Explain various framing techniques of Data Link Layer."
+  },
+  {
+    "id": "pyq_06",
+    "category": "pyq",
+    "query": "pyqs of data structures",
+    "notebooklm_output": "pyqs of data structures Previous year questions (PYQs) for Data Structures include: Write and explain algorithms for Push and pop operations of stack using linked list. Explain the algorithm for implementing quadratic probing on a hash table. Make a comparison of breadth first search and depth first search for a graph. Write an algorithm for merge sort and explain with a suitable example. Describe the Knuth-Morris-Pratt algorithm for pattern matching."
+  },
+  {
+    "id": "pyq_07",
+    "category": "pyq",
+    "query": "previous questions on paging in os",
+    "notebooklm_output": "What is Demand paging? Explain. Explain the concept of Least Recently Used memory page replacement method and how it is different from First In First Out (FIFO) page replacement method. Find the number of Page Faults with FIFO, Optimal Page replacement and LRU."
+  },
+  {
+    "id": "pyq_08",
+    "category": "pyq",
+    "query": "previous questions on linked list in data structures",
+    "notebooklm_output": "previous questions on linked list in data structures Previous questions on linked lists in Data Structures include: Define a single linked list. Write the structure of the linked list with a neat sketch. Write an algorithm of Insert and Delete operation in Singly Linked List. Write a program to implement stack using linked list. Write an algorithm for insertion of node at last position in Linear Linked List."
+  },
+  {
+    "id": "pyq_09",
+    "category": "pyq",
+    "query": "important questions in dbms",
+    "notebooklm_output": "Explain Relational Model and E-R model. What is meant by normalization? Explain in detail various normal forms with an example. Explain the ACID Properties of transactions. What is locking Protocol? Describe the Strict Two Phase locking Protocol. Describe the set operations of relational algebra. What are the differences between tree based and Hash based indexes?"
+  },
+  {
+    "id": "pyq_10",
+    "category": "pyq",
+    "query": "previous questions on deadlock in operating systems",
+    "notebooklm_output": "Explain various deadlock prevention strategies with brief illustrations. What is Deadlock? List the condition that leads to deadlock. How deadlock can be prevented. Explain Banker’s algorithm for deadlock avoidance with an example. Is it possible to have a deadlock involving only a single process? Explain."
+  },
+  {
+    "id": "unsupported_01",
+    "category": "unsupported",
+    "query": "Explain compiler design.",
+    "notebooklm_output": "Explain compiler design. Compiler Design is the science of building a compiler through a structured translation process. It is divided into phases including Lexical Analysis (using tokens, regular expressions, and finite automata), Syntax Analysis (context-free grammars, top-down and bottom-up parsing), and Syntax-Directed Translation. Additional phases cover Intermediate-Code Generation, Run-Time Environments, Machine-Independent Optimization, and Target Machine Code Generation."
+  },
+  {
+    "id": "unsupported_02",
+    "category": "unsupported",
+    "query": "What is machine learning?",
+    "notebooklm_output": "Machine learning is a field of computational intelligence concerned with designing systems that can learn from data and improve over time. It encompasses techniques such as decision tree learning, artificial neural networks, Bayesian learning, genetic algorithms, and reinforcement learning to solve well-posed prediction and classification problems."
+  },
+  {
+    "id": "unsupported_03",
+    "category": "unsupported",
+    "query": "Explain software engineering life cycle.",
+    "notebooklm_output": "Explain software engineering life cycle. The software engineering life cycle is a process framework dividing software development into distinct, manageable phases. Typical phases include analysis and specification of the task (requirements engineering), software design, implementation (coding), testing strategies, and maintenance. Generic models framing this cycle include the waterfall model, incremental process models, and evolutionary process models."
+  },
+  {
+    "id": "unsupported_04",
+    "category": "unsupported",
+    "query": "Tell me about blockchain.",
+    "notebooklm_output": "Tell me about blockchain. Blockchain is a decentralized and distributed ledger technology that securely records transactions across a network. The technology encompasses various consensus mechanisms, public and private blockchain systems, smart contracts (such as those in Ethereum), and cryptocurrencies like Bitcoin. It also involves navigating security and privacy challenges while developing platforms using tools like Hyperledger Fabric."
+  },
+  {
+    "id": "unsupported_05",
+    "category": "unsupported",
+    "query": "@@@ ### ???",
+    "notebooklm_output": "?? The source set does not provide enough information."
+  }
+]

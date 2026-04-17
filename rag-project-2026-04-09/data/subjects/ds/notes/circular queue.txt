@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int num;
+    struct  node *nextptr;
+}*front,*rear;
+int n;
+void create(int n);
+void display();
+void deleten();
+int main()
+{
+    printf("enter number of eleemnts");
+    scanf("%d",&n);
+    create(n);
+    printf("the queue  is");
+    display();
+    deleten();
+    printf("after deletion the queue is");
+    display();
+    return 0;
+}
+void create(int n)
+{
+    struct node *newnode;
+    int i,num;
+    for(i=1;i<=n;i++)
+    {
+        newnode=(struct node *)malloc(sizeof(struct node));
+        printf("enter input data for node %d",i);
+        scanf("%d",&num);
+        newnode->num=num;
+        newnode->nextptr=NULL;
+        if((front==NULL)&&(rear==NULL))
+        {
+            front=newnode;
+            rear=newnode;
+        }
+        else
+        {
+            rear->nextptr=newnode;
+            rear=newnode;
+        }
+    }
+    rear->nextptr=front;
+}
+void display()
+{
+    struct node *temp;
+    temp=front;
+    while(temp->nextptr!=front)
+    {
+        printf("%d \n",temp->num);
+        temp=temp->nextptr;
+    }
+    printf("%d \n",temp->num);
+}
+void deleten()
+{
+    struct node *temp;
+    temp=front;
+    front=front->nextptr;
+    rear->nextptr=front;
+    free(temp);
+}

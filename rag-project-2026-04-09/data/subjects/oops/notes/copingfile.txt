@@ -1,0 +1,45 @@
+#include<iostream>
+#include<conio.h>
+#include<fstream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+int  main()
+{
+	ifstream fs;
+	ofstream ft;
+	char ch;
+	ofstream op;
+    op.open("data.txt");
+    if(!op)
+	{
+		cout<<"Error in creating source file..!!";
+		exit(1);
+	}
+    op<<"hello students\nhow are you";
+    op.close();
+    fs.open("data.txt");
+	if(!fs)
+	{
+		cout<<"Error in opening source file..!!";
+		exit(1);
+	}
+	
+	ft.open("temp.txt");
+	if(!ft)
+	{
+		cout<<"Error in opening destination file..!!";
+		exit(1);
+	}
+	fs.get(ch);
+	while(fs.eof()==0)
+	{
+	    ft<<ch;
+		fs.get(ch);
+		
+	}
+	cout<<"File copied successfully..!!";
+	fs.close();
+	ft.close();
+	getch();
+}

@@ -1,0 +1,306 @@
+//new and delete operator
+#include <iostream>
+using namespace std;
+int main()
+{
+    int *p = new int;
+    *p=100;
+    cout<< *p;
+    {
+        int *q= new int(200);
+        cout << *q;
+        delete p;
+    }
+    
+    return 0;
+}
+
+
+
+
+//new and delete operator for creating array
+#include <iostream>
+using namespace std;
+int main()
+{
+    int *p = new int[5];
+    *p=100;
+    p++;
+    *p=300;
+    cout << *p<<endl;
+    p--;
+    cout << *p << endl;
+    delete []p;
+    return 0;
+}
+
+
+
+//without reference variables
+
+#include <iostream>
+using namespace std;
+void swap(int a,int b)
+{
+	int t=a;
+	a=b;
+	b=t;
+}
+int main()
+{
+	int x=10,y=5;
+	cout << "x = " << x << "y = " << y<<endl;
+	swap(x,y);
+	cout << "x = " << x <<"y = " << y;
+	return 0;
+}
+
+
+//with reference variables just and vefore a and b
+
+#include <iostream>
+using namespace std;
+void swap(int & a,int & b)
+{
+	int t=a;
+	a=b;
+	b=t;
+}
+int main()
+{
+	int x=10,y=5;
+	cout << "x = " << x << "y = " << y<<endl;
+	swap(x,y);
+	cout << "x = " << x <<"y = " << y;
+	return 0;
+}
+
+
+//with pointer variables
+
+#include <iostream>
+using namespace std;
+void swap(int *a,int *b)
+{
+	int t = *a;
+	*a = *b;
+	*b = t;
+}
+int main()
+{
+	int x=10,y=5;
+	cout << "x = " << x << "y = " << y<<endl;
+	swap(&x,&y);
+	cout << "x = " << x <<"y = " << y;
+	return 0;
+}
+
+//function returning reference
+
+#include <iostream>
+using namespace std;
+int &  max(int &a,int &b)
+{
+	if (a>b)
+		return a;
+	else
+		return b;
+}
+int main()
+{
+	int x=10,y=5;
+	cout << "calling function  " << max(x,y)<<endl;
+	max(x,y)=-1;
+	cout <<"calling function left hand side" << "x= " <<x<<"y = "<< y<<endl;
+}
+
+
+//default arguments
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	void printline(char ch='#',int length = 40); //prototype
+	printline();
+	cout <<"this is an example for default arguments" << endl;
+	printline('*');
+	return 0;
+}
+void printline(char ch, int length)
+{
+	for (int i=1;i<=length;i++)
+		cout<<ch;
+	cout <<endl;
+}
+
+//constant arguments
+#include <iostream>
+using namespace std;
+ivoid printline(const int i);   //prototype of printline function
+
+int main()
+{
+	printline(20);
+	return 0;
+}
+
+inline void printline(const int i)
+{
+	i++; //wrong because i is constant
+}
+
+
+
+//pointer to function
+
+#include <iostream>
+using namespace std;
+void fun(int a) 
+{ 
+    printf("Value of a is %d\n", a); 
+} 
+ int main() 
+{ 
+    // fun_ptr is a pointer to function fun()  
+    void (*fun_ptr)(int) = &fun; 
+  
+    /* The above line is equivalent of following two 
+       void (*fun_ptr)(int); 
+       fun_ptr = &fun;  
+    */
+      // Invoking fun() using fun_ptr 
+    (*fun_ptr)(10); 
+  
+    return 0; 
+}
+
+
+
+#include <iostream>
+using namespace std;
+void fun(int a) 
+{ 
+    printf("Value of a is %d\n", a); 
+} 
+  
+int main() 
+{  
+    void (*fun_ptr)(int) = fun;  // & removed 
+  
+    fun_ptr(10);  // * removed 
+  
+    return 0; 
+}
+
+
+
+//function pointers
+
+#include <iostream>
+using namespace std;
+void add(int a, int b) 
+{ 
+    cout << "Addition is "<< a+b<<endl; 
+} 
+void subtract(int a, int b) 
+{ 
+    cout << "subtraction is "<< a-b <<endl;  
+} 
+void multiply(int a, int b) 
+{ 
+   cout << "multiplication is "<< a*b<<endl; 
+} 
+  
+int main() 
+{ 
+    // fun_ptr_arr is an array of function pointers 
+    void (*fun_ptr_arr[])(int, int) = {add, subtract, multiply}; 
+    unsigned int ch, a = 15, b = 10; 
+  
+    cout<<"Enter Choice: 0 for add, 1 for subtract and 2 for multiply" << endl; 
+    cin >>ch; 
+  
+    if (ch > 2) return 0; 
+  
+    (*fun_ptr_arr[ch])(a, b); 
+  
+    return 0; 
+} 
+
+
+
+//function pointer eg 1
+#include <iostream>
+using namespace std;
+void fun(int a) 
+{ 
+    printf("Value of a is %d\n", a); 
+} 
+ int main() 
+{ 
+    // fun_ptr is a pointer to function fun()  
+    void (*fun_ptr)(int) = &fun; 
+  
+    /* The above line is equivalent of following two 
+       void (*fun_ptr)(int); 
+       fun_ptr = &fun;  
+    */
+      // Invoking fun() using fun_ptr 
+    (*fun_ptr)(10); 
+  
+    return 0; 
+}
+
+
+// funtion pointer eg2 & and * removed
+
+#include <iostream>
+using namespace std;
+void fun(int a) 
+{ 
+    cout <<"Value of a is "<< a<<endl; 
+} 
+int main() 
+{ 
+    void (*fun_ptr)(int) = fun; // & removed 
+
+    fun_ptr(10); // * removed 
+
+return 0; 
+}
+
+
+//funtion point array
+//function pointers
+
+#include <iostream>
+using namespace std;
+void add(int a, int b) 
+{ 
+    cout << "Addition is "<< a+b<<endl; 
+} 
+void subtract(int a, int b) 
+{ 
+    cout << "subtraction is "<< a-b <<endl;  
+} 
+void multiply(int a, int b) 
+{  
+   cout<<"multiplication is "<< a*b<<endl; 
+} 
+  
+int main() 
+{ 
+    // fun_ptr_arr is an array of function pointers 
+    void (*fun_ptr_arr[])(int, int) = {add, subtract, multiply}; 
+    unsigned int ch, a = 15, b = 10; 
+  
+    cout<<"Enter Choice: 0 for add, 1 for subtract and 2 for multiply" << endl; 
+    cin >>ch; 
+  
+    if (ch > 2) return 0; 
+  
+    (*fun_ptr_arr[ch])(a, b); 
+  
+    return 0; 
+}

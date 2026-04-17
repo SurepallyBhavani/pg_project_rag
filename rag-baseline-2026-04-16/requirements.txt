@@ -1,0 +1,8 @@
+flask==3.0.3
+python-dotenv==1.0.1
+openai>=1.99.9,<2.0.0
+langchain==0.3.27
+langchain-community==0.3.29
+chromadb==0.4.24
+sentence-transformers==2.6.1
+pypdf==4.2.0

@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include<stdlib.h>
+# define n 5
+void create(int x);
+void disp();
+void delete();
+
+int stack[n],top=0;
+int main()
+{
+    int x;
+  create(x);
+  printf("the stack is");
+  disp();
+  return 0;
+}
+void create(int x)
+{
+    int i;
+    for(i=top;i>=0;i++)
+    {
+        printf("enter ele");
+        scanf("%d",&x);
+        if(top==n-1)
+        {
+            printf("overflow");
+            break;
+        }
+         else
+        {
+            stack[top]=x;
+            top++;
+        }
+    }
+}
+    
+void disp()
+{
+    int i;
+    for(i=top;i>=0;i--)
+    {
+        printf("%d \n",stack[i]);
+    }
+}

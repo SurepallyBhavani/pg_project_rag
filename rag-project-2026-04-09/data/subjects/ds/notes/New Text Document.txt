@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct node
+{
+    int num;
+    struct node *nextptr;
+    struct node *prevptr;
+}*stnode;
+int n;
+void create(int n);
+void display();
+void insert();
+void delete();
+
+int main()
+{
+    printf("enter number of nodes");
+    scanf("%d",&n);
+    create(n);
+    printf("data entered in list");
+    display();
+    insert();
+    display();
+    delete();
+    display();
+    return 0;
+}
+void create(int n)
+{
+    struct node *fnode,*temp;
+    int num,i;
+    stnode=(struct node *)malloc(sizeof(struct node));
+    printf("enter input data for node 1"); 
+    scanf("%d",&num);
+    stnode->num=num;
+    stnode->nextptr=NULL;
+    temp=stnode;
+    for(i=2;i<=n;i++)
+    {
+        fnode=(struct node *)malloc(sizeof(struct node));
+        printf("input data for node %d",i);
+        scanf("%d",&num);
+        fnode->num=num;
+        fnode->nextptr=NULL;
+        fnode->prevptr=temp;
+        temp->nextptr=fnode;
+        temp=temp->nextptr;
+    }
+}
+void display()
+{
+    struct node *temp;
+    temp=stnode;
+    while(temp!=NULL)
+    {
+        printf("%d \n",temp->num);
+        temp=temp->nextptr;
+    }
+} 
+void insert()
+{
+    struct node *temp,*beforenode;
+    int index,i;
+    printf("enetr the index");
+    scanf("%d",&index);
+    temp=(struct node *)malloc(sizeof(struct node));
+    temp->num=8;
+    i=0;
+    beforenode=stnode;
+    while(i<(index-1)&&(beforenode->nextptr!=NULL))
+    {
+        i++;
+        beforenode=beforenode->nextptr;
+    }
+    temp->nextptr=beforenode->nextptr;
+    temp->prevptr=beforenode;
+    (temp->nextptr)->prevptr=temp;
+    beforenode->nextptr=temp;
+}
+void delete()
+{
+    struct node *temp;
+    int index,i;
+    printf("enter the index of delete node");
+    scanf("%d",&index);
+    temp=stnode;
+    i=0;
+    while((i<(index-1))&&(temp->nextptr!=NULL))
+    {
+        temp=temp->nextptr;
+        i++;
+    }
+        temp->nextptr=((temp->nextptr)->nextptr);
+        (temp->nextptr)->prevptr=temp;
+}
+
+    

@@ -1,0 +1,495 @@
+
+//single inheritance
+
+#include<iostream>
+using namespace std;
+
+class B
+{
+	int a;
+	public:
+		int b;
+		B(){a=10;b=20;}
+		int get_a(void){return a;}
+};
+class D : public B
+{
+	int d;
+	public:
+		void mul(void){d=b*get_a();}
+		void disp(void);
+};
+void D ::disp(void)
+{
+	cout <<  "A = "<< get_a() <<"\n";
+	cout << "B = "<< b <<"\n";
+	cout << "D = "<< d <<"\n";
+}
+
+int main()
+{
+	D d;
+	d.get_a();
+	d.mul();
+	d.disp();
+
+	d.b=100;
+	d.mul();
+	d.disp();
+}
+
+
+//visibility
+#include <iostream>
+using namespace std;
+class Inh
+{
+    private:
+        int pri_v;
+    protected:
+        int pro_v;
+    public:
+        int pub_v;
+        Inh()
+        {
+            pri_v=10;
+            pro_v=20;
+            pub_v=30;
+        }
+        void disp()
+        {
+            cout << "Base class............." << endl;
+            cout << "private variable = " << pri_v << endl;
+            cout << "protected variable = " << pro_v << endl;
+            cout << "public variable = " << pub_v << endl;
+        }
+};
+class Dev : private Inh
+{
+   private:
+        int pri_d;
+    protected:
+        int pro_d;
+    public:
+        int pub_d;
+        Dev()
+        {
+            pri_d=100;
+            pro_d=200;
+            pub_d=300;
+        }
+        void disp()
+        {
+            cout << "derived class............." << endl;
+            cout << "private variable = " << pri_d << endl;
+            cout << "protected variable = " << pro_d << endl;
+            cout << "public variable = " << pub_d << endl;
+        }
+};
+int main()
+{
+    Inh i;
+    i.disp();
+    Dev d;
+    d.disp();
+    return 0;
+}
+
+
+//virtural base class
+#include <iostream>
+using namespace std;
+class A	//grand parent
+{
+    public:
+        void disp()
+        {
+            cout << "grand parent";
+        }
+};
+class B1 : virtual public A	//parent 1
+{
+
+};
+class B2 : public virtual A	//parent 2
+{
+
+};
+class C : public B1, public B2		//child
+{
+			//only one copy of A will be inherited
+};
+int main()
+{
+    C oc;
+    oc.disp();
+    return 0;
+}
+
+// constructors in inheritance
+#include <iostream>
+using namespace std;
+class A
+{
+	int a;
+	public:
+		A(int i) {a=i;  cout<<"A initialized\n";}
+		void show_a(void){ cout<<"a="<<a<<"\n";}
+};
+class B
+{
+	int b;
+	public:
+		B(int j) {b=j;  cout<<"B initialized\n";}
+		void show_b(void){ cout<<"b="<<b<<"\n";}
+};
+class D : public A, public B
+{
+	int d;
+	public:
+		D(int a, int b, int de) :
+		A(a),
+		B(b)
+		{
+			d=de; cout<<"D initialized\n";
+		}
+			void show_d(void){ cout<<"d="<<d<<"\n";}
+
+};
+int main()
+{
+	D dobj(10,20,30);
+	dobj.show_a();
+	dobj.show_b();
+	dobj.show_d();
+	return 0;
+}
+
+
+// nesting example
+#include <iostream>
+using namespace std;
+class A
+{
+  int a;
+public:
+    A ()
+  {
+    a = 100;
+    cout << "A cons" << endl;
+  }
+  void disp_A ()
+  {
+    cout << "A= " << a << endl;
+  }
+
+};
+class B 
+{
+    int b;
+    public:
+    B()
+    {
+        b=200;
+        cout << "B cons"<< endl;
+    }
+    void disp_B()
+    {
+        cout << "B= "<< b<<endl;
+    }
+};
+class C 
+{
+    public:
+    A objA;
+    B objB;
+};
+int main()
+{
+    C objC;
+    objC.objA.disp_A();
+    //objB.disp_B();
+}
+
+//pointer to object
+#include <iostream>
+using namespace std;
+class A
+{
+	int a;
+	public:
+	   // A()
+	    //{   cout << "A cons"; }
+		//A(int i) {a=i;  cout<<"A initialized\n";}
+		void show_a(void){ cout<< "A class"<<endl;}
+};
+int main()
+{
+	A a;
+	A *ptr = &a;
+	a.show_a();
+	ptr->show_a();
+	(*ptr).show_a();
+	return 0;
+}
+
+
+
+//pointing derived class objects
+#include <iostream>
+using namespace std;
+class B
+{
+	public:
+		int b=10;
+		void show(void) {cout <<"b="<<b<<"\n";}
+};
+class D : public B
+{
+	public:
+		int d;
+		void show(void) {cout <<"D dkfkdsfkdsfjskdfjb="<<b<<"\n";cout <<"d="<<d<<"\n";}
+};
+int main()
+{
+	B b;
+	D d;
+	B *bptr;
+	cout<<"using bptr and base object\n";
+	bptr->show();	//calls B's show method
+	cout <<"using bptr and derived object\n";
+	bptr = &d;
+	bptr->b = 20;	//access d object via bptr
+	//bptr->d = 100 //will not work
+	bptr->show();	//calls B's show method
+	cout <<"using dptr and derived object\n";
+	D *dptr = &d;
+	dptr->d=100;
+	dptr->show();
+	cout <<"using (D *)bptr\n";
+	((D *)bptr) -> d=200;
+	((D *)bptr) -> show();
+	return 0;
+}
+
+//virtual functions
+#include <iostream>
+using namespace std;
+class B
+{
+	public:
+		void disp(void){cout<<"base display\n";}
+		virtual void show(void){cout <<"base show\n";}
+};
+class D : public B
+{
+	public:
+		void disp(void){cout<<"derived display\n";}
+		void show(void){cout <<"derived show\n";}
+};
+int main()
+{
+	B b;
+	D d;
+	B *bptr;
+	cout << "bptr points to base\n";
+	bptr = &b;
+	bptr->disp();	//calls base version
+	bptr->show();   //calls base version
+	cout << "bptr points to derived\n";
+	bptr = &d;
+	bptr->disp();  	//calls base version
+	bptr->show();   //calls derived version
+	return 0;
+}
+
+//pure virtual functions
+
+#include<iostream>
+using namespace std;
+
+class Base
+{
+int x;
+public:
+	virtual void fun() = 0;
+	int getX() { return x; }
+};
+
+// This class inherits from Base and implements fun()
+class Derived: public Base
+{
+	int y;
+public:
+	void fun() { cout << "fun() called"; }
+};
+
+int main(void)
+{
+	Derived d;
+	d.fun();
+	return 0;
+}
+
+// can be created pointer for abstract class
+#include<iostream>
+using namespace std;
+
+class Base
+{
+public:
+	virtual void show() = 0;
+};
+
+class Derived: public Base
+{
+public:
+	void show() { cout << "In Derived \n"; }
+};
+
+int main(void)
+{
+	Base *bp = new Derived();
+	bp->show();
+	return 0;
+}
+
+
+//abastract class can have constructors
+#include<iostream>
+using namespace std;
+
+// An abstract class with constructor
+class Base
+{
+protected:
+int x;
+public:
+virtual void fun() = 0;
+Base(int i) {
+			x = i;
+			cout<<"Constructor of base called\n";
+			}
+};
+
+class Derived: public Base
+{
+	int y;
+public:
+	Derived(int i, int j):Base(i) { y = j; }
+	void fun() { cout << "x = " << x << ", y = " << y<<'\n'; }
+};
+
+int main(void)
+{
+	Derived d(4, 5);
+	d.fun();
+	
+//object creation using pointer of base class
+	Base *ptr=new Derived(6,7);
+	ptr->fun();
+	return 0;
+}
+
+
+// destructors without virtual  undefined behavior
+#include<iostream> 
+using namespace std; 
+class base { 
+public: 
+	base()	 
+	{ cout<<"Constructing base \n"; } 
+	~base() 
+	{ cout<<"Destructing base \n"; }	 
+}; 
+class derived: public base { 
+public: 
+	derived()	 
+	{ cout<<"Constructing derived \n"; } 
+	~derived() 
+	{ cout<<"Destructing derived \n"; } 
+}; 
+int main(void) 
+{ 
+derived *d = new derived(); 
+base *b = d; 
+delete b; 
+return 0; 
+} 
+
+// pure virtual destructor with error
+// CPP Program to demonstrate pure virtual destructor
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+	virtual ~Base() = 0;
+	// Pure virtual destructor
+};
+
+class Derived : public Base {
+public:
+	~Derived() { cout << "~Derived() is executed"; }
+};
+
+// Driver Code
+int main()
+{
+	Base* b = new Derived();
+	delete b;
+	return 0;
+}
+
+
+//pure virtural destructor without error
+
+#include <iostream>
+class Base {
+public:
+	virtual ~Base() = 0; // Pure virtual destructor
+};
+Base::~Base()
+{
+	std::cout << "Pure virtual destructor is called";
+}
+
+class Derived : public Base {
+public:
+	~Derived() { std::cout << "~Derived() is executed\n"; }
+};
+
+int main()
+{
+	Base* b = new Derived();
+	delete b;
+	return 0;
+}
+
+
+//destructors with virutual
+#include<iostream> 
+using namespace std; 
+class base { 
+public: 
+	base()	 
+	{ cout<<"Constructing base \n"; } 
+	virtual ~base() 
+	{ cout<<"Destructing base \n"; }	 
+}; 
+class derived: public base { 
+public: 
+	derived()	 
+	{ cout<<"Constructing derived \n"; } 
+	~derived() 
+	{ cout<<"Destructing derived \n"; } 
+}; 
+int main(void) 
+{ 
+derived *d = new derived(); 
+base *b = d; 
+delete b; 
+return 0; 
+} 
+
+

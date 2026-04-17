@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int num;
+    struct  node *nextptr;
+}*top;
+int n;
+void create(int n);
+void display();
+void deleten();
+int main()
+{
+    printf("enter number of eleemnts");
+    scanf("%d",&n);
+    create(n);
+    printf("the stack  is");
+    display();
+    deleten();
+    printf("after deletion the stack is");
+    display();
+    return 0;
+}
+void create(int n)
+{
+    struct node *newnode;
+    int i,num;
+    for(i=1;i<=n;i++)
+    {
+        newnode=(struct node *)malloc(sizeof(struct node));
+        printf("enter input data for node %d",i);
+        scanf("%d",&num);
+        newnode->num=num;
+        newnode->nextptr=top;
+        top=newnode;
+    }
+}
+void display()
+{
+    struct node *temp;
+    temp=top;
+    while(temp!=0)
+    {
+        printf("%d \n",temp->num);
+        temp=temp->nextptr;
+    }
+}
+void deleten()
+{
+    top=top->nextptr;
+}

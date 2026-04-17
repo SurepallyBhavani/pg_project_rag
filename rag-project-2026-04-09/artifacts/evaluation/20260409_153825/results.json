@@ -1,0 +1,456 @@
+[
+  {
+    "id": "curriculum_cn_syllabus",
+    "category": "curriculum",
+    "query": "What is the syllabus of Computer Networks?",
+    "expected_query_type": "curriculum_query",
+    "actual_query_type": "curriculum_query",
+    "route_match": true,
+    "expected_retrieval_method": "Curriculum",
+    "actual_retrieval_method": "Curriculum",
+    "retrieval_match": true,
+    "expected_subject": null,
+    "actual_subject": null,
+    "subject_match": true,
+    "expected_contains": [
+      "UNIT I",
+      "UNIT II",
+      "L-T-P-C"
+    ],
+    "contains_hits": {
+      "UNIT I": false,
+      "UNIT II": false,
+      "L-T-P-C": true
+    },
+    "keyword_coverage": 0.333,
+    "citations_present": true,
+    "citation_count": 1,
+    "confidence": 0.9,
+    "confidence_applicable": true,
+    "latency_seconds": 0.003,
+    "overall_score": 0.833,
+    "answer_preview": "The official syllabus structure available for COMPUTER NETWORKS is as follows.\n\nSemester: III Year B.Tech. I -Semester L T P C\n\nL-T-P-C: 3-1-0-4\n\nUnits:\nUNIT  I: Network hardware, Network software, OSI, TCP/IP Reference models, Example Networks: ARPANET, Internet. Physical Layer : Guided Transmission media: twisted pairs, coaxial cable, fiber optics, Wireless transmission.\n\nUNIT  II: Data link layer : Design issues, framing, Error detection and correction. Elementary data link protocols: simplex"
+  },
+  {
+    "id": "curriculum_cn_labs",
+    "category": "curriculum",
+    "query": "List all labs under Computer Networks.",
+    "expected_query_type": "curriculum_query",
+    "actual_query_type": "curriculum_query",
+    "route_match": true,
+    "expected_retrieval_method": "Curriculum",
+    "actual_retrieval_method": "Curriculum",
+    "retrieval_match": true,
+    "expected_subject": null,
+    "actual_subject": null,
+    "subject_match": true,
+    "expected_contains": [
+      "lab",
+      "experiment"
+    ],
+    "contains_hits": {
+      "lab": true,
+      "experiment": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 1,
+    "confidence": 0.9,
+    "confidence_applicable": true,
+    "latency_seconds": 0.001,
+    "overall_score": 1.0,
+    "answer_preview": "The official lab syllabus available for COMPUTER NETWORKS LAB is as follows.\n\nObjectives:\n1. To understand the working principle of various communication protocols.\n2. To understand the network simulator environment and visualize a network topology and observe its\nperformance\n3. To analyze the traffic flow and the contents of protocol frames\n\nOutcomes:\n1. Implement data link layer farming methods\n2. Analyze error detection and error correction codes.\n3. Implement and analyze routing and congesti"
+  },
+  {
+    "id": "curriculum_dbms_prereq",
+    "category": "curriculum",
+    "query": "What are the prerequisites of Database Management Systems?",
+    "expected_query_type": "curriculum_query",
+    "actual_query_type": "curriculum_query",
+    "route_match": true,
+    "expected_retrieval_method": "Curriculum",
+    "actual_retrieval_method": "Curriculum",
+    "retrieval_match": true,
+    "expected_subject": null,
+    "actual_subject": null,
+    "subject_match": true,
+    "expected_contains": [
+      "data structures"
+    ],
+    "contains_hits": {
+      "data structures": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 1,
+    "confidence": 0.9,
+    "confidence_applicable": true,
+    "latency_seconds": 0.001,
+    "overall_score": 1.0,
+    "answer_preview": "The official prerequisites listed for DATABASE MANAGEMENT SYSTEMS are:\n\n1. A course on \u201cData Structures\u201d"
+  },
+  {
+    "id": "dbms_normalization",
+    "category": "subject",
+    "query": "What is normalization in DBMS?",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Vector",
+    "actual_retrieval_method": "Vector",
+    "retrieval_match": true,
+    "expected_subject": "dbms",
+    "actual_subject": "dbms",
+    "subject_match": true,
+    "expected_contains": [
+      "normalization"
+    ],
+    "contains_hits": {
+      "normalization": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 2,
+    "confidence": 0.55,
+    "confidence_applicable": true,
+    "latency_seconds": 10.256,
+    "overall_score": 1.0,
+    "answer_preview": "Normalization In Dbms is an important concept in Database Management Systems. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nAn extensive theory of normalization has been developed that helps formally de\ufb01ne what database designs are undesirable, and how to obtain desirable de-signs.\n\nTo understand it more clearly, it helps to note that what is Normalisation?.\n\nKey points and elaboration:\n- "
+  },
+  {
+    "id": "oops_inheritance",
+    "category": "subject",
+    "query": "Explain inheritance in OOPS.",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Vector",
+    "actual_retrieval_method": "Vector",
+    "retrieval_match": true,
+    "expected_subject": "oops",
+    "actual_subject": "oops",
+    "subject_match": true,
+    "expected_contains": [
+      "inheritance"
+    ],
+    "contains_hits": {
+      "inheritance": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 3,
+    "confidence": 0.4,
+    "confidence_applicable": true,
+    "latency_seconds": 7.955,
+    "overall_score": 1.0,
+    "answer_preview": "Inheritance In Oops is an important concept in Object-Oriented Programming. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\n[Page 451] Chapter 16 417 [Page 452] 418 C++: The Complete Reference Inheritance is one of the cornerstones of OOP because it allows the creation of hierarchical classifications.\n\nTo understand it more clearly, it helps to note that [Slide 6] Inheritance interacts with "
+  },
+  {
+    "id": "os_process_sync",
+    "category": "subject",
+    "query": "Explain process synchronization in OS.",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Vector",
+    "actual_retrieval_method": "Vector",
+    "retrieval_match": true,
+    "expected_subject": "os",
+    "actual_subject": "os",
+    "subject_match": true,
+    "expected_contains": [
+      "process synchronization"
+    ],
+    "contains_hits": {
+      "process synchronization": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 2,
+    "confidence": 0.57,
+    "confidence_applicable": true,
+    "latency_seconds": 7.743,
+    "overall_score": 1.0,
+    "answer_preview": "Process Synchronization In Os is an important concept in Operating Systems. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nThe operating system is responsible for the following activities in connection with process and thread management: the creation and deletion of both user and system processes; the scheduling of processes; and the provision of mechanisms for synchronization, communicatio"
+  },
+  {
+    "id": "ds_linked_list",
+    "category": "subject",
+    "query": "What is a linked list in Data Structures?",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Vector",
+    "actual_retrieval_method": "Graph-assisted",
+    "retrieval_match": false,
+    "expected_subject": "ds",
+    "actual_subject": "ds",
+    "subject_match": true,
+    "expected_contains": [
+      "linked list"
+    ],
+    "contains_hits": {
+      "linked list": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 1,
+    "confidence": 0.73,
+    "confidence_applicable": true,
+    "latency_seconds": 7.493,
+    "overall_score": 0.8,
+    "answer_preview": "A Linked List In Data Structures is an important concept in Data Structures. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nA linked list is a collection of structures in which each structure contains at least one member whose value is the address of the next logically ordered structure in the list.\n\nTo understand it more clearly, it helps to note that \uf0b7 By using pointers (Linked list) Impl"
+  },
+  {
+    "id": "cn_osi",
+    "category": "subject",
+    "query": "Explain the OSI model in Computer Networks.",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Vector",
+    "actual_retrieval_method": "Vector",
+    "retrieval_match": true,
+    "expected_subject": "cn",
+    "actual_subject": "cn",
+    "subject_match": true,
+    "expected_contains": [
+      "osi"
+    ],
+    "contains_hits": {
+      "osi": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 3,
+    "confidence": 0.59,
+    "confidence_applicable": true,
+    "latency_seconds": 7.777,
+    "overall_score": 1.0,
+    "answer_preview": "The Osi Model In Computer Networks is an important concept in Computer Networks. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nGain the knowledge of the functions of each layer in the OSI and TCP/IP reference model.\n\nTo understand it more clearly, it helps to note that protocol Hierarchies: - Network protocols are organized in hierarchical layers, such as the OSI (Open Systems Interconnect"
+  },
+  {
+    "id": "dbms_bcnf_prereq",
+    "category": "graph",
+    "query": "What should I study before BCNF in DBMS?",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Graph-assisted",
+    "actual_retrieval_method": "Graph-assisted",
+    "retrieval_match": true,
+    "expected_subject": "dbms",
+    "actual_subject": "dbms",
+    "subject_match": true,
+    "expected_contains": [
+      "BCNF"
+    ],
+    "contains_hits": {
+      "BCNF": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 3,
+    "confidence": 0.42,
+    "confidence_applicable": true,
+    "latency_seconds": 7.807,
+    "overall_score": 1.0,
+    "answer_preview": "What Should I Study Before Bcnf In Dbms is an important concept in Database Management Systems. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nWhat is DBMS ?\n\nTo understand it more clearly, it helps to note that \u2022Chapters 20 and 21, covering data warehousing, data mining, and informa- tion retrieval, can be used as self-study material or omitted from an introduc- tory course.\n\nKey points an"
+  },
+  {
+    "id": "os_deadlock_relation",
+    "category": "graph",
+    "query": "How is deadlock related to process synchronization in OS?",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Graph-assisted",
+    "actual_retrieval_method": "Graph-assisted",
+    "retrieval_match": true,
+    "expected_subject": "os",
+    "actual_subject": "os",
+    "subject_match": true,
+    "expected_contains": [
+      "deadlock"
+    ],
+    "contains_hits": {
+      "deadlock": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 2,
+    "confidence": 0.67,
+    "confidence_applicable": true,
+    "latency_seconds": 7.68,
+    "overall_score": 1.0,
+    "answer_preview": "How Is Deadlock Related To Process Synchronization In Os is an important concept in Operating Systems. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nSystem call interface for process management -fork, exit, wait, waitpid, exec Deadlocks - System Model, Deadlocks Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, and Recovery from "
+  },
+  {
+    "id": "oops_related_topics",
+    "category": "graph",
+    "query": "Which topics are related to inheritance in OOPS?",
+    "expected_query_type": "supported_subject_content",
+    "actual_query_type": "supported_subject_content",
+    "route_match": true,
+    "expected_retrieval_method": "Graph-assisted",
+    "actual_retrieval_method": "Graph-assisted",
+    "retrieval_match": true,
+    "expected_subject": "oops",
+    "actual_subject": "oops",
+    "subject_match": true,
+    "expected_contains": [
+      "inheritance"
+    ],
+    "contains_hits": {
+      "inheritance": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 3,
+    "confidence": 0.59,
+    "confidence_applicable": true,
+    "latency_seconds": 7.807,
+    "overall_score": 1.0,
+    "answer_preview": "Which Topics Are Related To Inheritance In Oops is an important concept in Object-Oriented Programming. The explanation below is based on the indexed academic materials and is written to give you a clear conceptual understanding before moving into details.\n\nsome programs are written around \u201cwhat is happening\u201d and this model is called as procedure-oriented model or programming some programs are written around \u201cwho is being affected.\u201d this model is called as object-oriented programming [Slide 2] T"
+  },
+  {
+    "id": "pyq_dbms_broad",
+    "category": "pyq",
+    "query": "pyqs of dbms",
+    "expected_query_type": "pyq_query",
+    "actual_query_type": "pyq_query",
+    "route_match": true,
+    "expected_retrieval_method": "PYQ",
+    "actual_retrieval_method": "PYQ",
+    "retrieval_match": true,
+    "expected_subject": "dbms",
+    "actual_subject": "dbms",
+    "subject_match": true,
+    "expected_contains": [
+      "previous questions"
+    ],
+    "contains_hits": {
+      "previous questions": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 5,
+    "confidence": null,
+    "confidence_applicable": false,
+    "latency_seconds": 0.003,
+    "overall_score": 1.0,
+    "answer_preview": "Here are relevant previous questions for Pyqs Of Dbms from the available Database Management Systems question papers.\n\nRelevant previous questions:\n- Describe the structure of DBMS and explain the function of each component in it.?\n- List four significant difference between file processing system and a DBMS?\n- Identify the main components in a DBMS and briefly explain what they do ?\n- Explain about various database users and administrators in DBMS.?\n- What are the three levels of abstraction in "
+  },
+  {
+    "id": "pyq_os_deadlock",
+    "category": "pyq",
+    "query": "previous questions on deadlock in os",
+    "expected_query_type": "pyq_query",
+    "actual_query_type": "pyq_query",
+    "route_match": true,
+    "expected_retrieval_method": "PYQ",
+    "actual_retrieval_method": "PYQ",
+    "retrieval_match": true,
+    "expected_subject": "os",
+    "actual_subject": "os",
+    "subject_match": true,
+    "expected_contains": [
+      "deadlock"
+    ],
+    "contains_hits": {
+      "deadlock": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 5,
+    "confidence": null,
+    "confidence_applicable": false,
+    "latency_seconds": 0.002,
+    "overall_score": 1.0,
+    "answer_preview": "Here are relevant previous questions for Deadlock In Os from the available Operating Systems question papers.\n\nRelevant previous questions:\n- Is it possible to apply the Resource allocation graph algorithm to avoid deadlock?\n- Explain banker\u2019s algorithm for deadlock avoidance with an example .?\n- Is it possible to have a deadlock involving only a single process?\n- Give an example of the situation describing deadlock.?\n- What are various methods to recover from deadlock?\n- Explain about deadlock "
+  },
+  {
+    "id": "pyq_dbms_topic_miss",
+    "category": "pyq",
+    "query": "Show pyqs on normalization in DBMS",
+    "expected_query_type": "pyq_query",
+    "actual_query_type": "pyq_query",
+    "route_match": true,
+    "expected_retrieval_method": "PYQ",
+    "actual_retrieval_method": "PYQ",
+    "retrieval_match": true,
+    "expected_subject": "dbms",
+    "actual_subject": "dbms",
+    "subject_match": true,
+    "expected_contains": [
+      "general previous questions"
+    ],
+    "contains_hits": {
+      "general previous questions": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": true,
+    "citation_count": 5,
+    "confidence": null,
+    "confidence_applicable": false,
+    "latency_seconds": 0.004,
+    "overall_score": 1.0,
+    "answer_preview": "I could not find exact previous questions on Normalization In Dbms in the currently available question papers.\n\nHowever, here are some general previous questions from Database Management Systems:\n- Describe the structure of DBMS and explain the function of each component in it.?\n- List four significant difference between file processing system and a DBMS?\n- Identify the main components in a DBMS and briefly explain what they do ?\n- Explain about various database users and administrators in DBMS."
+  },
+  {
+    "id": "unsupported_compiler",
+    "category": "unsupported",
+    "query": "Explain compiler design.",
+    "expected_query_type": "unsupported_subject",
+    "actual_query_type": "unsupported_subject",
+    "route_match": true,
+    "expected_retrieval_method": "Unsupported Subject",
+    "actual_retrieval_method": "Unsupported Subject",
+    "retrieval_match": true,
+    "expected_subject": null,
+    "actual_subject": null,
+    "subject_match": true,
+    "expected_contains": [
+      "not included"
+    ],
+    "contains_hits": {
+      "not included": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": false,
+    "citation_count": 0,
+    "confidence": null,
+    "confidence_applicable": false,
+    "latency_seconds": 0.001,
+    "overall_score": 0.85,
+    "answer_preview": "The requested subject or course, 'compiler design', is not included in the currently supported subject-information module. At present, detailed conceptual explanations are available only for the indexed core subjects. If you would like, you may enable the out-of-scope option and I can provide a general LLM-generated explanation instead."
+  },
+  {
+    "id": "gibberish_query",
+    "category": "no_source",
+    "query": "@@@ ### ???",
+    "expected_query_type": "no_source",
+    "actual_query_type": "no_source",
+    "route_match": true,
+    "expected_retrieval_method": "No Source",
+    "actual_retrieval_method": "No Source",
+    "retrieval_match": true,
+    "expected_subject": null,
+    "actual_subject": null,
+    "subject_match": true,
+    "expected_contains": [
+      "no relevant information source"
+    ],
+    "contains_hits": {
+      "no relevant information source": true
+    },
+    "keyword_coverage": 1.0,
+    "citations_present": false,
+    "citation_count": 0,
+    "confidence": null,
+    "confidence_applicable": false,
+    "latency_seconds": 0.0,
+    "overall_score": 0.85,
+    "answer_preview": "I am unable to provide a grounded response because no relevant information source was found in the currently indexed academic materials for this query."
+  }
+]

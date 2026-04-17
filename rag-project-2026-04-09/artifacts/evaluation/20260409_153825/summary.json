@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-04-09T15:39:29",
+  "total_queries": 16,
+  "route_accuracy": 1.0,
+  "retrieval_accuracy": 0.938,
+  "subject_accuracy": 1.0,
+  "citation_coverage": 0.875,
+  "average_keyword_coverage": 0.958,
+  "average_latency_seconds": 4.033,
+  "average_overall_score": 0.958,
+  "category_summary": [
+    {
+      "category": "curriculum",
+      "queries": 3,
+      "avg_score": 0.9443333333333334,
+      "avg_latency": 0.0016666666666666668,
+      "route_accuracy": 1.0,
+      "retrieval_accuracy": 1.0,
+      "keyword_coverage": 0.7776666666666667,
+      "citation_coverage": 1.0
+    },
+    {
+      "category": "graph",
+      "queries": 3,
+      "avg_score": 1.0,
+      "avg_latency": 7.764666666666667,
+      "route_accuracy": 1.0,
+      "retrieval_accuracy": 1.0,
+      "keyword_coverage": 1.0,
+      "citation_coverage": 1.0
+    },
+    {
+      "category": "no_source",
+      "queries": 1,
+      "avg_score": 0.85,
+      "avg_latency": 0.0,
+      "route_accuracy": 1.0,
+      "retrieval_accuracy": 1.0,
+      "keyword_coverage": 1.0,
+      "citation_coverage": 0.0
+    },
+    {
+      "category": "pyq",
+      "queries": 3,
+      "avg_score": 1.0,
+      "avg_latency": 0.0030000000000000005,
+      "route_accuracy": 1.0,
+      "retrieval_accuracy": 1.0,
+      "keyword_coverage": 1.0,
+      "citation_coverage": 1.0
+    },
+    {
+      "category": "subject",
+      "queries": 5,
+      "avg_score": 0.96,
+      "avg_latency": 8.244800000000001,
+      "route_accuracy": 1.0,
+      "retrieval_accuracy": 0.8,
+      "keyword_coverage": 1.0,
+      "citation_coverage": 1.0
+    },
+    {
+      "category": "unsupported",
+      "queries": 1,
+      "avg_score": 0.85,
+      "avg_latency": 0.001,
+      "route_accuracy": 1.0,
+      "retrieval_accuracy": 1.0,
+      "keyword_coverage": 1.0,
+      "citation_coverage": 0.0
+    }
+  ],
+  "method_summary": [
+    {
+      "actual_retrieval_method": "Curriculum",
+      "queries": 3,
+      "avg_score": 0.9443333333333334,
+      "avg_latency": 0.0016666666666666668,
+      "avg_confidence": 0.9
+    },
+    {
+      "actual_retrieval_method": "Graph-assisted",
+      "queries": 4,
+      "avg_score": 0.95,
+      "avg_latency": 7.69675,
+      "avg_confidence": 0.6025
+    },
+    {
+      "actual_retrieval_method": "No Source",
+      "queries": 1,
+      "avg_score": 0.85,
+      "avg_latency": 0.0,
+      "avg_confidence": 0.0
+    },
+    {
+      "actual_retrieval_method": "PYQ",
+      "queries": 3,
+      "avg_score": 1.0,
+      "avg_latency": 0.0030000000000000005,
+      "avg_confidence": 0.0
+    },
+    {
+      "actual_retrieval_method": "Unsupported Subject",
+      "queries": 1,
+      "avg_score": 0.85,
+      "avg_latency": 0.001,
+      "avg_confidence": 0.0
+    },
+    {
+      "actual_retrieval_method": "Vector",
+      "queries": 4,
+      "avg_score": 1.0,
+      "avg_latency": 8.43275,
+      "avg_confidence": 0.5275
+    }
+  ]
+}

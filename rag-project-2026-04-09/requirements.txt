@@ -1,0 +1,65 @@
+# #flask==3.1.2
+# flask>=2.3,<4.0
+# langchain==0.3.27
+# langchain-community==0.3.29
+# langchain-openai==0.3.32
+# sentence-transformers==5.1.0
+# chromadb==1.0.20
+# openai==1.105.0
+# python-dotenv==1.1.1
+# markdown2==2.5.4
+# pypdf==6.0.0
+# torch==2.8.0
+
+# # Graph Database and NLP dependencies
+# neo4j==5.15.0
+# networkx==3.2.1
+# spacy==3.7.2
+# numpy==1.26.2
+# scikit-learn==1.3.2
+# transformers==4.36.0
+
+# # Entity extraction and relationship detection
+# nltk==3.8.1
+# textblob==0.17.1
+# py2neo==2021.2.4
+
+# # Graph embedding libraries
+# node2vec==0.4.6
+# stellargraph==1.2.1
+# dgl==1.1.3
+
+# --extra-index-url https://download.pytorch.org/whl/cpu
+# Web
+# Web
+flask==3.0.3
+python-dotenv==1.0.1
+markdown2==2.4.13
+
+# LangChain + RAG
+langchain==0.3.27
+langchain-community==0.3.29
+langchain-openai==0.3.32
+chromadb==0.4.24
+sentence-transformers==2.6.1
+pypdf==4.2.0
+
+# OpenAI
+openai>=1.99.9,<2.0.0
+
+# ML / NLP
+torch==2.3.1
+scikit-learn==1.7.2
+transformers==4.40.2
+spacy==3.7.4
+nltk==3.8.1
+textblob==0.17.1
+
+# Graph (COMPATIBLE SET)
+neo4j==5.20.0
+networkx==2.8.8
+py2neo==2021.2.4
+node2vec==0.4.6
+dgl==2.2.1
+
+--extra-index-url https://download.pytorch.org/whl/cpu

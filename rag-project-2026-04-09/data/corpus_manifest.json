@@ -1,0 +1,81 @@
+{
+  "curriculum_source": "data/curriculum/course_structure/syllabus_cse.pdf",
+  "subject_syllabus_policy": "Each subject currently reuses the official syllabus_cse.pdf because the relevant subject syllabus is contained inside that shared curriculum document.",
+  "subjects": {
+    "cn": {
+      "name": "Computer Networks",
+      "folders": [
+        "syllabus",
+        "notes",
+        "slides",
+        "textbooks",
+        "programs",
+        "assignments",
+        "question_papers",
+        "ocr_processed",
+        "ocr_pending",
+        "misc"
+      ]
+    },
+    "dbms": {
+      "name": "Database Management System",
+      "folders": [
+        "syllabus",
+        "notes",
+        "slides",
+        "textbooks",
+        "programs",
+        "assignments",
+        "question_papers",
+        "ocr_processed",
+        "ocr_pending",
+        "misc"
+      ]
+    },
+    "ds": {
+      "name": "Data Structures",
+      "folders": [
+        "syllabus",
+        "notes",
+        "slides",
+        "textbooks",
+        "programs",
+        "assignments",
+        "question_papers",
+        "ocr_processed",
+        "ocr_pending",
+        "misc"
+      ]
+    },
+    "oops": {
+      "name": "Object Oriented Programming",
+      "folders": [
+        "syllabus",
+        "notes",
+        "slides",
+        "textbooks",
+        "programs",
+        "assignments",
+        "question_papers",
+        "ocr_processed",
+        "ocr_pending",
+        "misc"
+      ]
+    },
+    "os": {
+      "name": "Operating System",
+      "folders": [
+        "syllabus",
+        "notes",
+        "slides",
+        "textbooks",
+        "programs",
+        "assignments",
+        "question_papers",
+        "ocr_processed",
+        "ocr_pending",
+        "misc"
+      ]
+    }
+  }
+}

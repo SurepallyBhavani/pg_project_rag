@@ -1,0 +1,54 @@
+struct node
+{
+    int num;
+    struct node *nextptr;
+    struct node *prevptr;
+} *stnode;
+int n;
+void create(int n);
+void display();
+void insert();
+
+int main()
+{
+    printf("enter number of nodes");
+    scanf("%d",&n);
+    create(n);
+    printf("data entered in list");
+    display();
+    insert();
+    display();
+    return 0;
+}
+void create(int n)
+{
+    struct node *fnode,*temp;
+    int num,i;
+    stnode=(struct node *)malloc(sizeof(struct node));
+    printf("enter input data for node 1"); 
+    scanf("%d",&num);
+    stnode->num=num;
+    stnode->nextptr=NULL;
+    temp=stnode;
+    for(i=2;i<=n;i++)
+    {
+        fnode=(struct node *)malloc(sizeof(struct node));
+        printf("input data for node %d",i);
+        scanf("%d",&num);
+        fnode->num=num;
+        fnode->nextptr=NULL;
+        fnode->prevptr=temp; 
+        temp->nextptr=fnode;
+        temp=temp->nextptr;
+    }
+}
+void display()
+{
+    struct node *temp;
+    temp=stnode;
+    while(temp!=NULL)
+    {
+        printf("%d \n",temp->num);
+        temp=temp->nextptr;
+    }
+} 
