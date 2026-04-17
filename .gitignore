@@ -27,3 +27,5 @@ comparison-benchmark-2026-04-16/evaluation_cache.json
 *.docx
 *.csv
 !comparison-benchmark-2026-04-16/external_outputs_template.csv
+chroma.sqlite3
+*.sqlite3
