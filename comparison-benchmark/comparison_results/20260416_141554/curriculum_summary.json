@@ -1,0 +1,32 @@
+{
+  "query_count": 10,
+  "systems": [
+    {
+      "system": "eduassist",
+      "avg_relevance": 4.2,
+      "avg_completeness": 4.3,
+      "avg_clarity": 4.1,
+      "avg_appropriateness": 5.0,
+      "avg_total": 17.6,
+      "wins": 10
+    },
+    {
+      "system": "notebooklm",
+      "avg_relevance": 4.2,
+      "avg_completeness": 2.8,
+      "avg_clarity": 2.4,
+      "avg_appropriateness": 4.7,
+      "avg_total": 14.1,
+      "wins": 0
+    },
+    {
+      "system": "baseline_rag",
+      "avg_relevance": 1.3,
+      "avg_completeness": 3.8,
+      "avg_clarity": 3.1,
+      "avg_appropriateness": 2.2,
+      "avg_total": 10.4,
+      "wins": 0
+    }
+  ]
+}

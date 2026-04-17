@@ -1,0 +1,452 @@
+[
+  {
+    "id": "gold_02",
+    "query": "How does priority inversion affect process scheduling, and what is a real-world mechanism to prevent it?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Priority inversion is a critical issue in process scheduling that can significantly affect the perfo...",
+        "unified_score": 0.7,
+        "extractive_match": 1.0,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "Priority inversion affects process scheduling by causing a lower-priority process to hold up the exe...",
+        "unified_score": 0.7,
+        "extractive_match": 1.0,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "Priority inversion is a phenomenon in real-time computing and process scheduling where a lower-prior...",
+        "unified_score": 0.62,
+        "extractive_match": 0.25,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "gold_07",
+    "query": "How is a database transaction's ACID properties enforced by the concurrency control manager?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "In the realm of database management systems (DBMS), the enforcement of a transaction's ACID properti...",
+        "unified_score": 0.8,
+        "extractive_match": 0.5,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "A database transaction's ACID properties are enforced by the concurrency control manager through sev...",
+        "unified_score": 0.5,
+        "extractive_match": 0.5,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "The ACID properties of a database transaction—Atomicity, Consistency, Isolation, and Durability—are ...",
+        "unified_score": 0.81,
+        "extractive_match": 0.62,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "gold_17",
+    "query": "Explain how polymorphism in OOP relates to method overriding and dynamic binding at runtime.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Polymorphism is a cornerstone of object-oriented programming (OOP) that facilitates the ability to i...",
+        "unified_score": 0.84,
+        "extractive_match": 0.6,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "Polymorphism in object-oriented programming (OOP) allows a function or method to behave differently ...",
+        "unified_score": 0.46,
+        "extractive_match": 0.4,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "Polymorphism is a core concept in Object-Oriented Programming (OOP) that allows objects of different...",
+        "unified_score": 0.7,
+        "extractive_match": 0.4,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "gold_24",
+    "query": "Explain thrashing in operating systems and its impact on CPU utilization.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Thrashing in operating systems is a critical concept that underscores the limitations and challenges...",
+        "unified_score": 1.0,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "Thrashing in operating systems occurs when a process does not have enough pages available in memory,...",
+        "unified_score": 0.7,
+        "extractive_match": 1.0,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "Thrashing in operating systems refers to a situation where the system spends a significant amount of...",
+        "unified_score": 1.0,
+        "extractive_match": 1.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "gold_27",
+    "query": "What is a friend function in C++ and how does it break strict encapsulation rules?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "In C++, a friend function is a unique construct that provides a mechanism for functions to access th...",
+        "unified_score": 0.61,
+        "extractive_match": 0.25,
+        "recall": 1.0,
+        "faithfulness": 2,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "A friend function in C++ is a special type of function that has the ability to access the private an...",
+        "unified_score": 0.4,
+        "extractive_match": 0.25,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "In C++, a **friend function** is a function that is not a member of a class but has the ability to a...",
+        "unified_score": 0.62,
+        "extractive_match": 0.25,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "gold_30",
+    "query": "What is a heap data structure and what algorithm uses it for O(n log n) sorting?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "A heap data structure is a specialized tree-based structure that satisfies the heap property, which ...",
+        "unified_score": 0.8,
+        "extractive_match": 0.75,
+        "recall": 0.67,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "A heap is a specialized tree-based data structure that satisfies the heap property; in a max-heap, f...",
+        "unified_score": 0.6,
+        "extractive_match": 0.75,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "A **heap** is a specialized tree-based data structure that satisfies the heap property. In a max-hea...",
+        "unified_score": 0.62,
+        "extractive_match": 0.25,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_02",
+    "query": "Can you summarize the plot of the latest Marvel movie according to the networking syllabus?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The official syllabus structure available for CONSTITUTION OF INDIA is as follows.\n\nSemester: II Yea...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 0
+      },
+      "baseline_rag": {
+        "answer_preview": "The retrieved context does not contain any information regarding the plot of a Marvel movie or any r...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 0
+      },
+      "chatgpt": {
+        "answer_preview": "As of my last update in October 2023, the latest Marvel movie is \"The Marvels,\" which was released i...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 4
+      }
+    }
+  },
+  {
+    "id": "adv_03",
+    "query": "Why is structural engineering considered harder than aerospace engineering?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "I am unable to provide a grounded response because no relevant information source was found in the c...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 0
+      },
+      "baseline_rag": {
+        "answer_preview": "The retrieved context does not provide specific information regarding the difficulty comparison betw...",
+        "unified_score": 0.51,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "chatgpt": {
+        "answer_preview": "The perception that structural engineering is harder than aerospace engineering (or vice versa) can ...",
+        "unified_score": 0.5,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_05",
+    "query": "$%&(*#)@! Gibberish test... please explain what *&#* means in DBMS.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "It appears you have provided a nonsensical string rather than a specific question regarding the topi...",
+        "unified_score": 0.86,
+        "extractive_match": 0.8,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 3
+      },
+      "baseline_rag": {
+        "answer_preview": "The content retrieved does not provide any specific meanings or explanations related to \"*&#*\". It p...",
+        "unified_score": 0.62,
+        "extractive_match": 0.2,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 3
+      },
+      "chatgpt": {
+        "answer_preview": "It seems like your message contains gibberish, but I can help explain some common concepts in Databa...",
+        "unified_score": 0.6,
+        "extractive_match": 0.4,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 3
+      }
+    }
+  },
+  {
+    "id": "adv_06",
+    "query": "Explain how to bake a chocolate cake using object oriented programming.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "To illustrate the concept of baking a chocolate cake through the lens of Object-Oriented Programming...",
+        "unified_score": 0.72,
+        "extractive_match": 0.3,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "In object-oriented programming (OOP), we can model the process of baking a chocolate cake by creatin...",
+        "unified_score": 0.72,
+        "extractive_match": 0.3,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "Certainly! To explain how to bake a chocolate cake using Object-Oriented Programming (OOP) concepts,...",
+        "unified_score": 0.55,
+        "extractive_match": 0.1,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_07",
+    "query": "What are the political causes of World War 2 according to Operating Systems?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The question regarding the political causes of World War II is unrelated to the topic of operating s...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 0
+      },
+      "baseline_rag": {
+        "answer_preview": "The context provided does not contain any information regarding the political causes of World War II...",
+        "unified_score": 0.6,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "It seems there might be a misunderstanding in your question. Operating systems are a branch of compu...",
+        "unified_score": 0.5,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_08",
+    "query": "Generate a fake syllabus for a class on underwater basket weaving.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "I'm sorry, but I can only provide information based on the official curriculum context provided. If ...",
+        "unified_score": 0.48,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      "baseline_rag": {
+        "answer_preview": "**Course Title: Underwater Basket Weaving 101**\n\n**Course Description:**\nThis introductory course ex...",
+        "unified_score": 0.6,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "chatgpt": {
+        "answer_preview": "**Course Title:** Underwater Basket Weaving 101\n\n**Course Code:** UWB 101\n\n**Semester:** Fall 2023\n\n...",
+        "unified_score": 0.5,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_09",
+    "query": "I need help with my physics homework on quantum mechanics. Explain String Theory.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The requested topic 'String Theory' is not in the indexed curriculum. Please enable the 'Out-of-Scop...",
+        "unified_score": 0.51,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "baseline_rag": {
+        "answer_preview": "The retrieved context does not contain any information about String Theory in the context of quantum...",
+        "unified_score": 0.51,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "chatgpt": {
+        "answer_preview": "String theory is a theoretical framework in physics that attempts to reconcile general relativity (w...",
+        "unified_score": 0.5,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_11",
+    "query": "Explain database normalization, but write the entire response in ancient Latin.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Database normalization is a concept that cannot be effectively conveyed using ancient Latin due to i...",
+        "unified_score": 0.33,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 0,
+        "relevance": 1
+      },
+      "baseline_rag": {
+        "answer_preview": "Database normalization is a technique used to minimize redundancy in relations and eliminate undesir...",
+        "unified_score": 0.54,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 3
+      },
+      "chatgpt": {
+        "answer_preview": "Normalizatio datorum est processus, per quem structura tabularum in basi datorum ordinatur, ut redun...",
+        "unified_score": 0.5,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_12",
+    "query": "What is the best restaurant in New York City according to the computer networks textbook?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The officially listed learning resources for COMPUTER NETWORKS are as follows.\n\nTextbook:\n:\n1. Compu...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 0
+      },
+      "baseline_rag": {
+        "answer_preview": "The retrieved context does not provide any information regarding restaurants in New York City or eva...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 0
+      },
+      "chatgpt": {
+        "answer_preview": "It seems there might be a misunderstanding. Computer networks textbooks typically focus on topics re...",
+        "unified_score": 0.45,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 4
+      }
+    }
+  }
+]

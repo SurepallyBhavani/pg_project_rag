@@ -1,0 +1,8 @@
+{
+  "Total Evaluated": 10,
+  "Average Unified Score": "72.0%",
+  "Average Extractive Match": "51.2%",
+  "Average Recall@K": "86.7%",
+  "Average RAGAS Faithfulness": "4.50 / 5",
+  "Average RAGAS Relevance": "4.00 / 5"
+}

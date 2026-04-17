@@ -1,0 +1,322 @@
+[
+  {
+    "id": "curriculum_01",
+    "category": "curriculum",
+    "query": "What is the syllabus of Computer Networks?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=595, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 2,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=1, length=184, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1497, sentences=13"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_02",
+    "category": "curriculum",
+    "query": "What is the syllabus of Compiler Design?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=560, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 3,
+          "completeness": 4,
+          "clarity": 2,
+          "appropriateness": 2,
+          "note": "Overlap=2, length=334, sentences=1"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1976, sentences=16"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_03",
+    "category": "curriculum",
+    "query": "List all labs under Computer Networks.",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 0,
+          "completeness": 1,
+          "clarity": 2,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=0, sentences=1"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 2,
+          "clarity": 5,
+          "appropriateness": 4,
+          "note": "Overlap=0, length=103, sentences=6"
+        },
+        "eduassist": {
+          "relevance": 3,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=2415, sentences=54"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_04",
+    "category": "curriculum",
+    "query": "What are the textbooks for Software Engineering?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=266, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 2,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=1, length=574, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 3,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=697, sentences=15"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_05",
+    "category": "curriculum",
+    "query": "What are the textbooks for Computer Networks?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 3,
+          "completeness": 2,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=129, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=493, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 3,
+          "completeness": 4,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=375, sentences=11"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_06",
+    "category": "curriculum",
+    "query": "In which semester is Machine Learning placed according to the course structure?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 2,
+          "clarity": 2,
+          "appropriateness": 5,
+          "note": "Overlap=4, length=89, sentences=1"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=331, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 4,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=3469, sentences=23"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_07",
+    "category": "curriculum",
+    "query": "What are the prerequisites for Database Management Systems?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 4,
+          "completeness": 2,
+          "clarity": 2,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=82, sentences=1"
+        },
+        "baseline_rag": {
+          "relevance": 1,
+          "completeness": 4,
+          "clarity": 4,
+          "appropriateness": 2,
+          "note": "Overlap=1, length=265, sentences=4"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 2,
+          "clarity": 2,
+          "appropriateness": 5,
+          "note": "Overlap=4, length=104, sentences=1"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_08",
+    "category": "curriculum",
+    "query": "What are the prerequisites for Compiler Design?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 3,
+          "clarity": 2,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=182, sentences=1"
+        },
+        "baseline_rag": {
+          "relevance": 3,
+          "completeness": 4,
+          "clarity": 2,
+          "appropriateness": 2,
+          "note": "Overlap=2, length=334, sentences=1"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=227, sentences=3"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_09",
+    "category": "curriculum",
+    "query": "In which semester is Operating Systems placed according to the course structure?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 2,
+          "clarity": 2,
+          "appropriateness": 5,
+          "note": "Overlap=4, length=79, sentences=1"
+        },
+        "baseline_rag": {
+          "relevance": 2,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=2, length=353, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 4,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1797, sentences=17"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "curriculum_10",
+    "category": "curriculum",
+    "query": "What is the L-T-P-C structure for Software Engineering?",
+    "judgment": {
+      "systems": {
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 2,
+          "clarity": 2,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=93, sentences=1"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=180, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=369, sentences=3"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  }
+]

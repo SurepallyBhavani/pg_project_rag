@@ -1,0 +1,977 @@
+[
+  {
+    "id": "subject_01",
+    "category": "subject",
+    "query": "What is normalization in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1672, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=365, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=534, sentences=5"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=776, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_02",
+    "category": "subject",
+    "query": "Explain inheritance in OOPS.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1763, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=353, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=340, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=934, sentences=7"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_03",
+    "category": "subject",
+    "query": "Explain process synchronization in OS.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=2127, sentences=6"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=414, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=447, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1673, sentences=6"
+        }
+      },
+      "best_overall": "chatgpt",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_04",
+    "category": "subject",
+    "query": "What is a linked list in Data Structures?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1286, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=308, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=246, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1159, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_05",
+    "category": "subject",
+    "query": "Explain the OSI model in Computer Networks.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1853, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=416, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 4,
+          "note": "Overlap=0, length=437, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=862, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_06",
+    "category": "subject",
+    "query": "What is deadlock in Operating Systems?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1702, sentences=4"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=336, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=193, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=811, sentences=7"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_07",
+    "category": "subject",
+    "query": "Explain encapsulation in OOPS.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1509, sentences=4"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=395, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=209, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1304, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_08",
+    "category": "subject",
+    "query": "What is functional dependency in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1327, sentences=5"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=310, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 2,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=528, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1008, sentences=9"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_09",
+    "category": "subject",
+    "query": "Explain binary search tree in Data Structures.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1552, sentences=2"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=347, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=3, length=277, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=762, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_10",
+    "category": "subject",
+    "query": "What is congestion control in Computer Networks?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1652, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=368, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=255, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1033, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_11",
+    "category": "subject",
+    "query": "Explain paging in Operating Systems.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1597, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=395, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=295, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=633, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_12",
+    "category": "subject",
+    "query": "What is polymorphism in OOPS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1466, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=306, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=329, sentences=4"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1290, sentences=9"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_13",
+    "category": "subject",
+    "query": "Explain stack and its operations in Data Structures.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 3,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1506, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=354, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 3,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=336, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=827, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_14",
+    "category": "subject",
+    "query": "What is transaction management in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1704, sentences=4"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=361, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=334, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=907, sentences=9"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "subject_15",
+    "category": "subject",
+    "query": "Explain transport layer responsibilities in Computer Networks.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1708, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=427, sentences=3"
+        },
+        "baseline_rag": {
+          "relevance": 3,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=165, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=752, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_01",
+    "category": "graph",
+    "query": "What should I study before BCNF in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 2,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1594, sentences=10"
+        },
+        "notebooklm": {
+          "relevance": 2,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=297, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 2,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=147, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=901, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_02",
+    "category": "graph",
+    "query": "How is deadlock related to process synchronization in OS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=874, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=375, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 3,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=2, length=453, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1514, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_03",
+    "category": "graph",
+    "query": "Which topics are related to inheritance in OOPS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=699, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=345, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=377, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=1500, sentences=10"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_04",
+    "category": "graph",
+    "query": "What concepts are connected to trees in Data Structures?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=673, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=238, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 2,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=1, length=352, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1296, sentences=9"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_05",
+    "category": "graph",
+    "query": "What should I learn before routing in Computer Networks?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=564, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 2,
+          "completeness": 3,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=301, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 2,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=139, sentences=3"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=665, sentences=6"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_06",
+    "category": "graph",
+    "query": "Which topics are related to normalization in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=581, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=336, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 4,
+          "appropriateness": 2,
+          "note": "Overlap=1, length=543, sentences=5"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=1, length=814, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_07",
+    "category": "graph",
+    "query": "How is paging related to memory management in OS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=787, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=2, length=366, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=2, length=509, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1600, sentences=7"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_08",
+    "category": "graph",
+    "query": "What topics are linked to encapsulation in OOPS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=652, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=254, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 0,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=0, length=457, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=1437, sentences=10"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_09",
+    "category": "graph",
+    "query": "What concepts are related to graph traversal in Data Structures?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=745, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=281, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 3,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=2, length=365, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1029, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  },
+  {
+    "id": "graph_10",
+    "category": "graph",
+    "query": "How is TCP related to congestion control in Computer Networks?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 3,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=869, sentences=3"
+        },
+        "notebooklm": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=3, length=337, sentences=2"
+        },
+        "baseline_rag": {
+          "relevance": 5,
+          "completeness": 4,
+          "clarity": 3,
+          "appropriateness": 2,
+          "note": "Overlap=3, length=345, sentences=2"
+        },
+        "eduassist": {
+          "relevance": 5,
+          "completeness": 5,
+          "clarity": 5,
+          "appropriateness": 5,
+          "note": "Overlap=3, length=1056, sentences=8"
+        }
+      },
+      "best_overall": "eduassist",
+      "judge_mode": "heuristic"
+    }
+  }
+]

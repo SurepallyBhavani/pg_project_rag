@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduAssist RAG Academic Assistant — ask questions about your syllabus, notes, and textbooks.">
+  <title>EduAssist — RAG Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #e2e8f0;
+      background: #ffffff;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #334155;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+    }
+    .chat-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 32px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .messages-wrapper {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .message-row {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+    }
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .avatar.user { background: #475569; color: #ffffff; }
+    .avatar.ai { background: #d8b4fe; color: #4c1d95; }
+    .message-content { flex: 1; }
+    .user-bubble {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      color: #1e3a8a;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    .ai-reply {
+      font-size: 1.05rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .query-analysis {
+      background: #fdfdfd;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .qa-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #475569;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .qa-tags {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .tag.green { background: #dcfce7; color: #166534; }
+    .tag.blue { background: #e0e7ff; color: #3730a3; }
+    .qa-metrics {
+      display: flex;
+      gap: 24px;
+      color: #64748b;
+      font-size: 0.85rem;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 12px;
+    }
+    .metric {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .input-wrapper {
+      border-top: 1px solid #e2e8f0;
+      padding: 16px;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .input-container {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+    form {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 10px 16px;
+      background: #f8fafc;
+      transition: border 0.2s;
+    }
+    form:focus-within {
+      border-color: #94a3b8;
+    }
+    form textarea {
+      flex: 1;
+      border: none;
+      resize: none;
+      min-height: 24px;
+      max-height: 150px;
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 8px 0;
+      background: transparent;
+      outline: none;
+      color: #1e293b;
+    }
+    .submit-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #475569;
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-bottom: 2px;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover {
+      background: #334155;
+    }
+    .submit-btn svg { width: 18px; height: 18px; }
+    
+    .answer h2, .answer h3 { font-size: 1.15rem; color: #1e293b; margin-top: 24px; }
+    .answer p { margin-top: 0; }
+    .citations-card {
+      margin-top: 24px;
+      padding: 16px;
+      background: #fefce8;
+      border-radius: 12px;
+      border: 1px solid #fef08a;
+    }
+    .citations-title { font-size: 0.95rem; font-weight: 600; color: #854d0e; margin-bottom: 12px; }
+    .citation-item { font-size: 0.9rem; color: #713f12; margin-bottom: 6px; }
+    .error-card {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    /* ── Feedback buttons ── */
+    .feedback-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .fb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+      color: #475569;
+    }
+    .fb-btn:hover { background: #e2e8f0; border-color: #94a3b8; transform: scale(1.04); }
+    .fb-btn.active-helpful  { background: #dcfce7; border-color: #4ade80; color: #166534; }
+    .fb-btn.active-not_helpful { background: #fee2e2; border-color: #f87171; color: #991b1b; }
+    .fb-thanks { font-size: 0.8rem; color: #64748b; display: none; }
+
+    /* ── Feedback stats panel ── */
+    .fb-stats {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: #64748b;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 7px 14px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .fb-stats:hover { background: #e2e8f0; }
+    .fb-stat-item { display: flex; align-items: center; gap: 4px; font-weight: 600; }
+    .fb-stat-item.green { color: #16a34a; }
+    .fb-stat-item.red   { color: #dc2626; }
+
+    /* ── Analysis modal ── */
+    .fb-modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .fb-modal-overlay.open { display: flex; }
+    .fb-modal {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 520px;
+      width: 95%;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.18);
+      position: relative;
+      animation: modalIn 0.22s ease;
+    }
+    @keyframes modalIn { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+    .fb-modal h2 { margin: 0 0 18px; font-size: 1.15rem; color: #1e293b; }
+    .fb-modal-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; font-size: 1.4rem;
+      cursor: pointer; color: #94a3b8;
+    }
+    .fb-modal-close:hover { color: #475569; }
+    .fb-bar-row {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+      font-size: 0.88rem;
+    }
+    .fb-bar-label { width: 110px; color: #475569; font-weight: 600; }
+    .fb-bar-track { flex:1; height: 10px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+    .fb-bar-fill  { height: 100%; border-radius: 999px; transition: width 0.5s ease; }
+    .fb-bar-fill.green { background: #4ade80; }
+    .fb-bar-fill.red   { background: #f87171; }
+    .fb-bar-count { width: 26px; text-align: right; color: #64748b; font-size: 0.82rem; }
+    .fb-section-title { font-weight: 700; color: #334155; font-size: 0.9rem; margin: 18px 0 8px; }
+    .fb-recommendation {
+      background: #fefce8; border: 1px solid #fde68a;
+      border-radius: 10px; padding: 10px 14px; font-size: 0.82rem;
+      color: #713f12; margin-bottom: 8px;
+    }
+    .fb-empty { color: #94a3b8; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <span>🧠</span>
+      <span>RAG Assistant</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div class="status">
+        <div class="dot"></div>
+        <span>System Ready</span>
+      </div>
+      <div class="fb-stats" id="fb-stats-btn" title="Click to view feedback analysis" role="button" tabindex="0" aria-label="Feedback statistics">
+        <span>📊 Feedback</span>
+        <span class="fb-stat-item green">👍 <span id="hdr-helpful">0</span></span>
+        <span class="fb-stat-item red">👎 <span id="hdr-not-helpful">0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-container" id="chat-container">
+    <div class="messages-wrapper">
+      {% if not request.form.get('query') %}
+        <div style="text-align: center; color: #94a3b8; margin-top: 40px;">
+          Welcome! Ask me any question about your syllabus, notes, or textbooks.
+        </div>
+      {% endif %}
+
+      {% if request.form.get('query') %}
+        <div class="message-row">
+          <div class="avatar user">U</div>
+          <div class="message-content">
+            <div class="user-bubble">{{ request.form.get('query') }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if error %}
+        <div class="message-row">
+          <div class="avatar ai">AI</div>
+          <div class="message-content">
+            <div class="error-card">{{ error }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if answer %}
+        <div class="message-row">
+          <div class="avatar ai">AI</div>
+          <div class="message-content ai-reply">
+            
+            {% if query_info %}
+              <div class="query-analysis">
+                <div class="qa-title">🧠 Query Analysis</div>
+                <div class="qa-tags">
+                  {% if query_info.retrieval_method %}
+                    <span class="tag blue">{{ query_info.retrieval_method | upper }}</span>
+                  {% endif %}
+                </div>
+                <div class="qa-metrics">
+                  {% if query_info.confidence is not none %}
+                    <div class="metric">
+                      <span>📊</span>
+                      <span>{{ "%.1f"|format(query_info.confidence * 100) }}% confidence</span>
+                    </div>
+                  {% endif %}
+                  <div class="metric">
+                    <span>⚡</span>
+                    <span>{{ "%.3f"|format(query_info.processing_time) }}s processing</span>
+                  </div>
+                  {% if feedback_payload and feedback_payload.source_type %}
+                    <div class="metric">
+                      <span>🔧</span>
+                      <span>{{ feedback_payload.source_type }} method</span>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+
+            <div class="answer">{{ answer | safe }}</div>
+            
+            {% if sources %}
+              <div class="citations-card">
+                <div class="citations-title">Sources</div>
+                {% for source in sources %}
+                  <div class="citation-item">• {{ source }}</div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if feedback_payload %}
+              <div class="feedback-row" id="feedback-row">
+                <span>Was this helpful?</span>
+                <button class="fb-btn" id="btn-helpful"     onclick="submitFeedback('helpful')"     aria-label="Mark as helpful">👍 Helpful</button>
+                <button class="fb-btn" id="btn-not-helpful" onclick="submitFeedback('not_helpful')" aria-label="Mark as not helpful">👎 Not helpful</button>
+                <span class="fb-thanks" id="fb-thanks">Thanks for your feedback!</span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <div class="input-container">
+      <form method="POST">
+        <textarea name="query" placeholder="Ask any question about your syllabus, notes, or textbooks..." required rows="1" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+        <button type="submit" class="submit-btn" aria-label="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+        <!-- hidden checkbox -->
+        <input type="checkbox" name="allow_out_of_scope" id="hidden_oos" style="display:none;" {% if allow_out_of_scope %}checked{% endif %}>
+      </form>
+      <label class="checkbox-row" for="hidden_oos">
+        <input type="checkbox" onchange="document.getElementById('hidden_oos').checked = this.checked;" {% if allow_out_of_scope %}checked{% endif %}>
+        <span>Allow general LLM-generated answers for out-of-scope subjects.</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Feedback analysis modal -->
+  <div class="fb-modal-overlay" id="fb-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="fb-modal-title">
+    <div class="fb-modal">
+      <button class="fb-modal-close" id="fb-modal-close" aria-label="Close">&times;</button>
+      <h2 id="fb-modal-title">📊 Feedback Analysis</h2>
+      <div id="fb-modal-body"><p class="fb-empty">Loading…</p></div>
+    </div>
+  </div>
+
+  <script>
+    /* ── scroll to bottom ── */
+    const chatContainer = document.getElementById('chat-container');
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+
+    /* ── feedback payload injected from Jinja2 ── */
+    const FEEDBACK_PAYLOAD = {{ feedback_payload | tojson if feedback_payload else 'null' }};
+
+    /* ── submit helpful / not helpful ── */
+    function submitFeedback(label) {
+      if (!FEEDBACK_PAYLOAD) return;
+      const payload = Object.assign({}, FEEDBACK_PAYLOAD, { feedback: label });
+
+      fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(r => r.json())
+      .then(() => {
+        const btnH  = document.getElementById('btn-helpful');
+        const btnN  = document.getElementById('btn-not-helpful');
+        const thanks = document.getElementById('fb-thanks');
+        if (btnH && btnN) {
+          btnH.disabled = true;
+          btnN.disabled = true;
+          btnH.classList.toggle('active-helpful',    label === 'helpful');
+          btnN.classList.toggle('active-not_helpful', label === 'not_helpful');
+        }
+        if (thanks) thanks.style.display = 'inline';
+        loadFeedbackStats();
+      })
+      .catch(err => console.error('Feedback error:', err));
+    }
+
+    /* ── load header stats ── */
+    function loadFeedbackStats() {
+      fetch('/api/feedback_summary')
+        .then(r => r.json())
+        .then(data => {
+          if (!data.success) return;
+          const s = data.summary;
+          const hEl = document.getElementById('hdr-helpful');
+          const nEl = document.getElementById('hdr-not-helpful');
+          if (hEl) hEl.textContent = s.helpful || 0;
+          if (nEl) nEl.textContent = s.not_helpful || 0;
+          window._fbSummary = s;   // cache for modal
+        })
+        .catch(() => {});
+    }
+
+    /* ── render modal body ── */
+    function renderModal(s) {
+      const total = s.total_feedback || 0;
+      const helpfulRatio  = total ? s.helpful / total : 0;
+      const unhelpfulRatio = total ? s.not_helpful / total : 0;
+
+      let html = '';
+      if (total === 0) {
+        html = '<p class="fb-empty">No feedback recorded yet. Submit your first rating above!</p>';
+      } else {
+        html += `<p style="font-size:.85rem;color:#64748b;margin-bottom:14px">Total responses rated: <strong>${total}</strong></p>`;
+        html += '<div class="fb-bar-row">';
+        html += `<span class="fb-bar-label">👍 Helpful</span>`;
+        html += `<div class="fb-bar-track"><div class="fb-bar-fill green" style="width:${(helpfulRatio*100).toFixed(1)}%"></div></div>`;
+        html += `<span class="fb-bar-count">${s.helpful}</span></div>`;
+
+        html += '<div class="fb-bar-row">';
+        html += `<span class="fb-bar-label">👎 Not helpful</span>`;
+        html += `<div class="fb-bar-track"><div class="fb-bar-fill red" style="width:${(unhelpfulRatio*100).toFixed(1)}%"></div></div>`;
+        html += `<span class="fb-bar-count">${s.not_helpful}</span></div>`;
+
+        if (s.top_unhelpful_query_types && s.top_unhelpful_query_types.length) {
+          html += '<div class="fb-section-title">⚠️ Query types with most not-helpful ratings</div>';
+          s.top_unhelpful_query_types.forEach(([type, count]) => {
+            html += `<div class="fb-recommendation"><strong>${type}</strong> — ${count} not-helpful response${count!==1?'s':''}</div>`;
+          });
+        }
+        if (s.top_unhelpful_methods && s.top_unhelpful_methods.length) {
+          html += '<div class="fb-section-title">🔧 Retrieval methods with most not-helpful ratings</div>';
+          s.top_unhelpful_methods.forEach(([method, count]) => {
+            html += `<div class="fb-recommendation"><strong>${method}</strong> — ${count} not-helpful response${count!==1?'s':''}</div>`;
+          });
+        }
+      }
+      document.getElementById('fb-modal-body').innerHTML = html;
+    }
+
+    /* ── open / close modal ── */
+    function openModal() {
+      document.getElementById('fb-modal-overlay').classList.add('open');
+      const cached = window._fbSummary;
+      if (cached) {
+        renderModal(cached);
+      } else {
+        fetch('/api/feedback_summary')
+          .then(r => r.json())
+          .then(data => { if (data.success) renderModal(data.summary); })
+          .catch(() => { document.getElementById('fb-modal-body').innerHTML = '<p class="fb-empty">Could not load feedback data.</p>'; });
+      }
+    }
+
+    document.getElementById('fb-stats-btn').addEventListener('click', openModal);
+    document.getElementById('fb-stats-btn').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(); });
+    document.getElementById('fb-modal-close').addEventListener('click', () => document.getElementById('fb-modal-overlay').classList.remove('open'));
+    document.getElementById('fb-modal-overlay').addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.classList.remove('open'); });
+
+    /* ── load stats on page load ── */
+    loadFeedbackStats();
+  </script>
+</body>
+</html>

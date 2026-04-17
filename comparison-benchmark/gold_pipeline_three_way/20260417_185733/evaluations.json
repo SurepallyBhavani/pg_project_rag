@@ -1,0 +1,452 @@
+[
+  {
+    "id": "gold_02",
+    "query": "How does priority inversion affect process scheduling, and what is a real-world mechanism to prevent it?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "A Real-World Mechanism To Prevent It is an important concept in Operating Systems. The explanation b...",
+        "unified_score": 0.67,
+        "extractive_match": 1.0,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 4
+      },
+      "baseline_rag": {
+        "answer_preview": "Indirectly, a process with a lower priority—process M—has affected how long process H must wait for ...",
+        "unified_score": 0.54,
+        "extractive_match": 0.75,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 3
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "gold_07",
+    "query": "How is a database transaction's ACID properties enforced by the concurrency control manager?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "How Is A Database Transaction'S Acid Properties Enforced By The Concurrency Control Manager is an im...",
+        "unified_score": 0.73,
+        "extractive_match": 0.88,
+        "recall": 0.25,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "However, there are more efﬁcient concurrency-control policies forensuring serializability.\n\n[Page 65...",
+        "unified_score": 0.51,
+        "extractive_match": 0.75,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "gold_17",
+    "query": "Explain how polymorphism in OOP relates to method overriding and dynamic binding at runtime.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "How Polymorphism In Oop Relates To Method Overriding And Dynamic Binding At Runtime is an important ...",
+        "unified_score": 0.9,
+        "extractive_match": 1.0,
+        "recall": 0.67,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "[Slide 6] Runtime polymorphism If the appropriate member function could be selected while the progra...",
+        "unified_score": 0.59,
+        "extractive_match": 0.8,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 4
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "gold_24",
+    "query": "Explain thrashing in operating systems and its impact on CPU utilization.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Thrashing In Operating Systems And Its Impact On Cpu Utilization is an important concept in Operatin...",
+        "unified_score": 0.94,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 4,
+        "relevance": 4
+      },
+      "baseline_rag": {
+        "answer_preview": "[Slide 44] Thrashing If a process does not have “ enough ” pages, the page-fault rate is very high P...",
+        "unified_score": 0.67,
+        "extractive_match": 1.0,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 4
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "gold_27",
+    "query": "What is a friend function in C++ and how does it break strict encapsulation rules?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "A Friend Function In C++ And How Does It Break Strict Encapsulation Rules is an important concept in...",
+        "unified_score": 0.85,
+        "extractive_match": 1.0,
+        "recall": 0.5,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "[Slide 16] Friendly functions If two classes want to share a particular function, it is possible thr...",
+        "unified_score": 0.45,
+        "extractive_match": 0.75,
+        "recall": 0.0,
+        "faithfulness": 2,
+        "relevance": 3
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "gold_30",
+    "query": "What is a heap data structure and what algorithm uses it for O(n log n) sorting?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "A Heap Data Structure And What Algorithm Uses It For O(N Log N) Sorting is an important concept in D...",
+        "unified_score": 0.9,
+        "extractive_match": 1.0,
+        "recall": 0.67,
+        "faithfulness": 5,
+        "relevance": 5
+      },
+      "baseline_rag": {
+        "answer_preview": "Heap Sort 84 Time Complexities 86 Graphs: Basic terminology 87 Representation of graphs 89 Graph tra...",
+        "unified_score": 0.54,
+        "extractive_match": 0.75,
+        "recall": 0.0,
+        "faithfulness": 5,
+        "relevance": 3
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "adv_02",
+    "query": "Can you summarize the plot of the latest Marvel movie according to the networking syllabus?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The official syllabus structure available for CONSTITUTION OF INDIA is as follows.\n\nSemester: II Yea...",
+        "unified_score": 0.76,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "baseline_rag": {
+        "answer_preview": "Task 4: Charts and Pivot Tables – Charts, Pivot Tables Task 5: Conditionals and Lookup Tables - Cond...",
+        "unified_score": 0.76,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.8,
+        "extractive_match": 1.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 1
+      }
+    }
+  },
+  {
+    "id": "adv_03",
+    "query": "Why is structural engineering considered harder than aerospace engineering?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "I am unable to provide a grounded response because no relevant information source was found in the c...",
+        "unified_score": 0.91,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "baseline_rag": {
+        "answer_preview": "The 1960s gave birth to structured programming.\n\nthe structure of ALGOL or Modula-2.\n\nC Is a Program...",
+        "unified_score": 0.76,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "adv_05",
+    "query": "$%&(*#)@! Gibberish test... please explain what *&#* means in DBMS.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "What *&#* Means In Dbms is an important concept in Database Management Systems. The explanation belo...",
+        "unified_score": 0.89,
+        "extractive_match": 0.8,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 4
+      },
+      "baseline_rag": {
+        "answer_preview": "from department where building like ’%Watson%’; [Page 104] 3.4 Additional Basic Operations 77 For pa...",
+        "unified_score": 0.6,
+        "extractive_match": 0.6,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.3,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 1
+      }
+    }
+  },
+  {
+    "id": "adv_06",
+    "query": "Explain how to bake a chocolate cake using object oriented programming.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "How To Bake A Chocolate Cake Using Object Oriented Programming is an important concept in Object-Ori...",
+        "unified_score": 0.65,
+        "extractive_match": 0.35,
+        "recall": 1.0,
+        "faithfulness": 4,
+        "relevance": 3
+      },
+      "baseline_rag": {
+        "answer_preview": "Object-Oriented Programming The program design process that we outlined in the previous section repr...",
+        "unified_score": 0.6,
+        "extractive_match": 0.3,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.3,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 1
+      }
+    }
+  },
+  {
+    "id": "adv_07",
+    "query": "What are the political causes of World War 2 according to Operating Systems?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "What Are The Political Causes Of World War 2 According To Operating Systems is an important concept ...",
+        "unified_score": 0.76,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "baseline_rag": {
+        "answer_preview": "To understand more fully the operating system's role, we next explore operating systems from two vie...",
+        "unified_score": 0.88,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.8,
+        "extractive_match": 1.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 1
+      }
+    }
+  },
+  {
+    "id": "adv_08",
+    "query": "Generate a fake syllabus for a class on underwater basket weaving.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Based on the official curriculum document, the relevant syllabus information is as follows.\n\nI/II -S...",
+        "unified_score": 0.76,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "baseline_rag": {
+        "answer_preview": "and access the Internet.\n\nand access the Internet.\n\nand access the Internet....",
+        "unified_score": 0.75,
+        "extractive_match": 0.67,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 1.0,
+        "extractive_match": 1.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 5
+      }
+    }
+  },
+  {
+    "id": "adv_09",
+    "query": "I need help with my physics homework on quantum mechanics. Explain String Theory.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The requested topic 'String Theory' is not in the indexed curriculum. I do not have the context to e...",
+        "unified_score": 0.83,
+        "extractive_match": 0.8,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "baseline_rag": {
+        "answer_preview": "The string class is very large, with many constructors and member functions.\n\nThe first form constru...",
+        "unified_score": 0.76,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 1,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.8,
+        "extractive_match": 1.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 1
+      }
+    }
+  },
+  {
+    "id": "adv_11",
+    "query": "Explain database normalization, but write the entire response in ancient Latin.",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "Database Normalization, But Write The Entire Response In Ancient Latin is an important concept in Da...",
+        "unified_score": 0.57,
+        "extractive_match": 0.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 4
+      },
+      "baseline_rag": {
+        "answer_preview": "An extensive theory of normalization has been developed that helps formally deﬁne what database desi...",
+        "unified_score": 0.97,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 4
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.25,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 0
+      }
+    }
+  },
+  {
+    "id": "adv_12",
+    "query": "What is the best restaurant in New York City according to the computer networks textbook?",
+    "systems": {
+      "eduassist": {
+        "answer_preview": "The officially listed learning resources for COMPUTER NETWORKS are as follows.\n\nTextbook:\n:\n1. Compu...",
+        "unified_score": 0.91,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 2
+      },
+      "baseline_rag": {
+        "answer_preview": "Infrastructure, Device Technology: Hardware, Human – Machine Interfaces, Biometrics, Operating Syste...",
+        "unified_score": 0.88,
+        "extractive_match": 1.0,
+        "recall": 1.0,
+        "faithfulness": 5,
+        "relevance": 1
+      },
+      "chatgpt": {
+        "answer_preview": "...",
+        "unified_score": 0.3,
+        "extractive_match": 0.0,
+        "recall": "N/A",
+        "faithfulness": 5,
+        "relevance": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "id": "subject_01",
+    "category": "subject",
+    "query": "What is normalization in DBMS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_02",
+    "category": "subject",
+    "query": "Explain inheritance in OOPS.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_03",
+    "category": "subject",
+    "query": "Explain process synchronization in OS.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_04",
+    "category": "subject",
+    "query": "What is a linked list in Data Structures?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_05",
+    "category": "subject",
+    "query": "Explain the OSI model in Computer Networks.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_06",
+    "category": "subject",
+    "query": "What is deadlock in Operating Systems?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_07",
+    "category": "subject",
+    "query": "Explain encapsulation in OOPS.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_08",
+    "category": "subject",
+    "query": "What is functional dependency in DBMS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_09",
+    "category": "subject",
+    "query": "Explain binary search tree in Data Structures.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_10",
+    "category": "subject",
+    "query": "What is congestion control in Computer Networks?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_11",
+    "category": "subject",
+    "query": "Explain paging in Operating Systems.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_12",
+    "category": "subject",
+    "query": "What is polymorphism in OOPS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_13",
+    "category": "subject",
+    "query": "Explain stack and its operations in Data Structures.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_14",
+    "category": "subject",
+    "query": "What is transaction management in DBMS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "subject_15",
+    "category": "subject",
+    "query": "Explain transport layer responsibilities in Computer Networks.",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_01",
+    "category": "graph",
+    "query": "What should I study before BCNF in DBMS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_02",
+    "category": "graph",
+    "query": "How is deadlock related to process synchronization in OS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_03",
+    "category": "graph",
+    "query": "Which topics are related to inheritance in OOPS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_04",
+    "category": "graph",
+    "query": "What concepts are connected to trees in Data Structures?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_05",
+    "category": "graph",
+    "query": "What should I learn before routing in Computer Networks?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_06",
+    "category": "graph",
+    "query": "Which topics are related to normalization in DBMS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_07",
+    "category": "graph",
+    "query": "How is paging related to memory management in OS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_08",
+    "category": "graph",
+    "query": "What topics are linked to encapsulation in OOPS?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_09",
+    "category": "graph",
+    "query": "What concepts are related to graph traversal in Data Structures?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  },
+  {
+    "id": "graph_10",
+    "category": "graph",
+    "query": "How is TCP related to congestion control in Computer Networks?",
+    "judgment": {
+      "systems": {},
+      "best_overall": null,
+      "error": "Invalid API schema"
+    }
+  }
+]

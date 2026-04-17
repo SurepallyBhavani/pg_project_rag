@@ -1,0 +1,45 @@
+{
+  "query_count": 25,
+  "categories": [
+    "graph",
+    "subject"
+  ],
+  "systems": [
+    {
+      "system": "eduassist",
+      "avg_relevance": 5.0,
+      "avg_completeness": 5.0,
+      "avg_clarity": 5.0,
+      "avg_appropriateness": 5.0,
+      "avg_total": 20.0,
+      "wins": 24
+    },
+    {
+      "system": "chatgpt",
+      "avg_relevance": 4.8,
+      "avg_completeness": 5.0,
+      "avg_clarity": 3.32,
+      "avg_appropriateness": 5.0,
+      "avg_total": 18.12,
+      "wins": 1
+    },
+    {
+      "system": "notebooklm",
+      "avg_relevance": 4.76,
+      "avg_completeness": 3.88,
+      "avg_clarity": 3.0,
+      "avg_appropriateness": 4.76,
+      "avg_total": 16.4,
+      "wins": 0
+    },
+    {
+      "system": "baseline_rag",
+      "avg_relevance": 3.64,
+      "avg_completeness": 3.8,
+      "avg_clarity": 3.12,
+      "avg_appropriateness": 3.88,
+      "avg_total": 14.44,
+      "wins": 0
+    }
+  ]
+}

@@ -1,0 +1,952 @@
+[
+  {
+    "id": "subject_01",
+    "category": "subject",
+    "query": "What is normalization in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer is comprehensive and well-structured, covering all key aspects of normalization."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "The answer is concise and accurate but lacks some depth compared to others."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer is detailed and clearly explains the normalization process and its objectives."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "The answer is thorough and includes relevant context, enhancing its depth."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_02",
+    "category": "subject",
+    "query": "Explain inheritance in OOPS.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and clear explanation of inheritance in OOP with examples."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview of inheritance but lacks depth and examples."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a thorough explanation of inheritance with a focus on its hierarchical nature."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "Extensively covers inheritance with detailed explanations and relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_03",
+    "category": "subject",
+    "query": "Explain process synchronization in OS.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and clear explanation of process synchronization with relevant examples."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview but lacks depth in discussing synchronization mechanisms."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a thorough explanation with detailed mechanisms and examples."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Extensively covers synchronization concepts and mechanisms, with relevant context provided."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_04",
+    "category": "subject",
+    "query": "What is a linked list in Data Structures?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and accurate explanation of linked lists with clear structure and examples."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Delivers a concise definition but lacks depth in explaining types and advantages."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Offers a thorough overview of linked lists, including types and advantages, with good clarity."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Presents an in-depth analysis of linked lists, including structure and advantages, supported by relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_05",
+    "category": "subject",
+    "query": "Explain the OSI model in Computer Networks.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and structured explanation of the OSI model with clear details on each layer."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview of the OSI model but lacks depth in layer descriptions."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a detailed and well-structured explanation of the OSI model, covering all layers effectively."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Presents an in-depth analysis of the OSI model with relevant context, enhancing the explanation."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_06",
+    "category": "subject",
+    "query": "What is deadlock in Operating Systems?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and accurate explanation of deadlock with necessary conditions and handling techniques."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a clear definition and mentions handling techniques but lacks depth compared to others."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Delivers a solid explanation of deadlock and its implications but is slightly less detailed than the best response."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "Extensively covers deadlock, its conditions, and management strategies, but context relevance is mixed."
+        }
+      },
+      "best_overall": "chatgpt"
+    }
+  },
+  {
+    "id": "subject_07",
+    "category": "subject",
+    "query": "Explain encapsulation in OOPS.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer is comprehensive and accurately explains encapsulation in OOP."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "The explanation is clear but lacks depth compared to others."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a thorough explanation with good examples."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Very detailed and well-structured, with relevant context provided."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_08",
+    "category": "subject",
+    "query": "What is functional dependency in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer is comprehensive, accurate, and well-structured, covering key aspects of functional dependency."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "The answer is concise and relevant but lacks detailed examples and types of functional dependencies."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer is clear and informative, effectively explaining the concept and its importance."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "The answer is thorough and detailed, with relevant context that enhances understanding."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_09",
+    "category": "subject",
+    "query": "Explain binary search tree in Data Structures.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and detailed explanation of binary search trees, covering key properties and operations."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview but lacks depth in explaining operations and properties."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a clear and thorough explanation of binary search trees with a focus on operations."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "Extensively covers the topic with detailed explanations of operations and potential pitfalls."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_10",
+    "category": "subject",
+    "query": "What is congestion control in Computer Networks?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and accurate overview of congestion control with clear definitions and techniques."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise explanation but lacks depth compared to others."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a well-structured answer with clear categorization of techniques."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "Extensively covers the topic with detailed explanations and relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_11",
+    "category": "subject",
+    "query": "Explain paging in Operating Systems.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and clear explanation of paging with key concepts and examples."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview of paging but lacks depth and detail compared to others."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a thorough explanation of paging, including its mechanisms and implications."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Extensively covers paging with detailed mechanisms and performance considerations, supported by relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_12",
+    "category": "subject",
+    "query": "What is polymorphism in OOPS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and clear explanation of polymorphism with examples."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise definition but lacks detailed examples."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a thorough explanation of polymorphism with clarity."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Extensively covers polymorphism with examples and context, enhancing understanding."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_13",
+    "category": "subject",
+    "query": "Explain stack and its operations in Data Structures.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive explanation of stacks and their operations with clear examples."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview but lacks depth in explaining operations and applications."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Delivers a thorough explanation of stack operations and conditions with good structure."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Extensively covers stack operations and applications, supported by relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "subject_14",
+    "category": "subject",
+    "query": "What is transaction management in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and accurate explanation of transaction management and its principles."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Concise and clear explanation, but slightly less detailed than the best responses."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Thorough explanation of transaction management, though less structured than others."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Extensive and detailed response with relevant context, making it highly informative."
+        }
+      },
+      "best_overall": "chatgpt"
+    }
+  },
+  {
+    "id": "subject_15",
+    "category": "subject",
+    "query": "Explain transport layer responsibilities in Computer Networks.",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and accurate explanation of transport layer responsibilities."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a concise overview but lacks depth in explaining all responsibilities."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Thoroughly details the transport layer's functions with clear explanations."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "Delivers an in-depth analysis of the transport layer with relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_01",
+    "category": "graph",
+    "query": "What should I study before BCNF in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and structured overview of foundational concepts necessary for understanding BCNF."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Covers essential topics but lacks depth compared to others."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Clearly outlines key concepts and their relevance to BCNF."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "Offers an in-depth explanation with additional context, though some context is less relevant."
+        }
+      },
+      "best_overall": "chatgpt"
+    }
+  },
+  {
+    "id": "graph_02",
+    "category": "graph",
+    "query": "How is deadlock related to process synchronization in OS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "The answer accurately describes the relationship between deadlock and process synchronization but lacks depth."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "The response is clear and relevant, effectively linking deadlock to synchronization mechanisms."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "This answer provides a comprehensive explanation of deadlock in the context of process synchronization."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "The response is detailed and well-structured, thoroughly exploring the relationship with relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_03",
+    "category": "graph",
+    "query": "Which topics are related to inheritance in OOPS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Provides a clear and relevant overview of topics related to inheritance in OOP."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Covers a wide range of relevant topics related to inheritance in OOP."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Offers a detailed explanation of various inheritance-related topics in OOP."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "Delivers a comprehensive and well-structured response with relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_04",
+    "category": "graph",
+    "query": "What concepts are connected to trees in Data Structures?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive overview of tree concepts in data structures."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Covers key tree concepts but lacks depth in explanation."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Thoroughly explains tree concepts with clear definitions."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "In-depth analysis of tree structures and their applications."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_05",
+    "category": "graph",
+    "query": "What should I learn before routing in Computer Networks?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Provides a clear and structured overview of prerequisites for routing."
+        },
+        "notebooklm": {
+          "faithfulness": 4,
+          "answer_relevance": 3,
+          "context_precision": null,
+          "overall_quality": 3,
+          "note": "Covers basic concepts but lacks depth and detail."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Thoroughly addresses the query with comprehensive details on prerequisites."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "Extensively covers foundational topics and includes relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_06",
+    "category": "graph",
+    "query": "Which topics are related to normalization in DBMS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Provides a clear and relevant answer but lacks context."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Delivers a concise and accurate response without context."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Offers a comprehensive and well-structured answer with no context."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 3,
+          "overall_quality": 5,
+          "note": "Provides an in-depth answer with relevant context, enhancing understanding."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_07",
+    "category": "graph",
+    "query": "How is paging related to memory management in OS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Provides a clear explanation of paging's role in memory management but lacks depth."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Concise and accurate description of paging in memory management, though slightly less detailed."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Thoroughly explains paging's advantages and its impact on memory management."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "In-depth analysis of paging with relevant context, making it highly informative."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_08",
+    "category": "graph",
+    "query": "What topics are linked to encapsulation in OOPS?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive and accurate overview of topics linked to encapsulation in OOP."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Covers relevant topics but lacks depth compared to other responses."
+        },
+        "baseline_rag": {
+          "faithfulness": 0,
+          "answer_relevance": 0,
+          "context_precision": null,
+          "overall_quality": 1,
+          "note": "Fails to provide any relevant information on the topic."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "Delivers an in-depth analysis of encapsulation and its related topics with relevant context."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  },
+  {
+    "id": "graph_09",
+    "category": "graph",
+    "query": "What concepts are related to graph traversal in Data Structures?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Provides a comprehensive overview of graph traversal concepts with clear definitions."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "Covers key traversal methods but lacks depth in related concepts."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "Thoroughly explains graph traversal and related concepts in detail."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 2,
+          "overall_quality": 5,
+          "note": "Offers an extensive discussion on traversal methods and their applications, though context relevance is moderate."
+        }
+      },
+      "best_overall": "baseline_rag"
+    }
+  },
+  {
+    "id": "graph_10",
+    "category": "graph",
+    "query": "How is TCP related to congestion control in Computer Networks?",
+    "judgment": {
+      "systems": {
+        "chatgpt": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer is clear, comprehensive, and directly addresses the query about TCP and congestion control."
+        },
+        "notebooklm": {
+          "faithfulness": 5,
+          "answer_relevance": 4,
+          "context_precision": null,
+          "overall_quality": 4,
+          "note": "The answer is relevant but lacks depth in explaining specific congestion control mechanisms."
+        },
+        "baseline_rag": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": null,
+          "overall_quality": 5,
+          "note": "The answer effectively covers TCP's role in congestion control with clear explanations."
+        },
+        "eduassist": {
+          "faithfulness": 5,
+          "answer_relevance": 5,
+          "context_precision": 4,
+          "overall_quality": 5,
+          "note": "The answer provides an in-depth exploration of TCP's congestion control mechanisms and is well-structured."
+        }
+      },
+      "best_overall": "eduassist"
+    }
+  }
+]
