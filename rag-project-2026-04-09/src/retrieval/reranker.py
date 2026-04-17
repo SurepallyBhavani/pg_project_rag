@@ -33,14 +33,14 @@ class HeuristicReranker:
             syllabus_bonus = 0.1 if category == "syllabus" else 0.0
             
             if category == "textbooks":
-                source_bonus = 0.20
+                source_bonus = 0.80
             elif category in {"notes", "slides"}:
-                source_bonus = 0.02
+                source_bonus = 0.05
             else:
                 source_bonus = 0.0
                 
             rerank_score = min(1.0, overlap + phrase_bonus + topic_bonus + syllabus_bonus + source_bonus)
-            combined = (0.65 * chunk.vector_score) + (0.35 * rerank_score)
+            combined = (0.50 * chunk.vector_score) + (0.50 * rerank_score) if category == "textbooks" else (0.65 * chunk.vector_score) + (0.35 * rerank_score)
             ranked.append(
                 RankedChunk(
                     content=chunk.content,

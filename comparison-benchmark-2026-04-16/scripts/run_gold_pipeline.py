@@ -20,6 +20,7 @@ PROJECT_ROOT = ROOT.parent
 EDUASSIST_DIR = PROJECT_ROOT / "rag-project-2026-04-09"
 BASELINE_DIR = PROJECT_ROOT / "rag-baseline-2026-04-16"
 DATASET_FILE = ROOT / "gold_dataset_50.json"
+CACHE_FILE = ROOT / "evaluation_cache.json"
 RESULTS_DIR = ROOT / "gold_pipeline_three_way"
 
 def run_project_retriever(project_dir: Path, query: str) -> Dict[str, Any]:
@@ -82,7 +83,7 @@ def calc_extractive_match(client: openai.OpenAI, answer: str, must_contain: List
     for attempt in [2, 4]:
         try:
             completion = client.chat.completions.create(
-                model="openai/gpt-4o-mini",
+                model="anthropic/claude-3-haiku",
                 temperature=0,
                 messages=[{"role": "system", "content": prompt}, {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}],
                 response_format={"type": "json_object"}
@@ -117,7 +118,7 @@ def evaluate_ragas(client: openai.OpenAI, query: str, answer: str, context: List
     for attempt in [2, 4]:
         try:
             completion = client.chat.completions.create(
-                model="openai/gpt-4o-mini", # Evaluator Model
+                model="anthropic/claude-3-haiku", # Evaluator Model
                 temperature=0,
                 messages=[{"role": "system", "content": prompt}, {"role": "user", "content": json.dumps(payload)}],
                 response_format={"type": "json_object"}
@@ -210,6 +211,13 @@ def main():
         for s in systems
     }
     
+    eval_cache = {}
+    if CACHE_FILE.exists():
+        try:
+            eval_cache = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+        except:
+            pass
+            
     all_results = []
     print(f"\n--- Running 3-Way Pipeline on {len(eval_pairs)} queries ---\n")
     
@@ -219,54 +227,68 @@ def main():
         print(f"[{i+1}/{len(eval_pairs)}] Testing: {query}")
         
         row_eval = {"id": item["id"], "query": query, "systems": {}}
-        
-        # System 1: EduAssist
-        s1 = run_project_retriever(EDUASSIST_DIR, query)
-        
-        # System 2: Baseline RAG
-        s2 = run_project_retriever(BASELINE_DIR, query)
-        
-        # System 3: ChatGPT via API
-        s3 = run_chatgpt(client, query)
-        
-        system_outputs = {
-            "eduassist": s1,
-            "baseline_rag": s2,
-            "chatgpt": s3
-        }
+        db_id = item["id"]
+        if db_id not in eval_cache:
+            eval_cache[db_id] = {}
 
-        for sys_name, res in system_outputs.items():
-            ans = res["answer"]
-            ctx = res["context"]
-            
-            ex = calc_extractive_match(client, ans, vc.get("must_contain", []), vc.get("must_not_contain", []))
-            
-            rec = 0.0
-            if sys_name in ["eduassist", "baseline_rag"]:
-                rec = calc_recall_k(ctx, vc.get("target_citations", []))
+        for sys_name in systems:
+            if sys_name in eval_cache[db_id]:
+                print(f"  -> {sys_name} loaded from cache")
+                cached = eval_cache[db_id][sys_name]
+                ex = cached["raw_ex"]
+                rec = cached["raw_rec"]
+                f = cached["raw_f"]
+                ar = cached["raw_ar"]
+                unified = cached["unified"]
                 
-            ragas = evaluate_ragas(client, query, ans, ctx)
-            f = ragas["faithfulness"]
-            ar = ragas["answer_relevance"]
-            
-            # Weighted Scoring Rules
-            # For ChatGPT: 50% Extractive, 50% RAGAS (It has no context array)
-            # For RAGs: 40% Extractive, 30% Recall, 30% RAGAS
-            ragas_norm = ((f + ar) / 10.0)
-            if sys_name == "chatgpt":
-                unified = (ex * 0.5) + (ragas_norm * 0.5)
+                row_eval["systems"][sys_name] = cached["display_metrics"]
             else:
-                unified = (ex * 0.4) + (rec * 0.3) + (ragas_norm * 0.3)
+                print(f"  -> {sys_name} running retrieval & evaluation...")
+                if sys_name == "eduassist":
+                    res = run_project_retriever(EDUASSIST_DIR, query)
+                elif sys_name == "baseline_rag":
+                    res = run_project_retriever(BASELINE_DIR, query)
+                else:
+                    res = run_chatgpt(client, query)
+                    
+                ans = res["answer"]
+                ctx = res["context"]
                 
-            row_eval["systems"][sys_name] = {
-                "answer_preview": ans[:100] + "...",
-                "unified_score": round(unified, 2),
-                "extractive_match": round(ex, 2),
-                "recall": round(rec, 2) if sys_name != "chatgpt" else "N/A",
-                "faithfulness": f,
-                "relevance": ar
-            }
-            
+                ex = calc_extractive_match(client, ans, vc.get("must_contain", []), vc.get("must_not_contain", []))
+                
+                rec = 0.0
+                if sys_name in ["eduassist", "baseline_rag"]:
+                    rec = calc_recall_k(ctx, vc.get("target_citations", []))
+                    
+                ragas = evaluate_ragas(client, query, ans, ctx)
+                f = ragas["faithfulness"]
+                ar = ragas["answer_relevance"]
+                
+                ragas_norm = ((f + ar) / 10.0)
+                if sys_name == "chatgpt":
+                    unified = (ex * 0.5) + (ragas_norm * 0.5)
+                else:
+                    unified = (ex * 0.4) + (rec * 0.3) + (ragas_norm * 0.3)
+                    
+                display_metrics = {
+                    "answer_preview": ans[:100] + "...",
+                    "unified_score": round(unified, 2),
+                    "extractive_match": round(ex, 2),
+                    "recall": round(rec, 2) if sys_name != "chatgpt" else "N/A",
+                    "faithfulness": f if sys_name != "chatgpt" else "N/A",
+                    "relevance": ar
+                }
+                
+                eval_cache[db_id][sys_name] = {
+                    "raw_ex": ex,
+                    "raw_rec": rec,
+                    "raw_f": f,
+                    "raw_ar": ar,
+                    "unified": unified,
+                    "display_metrics": display_metrics
+                }
+                row_eval["systems"][sys_name] = display_metrics
+
             sd = summary_data[sys_name]
             sd["queries"] += 1
             sd["total_weighted_score"] += unified
@@ -276,6 +298,9 @@ def main():
             sd["ragas_ar_avg"] += ar
 
         all_results.append(row_eval)
+        
+        # Save cache dynamically
+        CACHE_FILE.write_text(json.dumps(eval_cache, indent=2, ensure_ascii=False), encoding="utf-8")
 
     # Output CSV and JSON
     with open(out_dir / "evaluations.json", "w", encoding="utf-8") as file:
@@ -291,7 +316,7 @@ def main():
                 f"{(summary_data[s]['total_weighted_score']/q)*100:.1f}%",
                 f"{(summary_data[s]['extractive_avg']/q)*100:.1f}%",
                 f"{(summary_data[s]['recall_avg']/q)*100:.1f}%" if s != "chatgpt" else "N/A",
-                f"{summary_data[s]['ragas_f_avg']/q:.2f}",
+                f"{summary_data[s]['ragas_f_avg']/q:.2f}" if s != "chatgpt" else "N/A",
                 f"{summary_data[s]['ragas_ar_avg']/q:.2f}"
             ])
             

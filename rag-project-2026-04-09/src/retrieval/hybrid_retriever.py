@@ -20,8 +20,8 @@ class HybridRetriever:
 
     def retrieve(self, query: str, filters: Optional[Dict[str, str]] = None, use_kg: bool = False, top_k: int = 5) -> RetrievalBundle:
         normalized_filters = filters or {}
-        vector_candidates = self._vector_search(query, normalized_filters, top_k=14)
-        reranked_chunks = self.reranker.rerank(query, vector_candidates, top_k=max(top_k * 2, 8))
+        vector_candidates = self._vector_search(query, normalized_filters, top_k=40)
+        reranked_chunks = self.reranker.rerank(query, vector_candidates, top_k=max(top_k * 3, 20))
         ranked_chunks = self._select_balanced_chunks(reranked_chunks, normalized_filters, top_k)
         graph_context = ""
         if use_kg and self.graph_retriever:

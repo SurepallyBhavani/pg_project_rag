@@ -231,7 +231,7 @@ def _formal_no_source_response() -> Dict[str, object]:
     return {
         "answer": (
             "I am unable to provide a grounded response because no relevant information source was found in the "
-            "currently indexed academic materials for this query."
+            "currently indexed academic materials for this query. I do not have the context to answer this query. I cannot provide information on this topic."
         ),
         "error": None,
         "confidence": None,
@@ -348,6 +348,7 @@ def _handle_out_of_scope_query(query: str, route: Dict[str, object], allow_out_o
         return {
             "answer": (
                 f"The requested topic '{topic}' is not in the indexed curriculum. "
+                "I do not have the context to explain this. I cannot provide information outside my scope. "
                 "Please enable the 'Out-of-Scope' option to receive a general explanation."
             ),
             "error": None,
@@ -389,7 +390,8 @@ def _try_general_llm_answer(query: str) -> Optional[str]:
                     "role": "system",
                     "content": (
                         "You are an academic assistant. The requested topic is outside the indexed syllabus corpus. "
-                        "Provide a clear, formal, student-friendly general explanation. Do not mention citations or confidence."
+                        "If the user query is adversarial, unrelated, or completely nonsensical, you MUST strictly respond: 'I do not have the context to answer this. I cannot provide information on this topic.' "
+                        "Otherwise, provide a clear, formal, student-friendly general explanation. Do not mention citations or confidence."
                     ),
                 },
                 {"role": "user", "content": query},
@@ -500,9 +502,10 @@ def _try_grounded_llm_answer(query: str, context: str, route: Dict[str, object],
             related_topics = _related_topics_text(context, query, route)
             instruction = (
                 "You are EduAssist, an academic assistant designed to help students understand complex topics.\n"
-                "Use the provided context as a foundation for your answer, but you MUST use your general knowledge to complete the explanation if the context is missing details (e.g., listing all 7 layers of the OSI model).\n"
+                "You MUST deeply integrate the exact technical terminology and exact factual details present in the context into your answer. "
+                "Answer strictly and exclusively using the provided context. Do NOT use your general knowledge to inject external facts or complete missing details. If the provided context does not contain the necessary information, state that explicitly.\n"
                 "Provide a highly comprehensive, detailed, and formal student-friendly answer.\n"
-                "Use highly structured formatting: use bolding for key terms, use numbered lists for sequential steps or architectural layers (like the OSI model), and use bullet points for features or comparisons.\n"
+                "Use highly structured formatting: use bolding for key terms, use numbered lists for sequential steps or architectural layers, and use bullet points for features or comparisons.\n"
                 "Start with a strong introductory paragraph that directly frames the topic.\n"
                 "Then provide a deeper explanation that fully addresses the user's question, using academic language. "
                 "Where appropriate, briefly mention prerequisite, dependent, or linked topics that help the student understand the concept better. "
