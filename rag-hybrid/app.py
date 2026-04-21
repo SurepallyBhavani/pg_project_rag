@@ -573,10 +573,21 @@ def _extractive_answer(query: str, route: Dict[str, object], chunks: List[Ranked
 
     if route.get("is_curriculum_based"):
         intro = "Based on the official curriculum document, the relevant syllabus information is as follows.\n\n"
-        paragraphs = [selected_sentences[0]]
-        if len(selected_sentences) > 1:
-            paragraphs.append(selected_sentences[1])
-        return intro + "\n\n".join(paragraphs)
+        # Take more sentences for curriculum to provide a better overview
+        all_selected = []
+        for chunk in chunks[:3]:
+            sentences = re.split(r"(?<=[.!?])\s+", chunk.content.replace("\n", " "))
+            for sentence in sentences:
+                sentence_terms = _tokenize(sentence)
+                if len(query_terms & sentence_terms) >= 1:
+                    all_selected.append(sentence.strip())
+        
+        # Deduplicate and limit
+        unique_sentences = list(dict.fromkeys(all_selected))
+        if not unique_sentences:
+             unique_sentences = [chunks[0].content[:500].strip()]
+             
+        return intro + "\n\n".join(unique_sentences[:12])
 
     subject_label = _subject_label(route)
     topic_label = _topic_label(query, route)

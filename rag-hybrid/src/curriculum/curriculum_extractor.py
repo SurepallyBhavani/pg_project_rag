@@ -84,7 +84,18 @@ class CurriculumExtractor:
         if not self.pages:
             return None
 
-        target = topic_candidate or query
+        target = topic_candidate
+        if not target:
+            # Fallback: Try to detect subject in query
+            from src.retrieval.query_router import QueryRouter
+            router = QueryRouter()
+            detected_slug = router._detect_supported_subject(query.lower())
+            if detected_slug:
+                from src.retrieval.query_router import SUPPORTED_SUBJECTS
+                target = SUPPORTED_SUBJECTS[detected_slug]["name"]
+            else:
+                target = query
+        
         course_page = self._find_best_course_page(target)
         query_lower = query.lower()
         wants_labs = bool(re.search(r"\blabs?\b", query_lower))
@@ -112,15 +123,29 @@ class CurriculumExtractor:
         return None
 
     def _find_best_course_page(self, target: str) -> Optional[Dict[str, object]]:
+        from src.retrieval.query_router import SUPPORTED_SUBJECTS
+        
         target_norm = self._normalize(target)
+        
+        # Check if target matches any subject aliases and use official name
+        expanded_targets = [target_norm]
+        for slug, info in SUPPORTED_SUBJECTS.items():
+            if target_norm in [self._normalize(a) for a in info["aliases"]]:
+                expanded_targets.append(self._normalize(info["name"]))
+                break
+        
         best = None
         best_score = 0
         for page in self.course_pages:
             title_norm = self._normalize(str(page["title"]))
-            score = self._match_score(target_norm, title_norm)
-            if score > best_score:
-                best = page
-                best_score = score
+            
+            # Check against original and expanded targets
+            for t in expanded_targets:
+                score = self._match_score(t, title_norm)
+                if score > best_score:
+                    best = page
+                    best_score = score
+                    
         return best if best_score > 0 else None
 
     def _build_course_answer(
@@ -305,7 +330,8 @@ class CurriculumExtractor:
         return self._clean_block(section)
 
     def _extract_units(self, text: str) -> str:
-        unit_matches = list(re.finditer(r"UNIT\s*-\s*[IVX]+", text, re.IGNORECASE))
+        # Flexible regex for UNIT headers (hyphen, colon, space, or none)
+        unit_matches = list(re.finditer(r"UNIT\s*[:\-\s]?\s*([IVX]+)", text, re.IGNORECASE))
         if not unit_matches:
             return ""
         blocks: List[str] = []
@@ -359,9 +385,12 @@ class CurriculumExtractor:
         if not left or not right:
             return 0
         if left == right:
-            return 10
+            return 100
         if left in right or right in left:
-            return 7
+            return 70
         left_terms = set(left.split())
         right_terms = set(right.split())
-        return len(left_terms & right_terms)
+        overlap = left_terms & right_terms
+        if overlap:
+            return len(overlap) * 10
+        return 0

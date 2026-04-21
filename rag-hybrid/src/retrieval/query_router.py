@@ -8,23 +8,23 @@ from typing import Dict, List, Optional
 SUPPORTED_SUBJECTS: Dict[str, Dict[str, List[str]]] = {
     "cn": {
         "name": "Computer Networks",
-        "aliases": ["cn", "computer network", "computer networks", "networking", "network protocol", "osi", "tcp"],
+        "aliases": ["cn", "computer network", "computer networks", "networking"],
     },
     "dbms": {
         "name": "Database Management System",
-        "aliases": ["dbms", "database management system", "database management systems", "database", "sql", "normalization", "er model", "transaction"],
+        "aliases": ["dbms", "database management system", "database management systems", "database"],
     },
     "ds": {
         "name": "Data Structures",
-        "aliases": ["ds", "data structure", "data structures", "stack", "queue", "tree", "graph", "linked list", "sorting", "searching"],
+        "aliases": ["ds", "data structure", "data structures"],
     },
     "oops": {
         "name": "Object Oriented Programming",
-        "aliases": ["oops", "oop", "object oriented programming", "object-oriented programming", "inheritance", "polymorphism", "encapsulation", "abstraction"],
+        "aliases": ["oops", "oop", "object oriented programming", "object-oriented programming"],
     },
     "os": {
         "name": "Operating System",
-        "aliases": ["os", "operating system", "operating systems", "process", "thread", "deadlock", "paging", "memory management", "synchronization"],
+        "aliases": ["os", "operating system", "operating systems"],
     },
 }
 
@@ -50,7 +50,7 @@ TOPIC_SUBJECT_HINTS: Dict[str, List[str]] = {
     "cn": [
         "go back n", "go-back-n", "goback n", "goback-n", "selective repeat",
         "stop and wait", "sliding window", "arq", "crc", "framing", "hamming code",
-        "osi model", "tcp/ip", "csma", "routing algorithm",
+        "osi model", "osi", "tcp/ip", "tcp", "network protocol", "csma", "routing algorithm",
     ],
     "dbms": [
         "normalization", "normalisation", "functional dependency", "bcnf", "3nf", "sql", "transaction",
@@ -58,14 +58,14 @@ TOPIC_SUBJECT_HINTS: Dict[str, List[str]] = {
     ],
     "os": [
         "deadlock", "paging", "thrashing", "process synchronization", "process synchronisation", "banker's algorithm",
-        "cpu scheduling", "semaphore", "mutex", "virtual memory", "segmentation",
+        "cpu scheduling", "semaphore", "mutex", "virtual memory", "segmentation", "process", "thread", "memory management", "synchronization",
     ],
     "oops": [
         "inheritance", "polymorphism", "encapsulation", "abstraction", "operator overloading",
         "method overriding", "dynamic binding", "message passing", "virtual function",
     ],
     "ds": [
-        "linked list", "queue", "stack", "tree", "graph traversal", "binary search tree",
+        "linked list", "queue", "stack", "tree", "graph", "graph traversal", "binary search tree",
         "sorting", "searching", "hash table", "spanning tree", "avl tree",
     ],
 }
@@ -98,7 +98,19 @@ class QueryRouter:
         reasons: List[str] = []
         topic_candidate = self._extract_topic_candidate(query)
         supported_subject = self._detect_supported_subject(query_lower)
+        
         curriculum_intent = self._is_curriculum_query(query_lower)
+        
+        # If the detected topic is exactly a subject alias, discard it as a specific topic
+        # BUT ONLY IF it's not a curriculum query. For curriculum, we need the topic!
+        if supported_subject and topic_candidate and not curriculum_intent:
+            is_subject_alias = any(
+                topic_candidate.lower() == alias 
+                for alias in SUPPORTED_SUBJECTS[supported_subject]["aliases"]
+            )
+            if is_subject_alias:
+                topic_candidate = None
+
         pyq_intent = self._is_pyq_query(query_lower)
         needs_summary = any(term in query_lower for term in SUMMARY_TERMS)
         use_kg = any(term in query_lower for term in RELATIONSHIP_TERMS)
@@ -248,19 +260,18 @@ class QueryRouter:
     def _extract_topic_candidate(self, query: str) -> Optional[str]:
         # Strip conversational adverbs that throw off the regex greedy match
         clean_query = re.sub(
-            r"\b(more clearly|in detail|briefly|with examples?|with an example|please|can you)\b", 
+            r"\b(show me|show|give me|give|find me|find|get me|get|i want|tell me|what are the|what are|more clearly|in detail|briefly|with examples?|with an example|please|can you)\b", 
             "", 
             query, 
             flags=re.IGNORECASE
         ).strip()
         
         patterns = [
-            r"(?:pyqs?|previous questions?|important questions?|exam questions?)\s+(?:on|for|from)\s+(.+?)(?:\?|$)",
+            r"(?:pyqs?|previous questions?|important questions?|exam questions?)\s+(?:on|for|from|of)\s+(.+?)(?:\?|$)",
+            r"(.+?)\s+(?:pyqs?|previous questions?|important questions?|exam questions?)(?:\?|$)",
             r"(?:questions?|question papers?)\s+(?:on|for)\s+(.+?)(?:\?|$)",
-            r"(?:syllabus|lab|labs|textbook|textbooks|references?)\s+(?:of|for)\s+(.+?)(?:\?|$)",
-            r"(?:labs?|textbooks?|references?)\s+under\s+(.+?)(?:\?|$)",
-            r"(?:what is|define|explain|describe|give notes on|short notes on)\s+(.+?)(?:\?|$)",
-            r"(.+?)\s+syllabus(?:\?|$)",
+            r"(?:syllabus|lab|labs|textbooks?|references?|units?|outcomes?|credits?|prerequisites?|course structure)\s+(?:of|for|in|under)\s+(.+?)(?:\?|$)",
+            r"(.+?)\s+(?:syllabus|lab|labs|units?|outcomes?|credits?)(?:\?|$)",
         ]
         for pattern in patterns:
             match = re.search(pattern, clean_query, re.IGNORECASE)

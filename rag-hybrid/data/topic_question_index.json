@@ -1,0 +1,3612 @@
+{
+  "cn": {
+    "unit_topics": {
+      "UNIT-I": {
+        "title": "Network hardware Network software OSI TCP/IP Reference mo",
+        "keywords": [
+          "arpanet",
+          "arpanet internet",
+          "arpanet internet physical",
+          "cable",
+          "cable fiber",
+          "cable fiber optics",
+          "coaxial",
+          "coaxial cable",
+          "coaxial cable fiber",
+          "example",
+          "example networks",
+          "example networks arpanet",
+          "fiber",
+          "fiber optics",
+          "fiber optics wireless",
+          "guided",
+          "guided transmission",
+          "guided transmission media",
+          "hardware",
+          "hardware network",
+          "hardware network software",
+          "internet",
+          "internet physical",
+          "internet physical layer",
+          "layer",
+          "layer guided",
+          "layer guided transmission",
+          "media",
+          "media twisted",
+          "media twisted pairs",
+          "models",
+          "models example",
+          "models example networks",
+          "network",
+          "network hardware",
+          "network hardware network",
+          "network software",
+          "network software osi",
+          "networks",
+          "networks arpanet",
+          "networks arpanet internet",
+          "optics",
+          "optics wireless",
+          "optics wireless transmission",
+          "osi tcp",
+          "osi tcp reference",
+          "pairs",
+          "pairs coaxial",
+          "pairs coaxial cable",
+          "physical"
+        ],
+        "questions": [
+          {
+            "question": "Explain about various transmission media in physical layer with a neat sketch. [7+8 ]?",
+            "source": "cn2.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Explain about fiber optics transmission media . [10]?",
+            "source": "cn3.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Write about Co -axial cable transmission media?",
+            "source": "cn3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) What is the importance of layered architecture in network models?",
+            "source": "cn1.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Differentiate between TCP/IP network model and ISO-OSI reference model. [7+8]?",
+            "source": "cn1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the advantages of fiber optic cables?",
+            "source": "cn1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the advantages of fiber optic cables? Explain with a neat sketch. [7+8]?",
+            "source": "cn1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain about the functionality of each layer in ISO-OSI reference model with a neat sketch. [5+10]?",
+            "source": "cn5.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Describe in brief about TCP segment Header. [8+7]?",
+            "source": "cn4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain each field in TCP header with neat diagram. [7+8]?",
+            "source": "cn5.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "A) What is ARPANET?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain the TCP/IP reference model . [10] OR?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain about wireless LAN. [10]?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain the TCP transmission policy . [10]?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Discuss about Internet standards. [8+7]?",
+            "source": "cn4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What are the responsibilities of Presentation layer and Session layer of OSI model?",
+            "source": "cn4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What are the responsibilities of Presentation layer and Session layer of OSI model? [8+7]?",
+            "source": "cn4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Draw and explain Internet architecture with a neat sketch. [8+7]?",
+            "source": "cn5.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-II": {
+        "title": "Data link layer",
+        "keywords": [
+          "acces",
+          "acces protocols",
+          "acces protocols collision",
+          "access",
+          "access protocols",
+          "access protocols aloha",
+          "access sub",
+          "access sub layer",
+          "allocation",
+          "allocation problem",
+          "allocation problem multiple",
+          "aloha",
+          "aloha carrier",
+          "aloha carrier sense",
+          "and correction",
+          "and correction elementary",
+          "and wait",
+          "and wait protocol",
+          "back",
+          "back protocol",
+          "back protocol using",
+          "bit sliding",
+          "bit sliding window",
+          "carrier",
+          "carrier sense",
+          "carrier sense multiple",
+          "channel",
+          "channel allocation",
+          "channel allocation problem",
+          "channel simplex",
+          "channel simplex stop",
+          "channel sliding",
+          "channel sliding window",
+          "collision",
+          "collision free",
+          "collision free protocols",
+          "correction",
+          "correction elementary",
+          "correction elementary data",
+          "data",
+          "data link",
+          "data link layer",
+          "data link protocols",
+          "design",
+          "design issues",
+          "design issues framing",
+          "detection",
+          "detection and",
+          "detection and correction",
+          "elementary"
+        ],
+        "questions": [
+          {
+            "question": "Explain about simplex stop and wait protocol for noisy channel. [8+7]?",
+            "source": "cn5.pdf",
+            "score": 56.98
+          },
+          {
+            "question": "Explain in detail about the Simplex Stop and Wait protocol. [8+7]?",
+            "source": "cn4.pdf",
+            "score": 30.9
+          },
+          {
+            "question": "A) What are the design issues of Data Link Layer?",
+            "source": "cn1.pdf",
+            "score": 18.68
+          },
+          {
+            "question": "A) What are the design issues of Data Link Layer?",
+            "source": "cn4.pdf",
+            "score": 18.68
+          },
+          {
+            "question": "What is framing? Explain various framing techniques of Data Link Layer. [15]?",
+            "source": "cn5.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "What are the advantages of sliding window protocol?",
+            "source": "cn3.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "What are the advantages of sliding window protocol? [3]?",
+            "source": "cn3.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "Explain how slotted ALOHA solves the problem of Channel allocation. [8+7]?",
+            "source": "cn4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What are various types of Error Detection methods ? Explain about Cycli c Redundancy Check Error Detection Method with suitable example. [15]?",
+            "source": "cn1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the stop -and-wait protocol . [10] OR?",
+            "source": "cn3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Compare and contrast C SMA/CD and CSMA/CA for channel allocation. [7+8]?",
+            "source": "cn1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What are various types of Error Detection methods ?",
+            "source": "cn1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is framing?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is framing? [2]?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is framing?",
+            "source": "cn5.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-III": {
+        "title": "Network Layer",
+        "keywords": [
+          "algorithms",
+          "algorithms quality",
+          "algorithms quality service",
+          "algorithms shortest",
+          "algorithms shortest path",
+          "broadcast",
+          "broadcast multicast",
+          "broadcast multicast distance",
+          "congestion",
+          "congestion ontrol",
+          "congestion ontrol algorithms",
+          "design",
+          "design issues",
+          "design issues routing",
+          "distance",
+          "distance vector",
+          "distance vector routing",
+          "flooding",
+          "flooding hierarchical",
+          "flooding hierarchical routing",
+          "hierarchical",
+          "hierarchical routing",
+          "hierarchical routing broadcast",
+          "internet",
+          "internetworking",
+          "internetworking the",
+          "internetworking the network",
+          "issues",
+          "issues routing",
+          "issues routing algorithms",
+          "layer",
+          "layer design",
+          "layer design issues",
+          "layer the",
+          "layer the internet",
+          "multicast",
+          "multicast distance",
+          "multicast distance vector",
+          "network",
+          "network layer",
+          "network layer design",
+          "network layer the",
+          "ontrol",
+          "ontrol algorithms",
+          "ontrol algorithms quality",
+          "path",
+          "path routing",
+          "path routing flooding",
+          "quality",
+          "quality service"
+        ],
+        "questions": [
+          {
+            "question": "What is internetworking? List out the internetworking devices. [7+8]?",
+            "source": "cn2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the shortest -path routing algorithm . [10] OR?",
+            "source": "cn3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) What are the design is sues of Network Layer?",
+            "source": "cn5.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain about QoS in Network layer. [7+8]?",
+            "source": "cn4.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is internetworking?",
+            "source": "cn2.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Define congestion. Write about congestion control policies. [7+8]?",
+            "source": "cn5.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the advantages and limitations of flooding?",
+            "source": "cn1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What are the advantages and limitations of flooding? [9+6]?",
+            "source": "cn1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What are the services provided by DNS?",
+            "source": "cn2.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) How would you summarize the concepts of E -mail, its architecture and services?",
+            "source": "cn2.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is non -adaptive routing?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is non -adaptive routing? [2]?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is meant by congestion?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is meant by congestion? [3]?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Differentiate between broadcasting and mul ticasting . [7+8]?",
+            "source": "cn5.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-IV": {
+        "title": "Transport Layer",
+        "keywords": [
+          "and udp",
+          "and udp protocols",
+          "connection",
+          "connection management",
+          "connection management tcp",
+          "elements",
+          "elements transport",
+          "elements transport protocols",
+          "layer",
+          "layer transport",
+          "layer transport services",
+          "management",
+          "management tcp",
+          "management tcp and",
+          "protocols",
+          "protocols connection",
+          "protocols connection management",
+          "services",
+          "services elements",
+          "services elements transport",
+          "tcp and",
+          "tcp and udp",
+          "transport",
+          "transport layer",
+          "transport layer transport",
+          "transport protocols",
+          "transport protocols connection",
+          "transport services",
+          "transport services elements",
+          "udp protocols"
+        ],
+        "questions": [
+          {
+            "question": "Compare and contrast TCP and UDP Protocols. [7+8]?",
+            "source": "cn1.pdf",
+            "score": 19.88
+          },
+          {
+            "question": "Explain the connection establishment and release in transport layer. [7+8]?",
+            "source": "cn2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the elements of transport layer. [10] OR?",
+            "source": "cn3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) What are the s ervices provided by transport layer to the upper layers?",
+            "source": "cn2.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is the function of transport layer?",
+            "source": "cn3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is the function of transport layer? [2]?",
+            "source": "cn3.pdf",
+            "score": 4.83
+          }
+        ]
+      },
+      "UNIT-V": {
+        "title": "Application Layer Domain name system SNMP Electronic Mail",
+        "keywords": [
+          "and networking",
+          "and networking behrouz",
+          "and video",
+          "and video textbook",
+          "andrew",
+          "andrew tanenbaum",
+          "andrew tanenbaum david",
+          "application",
+          "application layer",
+          "application layer domain",
+          "approach",
+          "approach computer",
+          "approach computer networks",
+          "audio",
+          "audio and",
+          "audio and video",
+          "behrouz",
+          "behrouz forouzan",
+          "behrouz forouzan edition",
+          "communications",
+          "communications and",
+          "communications and networking",
+          "computer",
+          "computer networks",
+          "computer networks andrew",
+          "computer networks keshav",
+          "data",
+          "data communications",
+          "data communications and",
+          "david",
+          "david wetherall",
+          "david wetherall edition",
+          "domain",
+          "domain name",
+          "domain name system",
+          "edition",
+          "edition pearson",
+          "edition pearson education",
+          "edition tmh",
+          "education",
+          "education data",
+          "education data communications",
+          "education phi",
+          "education phi references",
+          "electronic",
+          "electronic mail",
+          "electronic mail the",
+          "engineering",
+          "engineering approach",
+          "engineering approach computer"
+        ],
+        "questions": [
+          {
+            "question": "How Streaming of audio and video can be done ?",
+            "source": "cn2.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "What is the function of application layer?",
+            "source": "cn3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is the function of application layer? [2]?",
+            "source": "cn3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain about streaming audio. [10] ---ooOoo --- R18 JNTUH Used papers 2023?",
+            "source": "cn3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "How DNS service maps domain names to IP addresses ?",
+            "source": "cn4.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "A) What are the advantages of computer networks?",
+            "source": "cn5.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "A) What are the major components in E -mail system?",
+            "source": "cn1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Discuss about HTTP request and response mechanism s. [8+7] ---ooOoo --- R18 jntuh used paper aug-2022?",
+            "source": "cn1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain about HTTP . [10] OR?",
+            "source": "cn3.pdf",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    "unmatched": [
+      {
+        "question": "A) What is the purpose of CSMA CD?",
+        "source": "cn2.pdf"
+      },
+      {
+        "question": "Explain the functions of following devices:?",
+        "source": "cn2.pdf"
+      },
+      {
+        "question": "What is UDP? [3]?",
+        "source": "cn3.pdf"
+      },
+      {
+        "question": "What is DNS? [3] PART – B (50 Marks)?",
+        "source": "cn3.pdf"
+      },
+      {
+        "question": "What is packet fragmentation?",
+        "source": "cn3.pdf"
+      },
+      {
+        "question": "What is packet fragmentation? [5+5]?",
+        "source": "cn3.pdf"
+      }
+    ]
+  },
+  "dbms": {
+    "unit_topics": {
+      "UNIT-I": {
+        "title": "Database System Applications",
+        "keywords": [
+          "abstraction",
+          "abstraction dbms",
+          "abstraction dbms data",
+          "additional",
+          "additional features",
+          "additional features the",
+          "and diagrams",
+          "and diagrams entities",
+          "and entity",
+          "and entity sets",
+          "and relationship",
+          "and relationship sets",
+          "applications",
+          "applications historical",
+          "applications historical pers",
+          "attributes",
+          "attributes and",
+          "attributes and entity",
+          "conceptual",
+          "conceptual design",
+          "conceptual design with",
+          "data",
+          "data independence",
+          "data independence structure",
+          "data model",
+          "data model levels",
+          "database",
+          "database design",
+          "database design and",
+          "database design database",
+          "database system",
+          "database system applications",
+          "dbms",
+          "dbms data",
+          "dbms data independence",
+          "dbms introduction",
+          "dbms introduction database",
+          "dbms the",
+          "dbms the data",
+          "design",
+          "design and",
+          "design and diagrams",
+          "design database",
+          "design database design",
+          "design with",
+          "design with the",
+          "diagrams",
+          "diagrams entities",
+          "diagrams entities attributes",
+          "entities"
+        ],
+        "questions": [
+          {
+            "question": "Explain about the conceptual design with the ER model. [5+5]?",
+            "source": "dbms9.pdf",
+            "score": 22.88
+          },
+          {
+            "question": "A) What is data model?",
+            "source": "dbms1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a data model?",
+            "source": "dbms2.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What are the different data models?",
+            "source": "dbms2.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a data model? What are the different data models? Explain . [7+8]?",
+            "source": "dbms2.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is data model?",
+            "source": "dbms9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is data model? Name three categories of data models . [3]?",
+            "source": "dbms9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "A) What is data independence?",
+            "source": "dbms9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What are the three levels of abstraction in DBMS?",
+            "source": "dbms4.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "What are the three levels of abstraction in DBMS? Explain. [5+5] OR?",
+            "source": "dbms4.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "List four significant difference between file processing system and a DBMS?",
+            "source": "dbms8.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "What is an attribute? Explain various types of attributes with examples. [9+6]?",
+            "source": "dbms3.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is meant by E -R model? Explain with an example. [5+5]?",
+            "source": "dbms4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain various data manipulation and data definition statements in SQL with examples. [15] ---ooOoo --- R18 JNTUH SS Feb 2021?",
+            "source": "dbms5.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain any five applications of DBMS . [15]?",
+            "source": "dbms7.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is Entity set and also define Relationship set. List and explain the symbols used to draw ER Diagram. [15]?",
+            "source": "dbms7.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is E -R model? Draw an E -R Diagram for any Banking enterprise system . [6+9]?",
+            "source": "dbms8.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Distinguish strong entity set with weak entity set?",
+            "source": "dbms9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Distinguish strong entity set with weak entity set? Draw an ER diagram to illustrate weak entity set? [5+5] OR?",
+            "source": "dbms9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "A) What are the goals of DBMS ?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) Identify the main components in a DBMS and briefly explain what they do ?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain various set operations are used in SQL with examples . [5+5]?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is log file ?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain Deletion and insertion operations in ISAM with examples . [5+5] OR?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What are the Pros and Cons of ISAM? [8+7] ---ooOoo --- R18 JNTUH usedpapers Sep2021?",
+            "source": "dbms2.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What is ER model?",
+            "source": "dbms3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain the following with any example queries.?",
+            "source": "dbms3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is meant by E -R model?",
+            "source": "dbms4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain Closure of Set of Functional dependency and Closure of Attribute sets. [5+5] OR?",
+            "source": "dbms4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Describe insertion and deletion operations in B+ tree with example . [15]?",
+            "source": "dbms5.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "How it is represented in E -R Model ?",
+            "source": "dbms5.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define generalization, specialization and aggregation? How it is represented in E -R Model ? [7+8]?",
+            "source": "dbms5.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What is DBMS?",
+            "source": "dbms8.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is E -R model?",
+            "source": "dbms8.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain various DML functions in SQL with examples. [8+7]?",
+            "source": "dbms8.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain deletion and insertion operations in linear hashing with examples. [15]?",
+            "source": "dbms8.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Draw an ER diagram to illustrate weak entity set?",
+            "source": "dbms9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-II": {
+        "title": "Introduction to the Relational Model",
+        "keywords": [
+          "algebra",
+          "algebra tuple",
+          "algebra tuple relational",
+          "altering",
+          "altering tables",
+          "altering tables and",
+          "and views",
+          "and views relational",
+          "base",
+          "base design",
+          "base design introd",
+          "calculus",
+          "calculus domain",
+          "calculus domain relational",
+          "constraint",
+          "constraint over",
+          "constraint over relations",
+          "constraints",
+          "constraints querying",
+          "constraints querying relational",
+          "data",
+          "data base",
+          "data base design",
+          "data logical",
+          "data logical data",
+          "deleting",
+          "deleting altering",
+          "deleting altering tables",
+          "design",
+          "design introd",
+          "design introd uction",
+          "domain",
+          "domain relational",
+          "domain relational calculus",
+          "enforcing",
+          "enforcing integrity",
+          "enforcing integrity constraints",
+          "integrity",
+          "integrity constraint",
+          "integrity constraint over",
+          "integrity constraints",
+          "integrity constraints querying",
+          "introd",
+          "introd uction",
+          "introd uction views",
+          "introduction",
+          "introduction the",
+          "introduction the relational",
+          "logical",
+          "logical data"
+        ],
+        "questions": [
+          {
+            "question": "Compare tuple relational calculus and domain relational calculus. [7+8]?",
+            "source": "dbms2.pdf",
+            "score": 22.88
+          },
+          {
+            "question": "Compare and contrast the Tuple Relational Calculus and Domain relational calculus. [8+7]?",
+            "source": "dbms6.pdf",
+            "score": 22.88
+          },
+          {
+            "question": "Explain Domain relational calculus . [3]?",
+            "source": "dbms1.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "Discuss briefly about Domain relational calculus with suitable example. [15]?",
+            "source": "dbms7.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "Explain about domain relational calculus with example. [7+8]?",
+            "source": "dbms8.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "Explain about domain relational calculus with example. [8+7]?",
+            "source": "dbms8.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "Discuss about Domain Relational calculus in detail. [5+5] OR?",
+            "source": "dbms9.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "How to alter, destroy tables and views?",
+            "source": "dbms3.pdf",
+            "score": 12.85
+          },
+          {
+            "question": "How to alter tables and views?",
+            "source": "dbms9.pdf",
+            "score": 12.85
+          },
+          {
+            "question": "Which normal form is considered adequate for normal relational database design?",
+            "source": "dbms4.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Discuss the importance of entity integrity and referential integrity constraints. [8+7]?",
+            "source": "dbms2.pdf",
+            "score": 8.66
+          },
+          {
+            "question": "A) Describe th e set operations of relational algebra, including union (U), set difference ( -), and cross product (X). For each, what can you say about the cardinality of their input and output tables?",
+            "source": "dbms6.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain shadow paging recovery scheme for recovering the data base?",
+            "source": "dbms8.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain shadow paging recovery scheme for recovering the data base? [15]?",
+            "source": "dbms8.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) What is Relational Model?",
+            "source": "dbms1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain various fundamental operations in relational algebra with examples . [5+5] R18 JNTUH Used papers 2023?",
+            "source": "dbms1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain fundamental operations in relational algebra with examples . [8+7]?",
+            "source": "dbms3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Illustrate different set operations in Relational algebra with an example. [5+5]?",
+            "source": "dbms4.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is Relational Model?",
+            "source": "dbms5.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is Relational Model? Distinguish between Super key, Candidate key, Primary Key for a relation with examples . [15]?",
+            "source": "dbms5.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is integrity constraint?",
+            "source": "dbms9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is integrity constraint? [2]?",
+            "source": "dbms9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "How can we translate an ER Diagram into SQL statements to create tables?",
+            "source": "dbms6.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "How are views used for security?",
+            "source": "dbms9.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "How are queries on views evaluated?",
+            "source": "dbms9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-III": {
+        "title": "SQL Queries Constraints Triggers",
+        "keywords": [
+          "about",
+          "about functional",
+          "about functional dependencies",
+          "active",
+          "active data",
+          "active data bases",
+          "aggregation",
+          "aggregation operat",
+          "aggregation operat ors",
+          "and active",
+          "and active data",
+          "and except",
+          "and except nested",
+          "bases",
+          "bases schema",
+          "bases schema refinement",
+          "basic",
+          "basic sql",
+          "basic sql query",
+          "bcnf",
+          "bcnf lossless",
+          "bcnf lossless join",
+          "caused",
+          "caused redundancy",
+          "caused redundancy decompositions",
+          "complex",
+          "complex integrity",
+          "complex integrity constraints",
+          "constraints",
+          "constraints sql",
+          "constraints sql triggers",
+          "constraints triggers",
+          "constraints triggers basic",
+          "data",
+          "data bases",
+          "data bases schema",
+          "decomposition",
+          "decomposition multi",
+          "decomposition multi valued",
+          "decomposition reasoning",
+          "decomposition reasoning about",
+          "decompositions",
+          "decompositions problems",
+          "decompositions problems related",
+          "dependencies",
+          "dependencies first",
+          "dependencies first second",
+          "dependencies fourth",
+          "dependencies fourth normal",
+          "except"
+        ],
+        "questions": [
+          {
+            "question": "Define Functional dependencies and Multi valued dependencies. How are primary keys related to FDs ?",
+            "source": "dbms1.pdf",
+            "score": 18.68
+          },
+          {
+            "question": "Define Functional dependencies and Multi valued dependencies. How are primary keys related to FDs ? [5+5] OR?",
+            "source": "dbms1.pdf",
+            "score": 18.68
+          },
+          {
+            "question": "Discuss fourth normal form with illustration . [8+7]?",
+            "source": "dbms2.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "What is normalization? Explain 2NF, 3NF and BCNF Normal forms with example. [15]?",
+            "source": "dbms5.pdf",
+            "score": 7.83
+          },
+          {
+            "question": "A) When is the decomposition of a relation schema R into two relation schemas X and Y said to be lossless -join decomposition?",
+            "source": "dbms2.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What is normalization? Explain 4NF and 5NF Normal forms with example . [15] ---ooOoo --- R18 JNTUH USED 25-11-2020PM?",
+            "source": "dbms8.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What is meant by normalization? Explain in detail various normal form s with an example. [15]?",
+            "source": "dbms3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain Boyce -codd normal form with an example. [5+5] R18?",
+            "source": "dbms4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Discuss the basic form of SQL query. [2]?",
+            "source": "dbms9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What are the problems caused by redundancy?",
+            "source": "dbms9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What are the problems caused by redundancy? Explain. [3]?",
+            "source": "dbms9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Distinguish between independent and correlated nested queries. Provide appropriate examples to support your explanation . [5+5] OR?",
+            "source": "dbms9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is decomposition? Discuss the problems related to decomposition. [5+5] R18 JNTUH USED PAPERS 2023?",
+            "source": "dbms9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) What are the differences between functional dependency and multivalued dependency?",
+            "source": "dbms9.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain about DML language and query processor. [3]?",
+            "source": "dbms1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Discuss the functionality of query evaluation engine. [8+7]?",
+            "source": "dbms2.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is meant by normalization?",
+            "source": "dbms3.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is normalization?",
+            "source": "dbms5.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Give an example that illustrates how a collection of relations in BCNF could have redundanc y even though each relation, by itself, is free from redundancy. [15]?",
+            "source": "dbms6.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is normalization?",
+            "source": "dbms8.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "A) What is normalization?",
+            "source": "dbms9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Differentiate between SQL co mmands DROP TABLE and DROP VIEW. [3]?",
+            "source": "dbms4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Define depende ncy preserving decomposition. [2]?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is the di fference between 3NF and BCNF?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is the di fference between 3NF and BCNF? [3]?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What aggregate operato rs does SQL support ?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What are the steps to be followed to convert a relation in 3NF to BCNF?",
+            "source": "dbms2.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Discuss about Dense Index. [3] PART – B (50 Marks)?",
+            "source": "dbms4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define Join. Explain different types of joins. [5+5] OR?",
+            "source": "dbms4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define generalization, specialization and aggregation?",
+            "source": "dbms5.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define a trigger. What are the differences between row -level and statement -level triggers?",
+            "source": "dbms6.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define a trigger. What are the differences between row -level and statement -level triggers? [8+7]?",
+            "source": "dbms6.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is Functional Dependency?",
+            "source": "dbms7.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is Functional Dependency? Explain types and properties of FD’s. [15]?",
+            "source": "dbms7.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is decomposition?",
+            "source": "dbms9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-IV": {
+        "title": "Transaction Concept Transaction State Implementation of At",
+        "keywords": [
+          "academic",
+          "academic year",
+          "and atomicity",
+          "and atomicity log",
+          "and durability",
+          "and durability concurrent",
+          "atomicity",
+          "atomicity and",
+          "atomicity and durability",
+          "atomicity log",
+          "atomicity log based",
+          "based",
+          "based protocols",
+          "based protocols multiple",
+          "based protocols timestamp",
+          "based protocols validation",
+          "based recovery",
+          "based recovery recovery",
+          "concept",
+          "concept transaction",
+          "concept transaction state",
+          "concurrent",
+          "concurrent executions",
+          "concurrent executions serializability",
+          "concurrent transactions",
+          "concurrent transactions dept",
+          "cse jntuhuceh",
+          "cse jntuhuceh tech",
+          "dept",
+          "dept cse",
+          "dept cse jntuhuceh",
+          "durability",
+          "durability concurrent",
+          "durability concurrent executions",
+          "executions",
+          "executions serializability",
+          "executions serializability recoverabili",
+          "for serializability",
+          "for serializability lock",
+          "granularity",
+          "granularity recovery",
+          "granularity recovery and",
+          "idp academic",
+          "idp academic year",
+          "implementation",
+          "implementation atomicity",
+          "implementation atomicity and",
+          "implementation isolation",
+          "implementation isolation testing",
+          "isolation"
+        ],
+        "questions": [
+          {
+            "question": "What is log file ? Explain the following log based recovery schemes .?",
+            "source": "dbms1.pdf",
+            "score": 12.85
+          },
+          {
+            "question": "Differentiate between atomicity and durability. [3]?",
+            "source": "dbms9.pdf",
+            "score": 12.85
+          },
+          {
+            "question": "Describe Validation -based protocols . [5+5]?",
+            "source": "dbms4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain multiple granularity concurrency control scheme . [5+5] OR?",
+            "source": "dbms1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain log -based recovery protocol. [8+7]?",
+            "source": "dbms3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Discuss time -stamp based protocols in brief. [5+5]?",
+            "source": "dbms9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Define atomicity and consistency. [3]?",
+            "source": "dbms4.pdf",
+            "score": 3.83
+          },
+          {
+            "question": "Discuss about transaction recovery techniques. [15]?",
+            "source": "dbms7.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain about transaction recovery techniques. [5+5] OR?",
+            "source": "dbms9.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain about durability of transaction . [2]?",
+            "source": "dbms1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is transaction? Explain its states . [3]?",
+            "source": "dbms1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain generalization and specialization concepts with an example. [7+8]?",
+            "source": "dbms3.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Describe about testing of Serializability. [5+5] OR?",
+            "source": "dbms4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is a view ? How to specify a view? Write about view implementation techniques. [15]?",
+            "source": "dbms7.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain the concept of transaction. [2]?",
+            "source": "dbms9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is transaction?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What is locking Protocol?",
+            "source": "dbms1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) How to test serializability of a schedule?",
+            "source": "dbms3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is seri alizability? Explain conflict and view is serializability in detail. [15]?",
+            "source": "dbms5.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What is Transaction?",
+            "source": "dbms6.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What are the desira ble properties of a transaction?",
+            "source": "dbms9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-V": {
+        "title": "Data on External Storage File Organization and Indexing Cl",
+        "keywords": [
+          "access",
+          "access methods",
+          "access methods isam",
+          "and indexing",
+          "and indexing cluster",
+          "and management",
+          "and management peter",
+          "and performance",
+          "and performance tuning",
+          "and secondary",
+          "and secondary indexes",
+          "base",
+          "base indexing",
+          "base indexing comparison",
+          "based",
+          "based indexing",
+          "based indexing tree",
+          "carlos",
+          "carlos coronel",
+          "carlos coronel edition",
+          "cluster",
+          "cluster indexes",
+          "cluster indexes primary",
+          "comparison",
+          "comparison file",
+          "comparison file organizations",
+          "complete",
+          "complete reference",
+          "complete reference james",
+          "concepts",
+          "concepts silberschatz",
+          "concepts silberschatz korth",
+          "coronel",
+          "coronel edition",
+          "coronel edition sql",
+          "data",
+          "data external",
+          "data external storage",
+          "data structures",
+          "data structures hash",
+          "database",
+          "database management",
+          "database management systems",
+          "database syst",
+          "database syst concepts",
+          "database systems",
+          "database systems design",
+          "design",
+          "design implementation",
+          "design implementation and"
+        ],
+        "questions": [
+          {
+            "question": "What are the Primary and Secondary indexes?",
+            "source": "dbms9.pdf",
+            "score": 22.88
+          },
+          {
+            "question": "What are the Primary and Secondary indexes? Explain. [5+5] OR?",
+            "source": "dbms9.pdf",
+            "score": 22.88
+          },
+          {
+            "question": "What is meant by file organization? Explain in brief about Indexed S equential Access Method (ISAM). [8+7] ---oo0oo --- R18 JNTUH Used paper Aug-2022?",
+            "source": "dbms3.pdf",
+            "score": 8.83
+          },
+          {
+            "question": "Compare and contrast the Hash -Based Indexing and Tree -based Indexing. [15]?",
+            "source": "dbms6.pdf",
+            "score": 8.83
+          },
+          {
+            "question": "What is the main difference between ISAM and B+ tree indexes ?",
+            "source": "dbms1.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What is the main difference between ISAM and B+ tree indexes ? [3] PART – B (50 Marks)?",
+            "source": "dbms1.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain about ha sh based indexing with example. [5+5] ---ooOoo --- JNTUH USED PAPERS 2023?",
+            "source": "dbms9.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Define Primary index and Secondary Index. [2]?",
+            "source": "dbms4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is meant by file organization?",
+            "source": "dbms3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Describe the different types of file organization. [5+5] OR?",
+            "source": "dbms4.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain the functions of Database Administrator . [15]?",
+            "source": "dbms5.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain about B+ tree index file. [3] PART – B (50 Mark s)?",
+            "source": "dbms9.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain deletion and insertion operation in B+ trees . [4+6] ---ooOoo --- JNTUH Used papers 2023?",
+            "source": "dbms1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "A) What is the purpose of indexing in DBMS?",
+            "source": "dbms3.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Illustrate insertion and deletion of an element in B+ trees with example . [5+5] ---ooOoo?",
+            "source": "dbms4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "How does a B+ tree index handle the search, insert and delete?",
+            "source": "dbms6.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain in detail about external hashing techniques . [15] ---ooOoo --- R18 JNTUH UsedPapers March2022?",
+            "source": "dbms7.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain about organization of records in files. [2]?",
+            "source": "dbms9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the Pros and Cons of ISAM?",
+            "source": "dbms2.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Why is a table whose primary key consists of a single attribute automatically in 2NF when it is in 1NF?",
+            "source": "dbms6.pdf",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    "unmatched": [
+      {
+        "question": "Distinguish between super key and Candidate key. [2]?",
+        "source": "dbms1.pdf"
+      },
+      {
+        "question": "Explain the following :?",
+        "source": "dbms1.pdf"
+      },
+      {
+        "question": "Why is this proper ty so important?",
+        "source": "dbms2.pdf"
+      },
+      {
+        "question": "What is an attribute?",
+        "source": "dbms3.pdf"
+      },
+      {
+        "question": "What do you mean by procedural DML?",
+        "source": "dbms4.pdf"
+      },
+      {
+        "question": "Demonstrate transitive dependency?",
+        "source": "dbms4.pdf"
+      },
+      {
+        "question": "What is seri alizability?",
+        "source": "dbms5.pdf"
+      },
+      {
+        "question": "What is a view ?",
+        "source": "dbms7.pdf"
+      },
+      {
+        "question": "How to specify a view?",
+        "source": "dbms7.pdf"
+      }
+    ]
+  },
+  "ds": {
+    "unit_topics": {
+      "UNIT-I": {
+        "title": "Introduction to Data Structures abstract data types Linear",
+        "keywords": [
+          "abstract",
+          "abstract data",
+          "abstract data types",
+          "and linked",
+          "and linked representations",
+          "and searching",
+          "and searching operations",
+          "applications",
+          "applications queues",
+          "applications queues operations",
+          "array",
+          "array and",
+          "array and linked",
+          "data",
+          "data structures",
+          "data structures abstract",
+          "data types",
+          "data types linear",
+          "deletion",
+          "deletion and",
+          "deletion and searching",
+          "implementation",
+          "implementation insertion",
+          "implementation insertion deletion",
+          "insertion",
+          "insertion deletion",
+          "insertion deletion and",
+          "introduction",
+          "introduction data",
+          "introduction data structures",
+          "linear",
+          "linear list",
+          "linear list singly",
+          "linear list stacks",
+          "linked",
+          "linked list",
+          "linked list implementation",
+          "linked representations",
+          "linked representations stacks",
+          "list",
+          "list implementation",
+          "list implementation insertion",
+          "list singly",
+          "list singly linked",
+          "list stacks",
+          "list stacks operations",
+          "operations",
+          "operations array",
+          "operations array and",
+          "operations linear"
+        ],
+        "questions": [
+          {
+            "question": "Explain in detail about skip lists in data structures. [15] ---ooOoo --- R18 10-03-2021 AM?",
+            "source": "ds3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) Define a single linked list ?",
+            "source": "ds8.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "How to construct a queue using stacks?",
+            "source": "ds1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Discuss the applications of queues. [5+5]?",
+            "source": "ds1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "List out the applications of tries . [1] PART -B (50 Marks)?",
+            "source": "ds8.pdf",
+            "score": 2.0
+          }
+        ]
+      },
+      "UNIT-II": {
+        "title": "Dictionaries",
+        "keywords": [
+          "addressing",
+          "addressing linear",
+          "addressing linear probing",
+          "and searching",
+          "and searching hash",
+          "chaining",
+          "chaining open",
+          "chaining open addressing",
+          "collision",
+          "collision resolution",
+          "collision resolution separate",
+          "deletion",
+          "deletion and",
+          "deletion and searching",
+          "dictionaries",
+          "dictionaries linear",
+          "dictionaries linear list",
+          "double",
+          "double hashing",
+          "double hashing rehashing",
+          "extendible",
+          "extendible hashing",
+          "functions",
+          "functions collision",
+          "functions collision resolution",
+          "hash",
+          "hash functions",
+          "hash functions collision",
+          "hash table",
+          "hash table representation",
+          "hashing",
+          "hashing rehashing",
+          "hashing rehashing extendible",
+          "insertion",
+          "insertion deletion",
+          "insertion deletion and",
+          "linear",
+          "linear list",
+          "linear list representation",
+          "linear probing",
+          "linear probing quadratic",
+          "list",
+          "list representation",
+          "list representation opera",
+          "list representation skip",
+          "open",
+          "open addressing",
+          "open addressing linear",
+          "opera",
+          "opera tions"
+        ],
+        "questions": [
+          {
+            "question": "Is linear probing and open addressing same?",
+            "source": "ds4.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Explain briefly about double hashing and extendible hashing techniques. [4+6] R22?",
+            "source": "ds8.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "What are different methods of collision resolution in hashing?",
+            "source": "ds3.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What are different methods of collision resolution in hashing? Explain in brief. [15]?",
+            "source": "ds3.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "List and explain the advantages of extendible hashing . [10+5]?",
+            "source": "ds4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain Push and Pop operations of a stack using array representations. [5+5] OR?",
+            "source": "ds8.pdf",
+            "score": 6.0
+          },
+          {
+            "question": "List the drawbacks of open addressing. [3]?",
+            "source": "ds1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the algorithm for implementing quadratic probing on a hash ta ble. [10]?",
+            "source": "ds1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is the expected number of probes for both successful and unsuccessful searches in a linear probing table with load factor 0.25?",
+            "source": "ds2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is the expected number of probes for both successful and unsuccessful searches in a linear probing table with load factor 0.25? [7+8]?",
+            "source": "ds2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Ng numbers 10, 20, 50, 30, 90, 60 (Top) are present in a stack of size 10. Perform the following operations in sequenc e. pop(), push(30), push(40), pop(), push ( 60), pop(), pop(), pop() What is the peek element at last?",
+            "source": "ds2.pdf",
+            "score": 5.0
+          },
+          {
+            "question": "Wing numbers 10, 20, 50, 30, 90, 60 (Top) are present in a stack of size 10. Perform the following operations in sequence. pop(), push(30), push(40), pop(), push (60), pop(), pop(), pop() What is the peek element at last?",
+            "source": "ds8.pdf",
+            "score": 5.0
+          },
+          {
+            "question": "What is a skip list?",
+            "source": "ds1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a skip list? [2]?",
+            "source": "ds1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain about the various has h collision resolution techniques with an example. [15]?",
+            "source": "ds5.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain about the various has h collision resolution techniques with an example. [15]?",
+            "source": "ds6.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a skip list?",
+            "source": "ds8.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a skip list? [1]?",
+            "source": "ds8.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain the operations of Queue with an example. [8+7]?",
+            "source": "ds5.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain the operations of Queue with an example. [8+7]?",
+            "source": "ds6.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Define Rehashing?",
+            "source": "ds8.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Define Rehashing? [1]?",
+            "source": "ds8.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain the operation s of queue . [8+7]?",
+            "source": "ds4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the applications of the queue?",
+            "source": "ds4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the applications of the queue? Explain. [8+7]?",
+            "source": "ds4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Differentiate between stack and queue. [8+7]?",
+            "source": "ds7.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the app lications of the queue?",
+            "source": "ds8.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are the app lications of the queue? [1]?",
+            "source": "ds8.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "R five cities: (i) New Delhi, (ii) Mumbai, (iii) Chennai, (iv) Bangalor e, and (v) Kolkata, and a list of flights that connect these cities as shown in the following table. Use the given information to construct a graph ?",
+            "source": "ds8.pdf",
+            "score": 2.0
+          }
+        ]
+      },
+      "UNIT-III": {
+        "title": "Search Trees",
+        "keywords": [
+          "and deletion",
+          "and deletion avl",
+          "and searching",
+          "and searching red",
+          "avl tree",
+          "avl tree operations",
+          "avl trees",
+          "avl trees definition",
+          "binary",
+          "binary search",
+          "binary search trees",
+          "black",
+          "black splay",
+          "black splay trees",
+          "definition",
+          "definition height",
+          "definition height avl",
+          "definition implementation",
+          "definition implementation operations",
+          "deletion",
+          "deletion and",
+          "deletion and searching",
+          "deletion avl",
+          "deletion avl trees",
+          "height",
+          "height avl",
+          "height avl tree",
+          "implementation",
+          "implementation operations",
+          "implementation operations searching",
+          "insertion",
+          "insertion and",
+          "insertion and deletion",
+          "insertion deletion",
+          "insertion deletion and",
+          "operations",
+          "operations insertion",
+          "operations insertion deletion",
+          "operations searching",
+          "operations searching insertion",
+          "red black",
+          "red black splay",
+          "search",
+          "search trees",
+          "search trees binary",
+          "search trees definition",
+          "searching",
+          "searching insertion",
+          "searching insertion and",
+          "searching red"
+        ],
+        "questions": [
+          {
+            "question": "Explain briefly about binary search trees. [7+8]?",
+            "source": "ds3.pdf",
+            "score": 20.05
+          },
+          {
+            "question": "Define Binary search tree. [12+3 ]?",
+            "source": "ds4.pdf",
+            "score": 11.02
+          },
+          {
+            "question": "Define Binary search tree?",
+            "source": "ds8.pdf",
+            "score": 11.02
+          },
+          {
+            "question": "Define Binary search tree? [1]?",
+            "source": "ds8.pdf",
+            "score": 11.02
+          },
+          {
+            "question": "What operations are performed on Splay trees?",
+            "source": "ds1.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "In an initially empty AVL tree insert the following ke ys: DEC, JAN, APR,MAR, JUL, AUG, OCT, FEB, NOV. Draw AVL tree after every insertion and apply rotations where ver is necessary?",
+            "source": "ds8.pdf",
+            "score": 7.66
+          },
+          {
+            "question": "Explain insertion operation with following numbers into Red Black tree 45, 10, 8, 9, 34, 35, 12, 60, 90. [7+8]?",
+            "source": "ds2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the operations of Splay tree with an example. [15] ---ooOoo --- R18 Used Papers SEP 2021?",
+            "source": "ds7.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Discuss the importance of height balanced trees for searching. [5+5] OR?",
+            "source": "ds1.pdf",
+            "score": 5.0
+          },
+          {
+            "question": "What is the need of rotations in red-black tree?",
+            "source": "ds8.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is the need of rotations in red-black tree? [1]?",
+            "source": "ds8.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a max heap?",
+            "source": "ds1.pdf",
+            "score": 3.83
+          },
+          {
+            "question": "What is a max heap? [2]?",
+            "source": "ds1.pdf",
+            "score": 3.83
+          },
+          {
+            "question": "What does the color notate in re d-black tree?",
+            "source": "ds1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Differentiate between spl ay tree and red -black tree. [5+5] R18 JNTUH Used papers 2023?",
+            "source": "ds1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Define trie. [2]?",
+            "source": "ds1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define a trie. [1]?",
+            "source": "ds8.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-IV": {
+        "title": "Graphs",
+        "keywords": [
+          "external",
+          "external sorting",
+          "external sorting merge",
+          "external sorting model",
+          "for external",
+          "for external sorting",
+          "graph",
+          "graph implementation",
+          "graph implementation methods",
+          "graph traversal",
+          "graph traversal methods",
+          "graphs",
+          "graphs graph",
+          "graphs graph implementation",
+          "heap",
+          "heap sort",
+          "heap sort external",
+          "implementation",
+          "implementation methods",
+          "implementation methods graph",
+          "merge",
+          "merge sort",
+          "methods",
+          "methods graph",
+          "methods graph traversal",
+          "methods sortings",
+          "methods sortings heap",
+          "model",
+          "model for",
+          "model for external",
+          "sort",
+          "sort external",
+          "sort external sorting",
+          "sorting",
+          "sorting merge",
+          "sorting merge sort",
+          "sorting model",
+          "sorting model for",
+          "sortings",
+          "sortings heap",
+          "sortings heap sort",
+          "traversal",
+          "traversal methods",
+          "traversal methods sortings",
+          "bfs",
+          "dfs",
+          "breadth first",
+          "depth first",
+          "spanning tree",
+          "shortest path"
+        ],
+        "questions": [
+          {
+            "question": "Explain about external sorting with an example. [7+8]?",
+            "source": "ds5.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain about external sorting with an example. [7+8]?",
+            "source": "ds6.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "List out the external sorting techniques. [1]?",
+            "source": "ds8.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the process of heap sort with example. [15]?",
+            "source": "ds3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "How a graph is traversed using depth first search?",
+            "source": "ds3.pdf",
+            "score": 3.83
+          },
+          {
+            "question": "Compare and contrast different sorting methods. [15]?",
+            "source": "ds3.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Give example for adjacency list of a graph. [3]?",
+            "source": "ds1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Compare BFS and DFS with suitable examples. [8+7] R18 JNTUH Used paper Aug-2022?",
+            "source": "ds2.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Define a graph. [1]?",
+            "source": "ds8.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-V": {
+        "title": "Pattern matching and Tries",
+        "keywords": [
+          "academic",
+          "academic year",
+          "academic year textbooks",
+          "algorithm",
+          "algorithm standard",
+          "algorithm standard tries",
+          "algorithm the",
+          "algorithm the knuth",
+          "algorithms",
+          "algorithms brute",
+          "algorithms brute force",
+          "and augenstein",
+          "and augenstein phi",
+          "and forouzan",
+          "and forouzan edition",
+          "and susan",
+          "and susan anderson",
+          "and tries",
+          "and tries pattern",
+          "anderson",
+          "anderson freed",
+          "anderson freed edition",
+          "approach",
+          "approach with",
+          "approach with gilberg",
+          "ashok",
+          "ashok kamthane",
+          "ashok kamthane edition",
+          "augenstein",
+          "augenstein phi",
+          "augenstein phi pearson",
+          "boyer",
+          "boyer moore",
+          "boyer moore algorithm",
+          "brute",
+          "brute force",
+          "brute force the",
+          "cengage",
+          "cengage learning",
+          "cengage learning introduction",
+          "compressed",
+          "compressed tries",
+          "compressed tries suffix",
+          "cse jntuhuceh",
+          "cse jntuhuceh tech",
+          "data",
+          "data structures",
+          "data structures ashok",
+          "data structures horowitz",
+          "data structures pseudocode"
+        ],
+        "questions": [
+          {
+            "question": "Explain the features that distinguish between Boyer Moore algorithm from the conventional algorithms. [7+8]?",
+            "source": "ds7.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "Explain the features that distinguish between Boyer Moore algorithm from the conventional algorithms . [5+5] ---ooOoo?",
+            "source": "ds8.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "What are the meri ts and demerits of brute force method for pattern matching?",
+            "source": "ds1.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "What are the meri ts and demerits of brute force method for pattern matching? [3] PART – B (50 Marks)?",
+            "source": "ds1.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Describe the Knuth -Morris -Pratt algorith m for pattern matchin g. [10] OR?",
+            "source": "ds1.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain about the Brute force algorithm with an example. [7+8]?",
+            "source": "ds5.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain about the Brute force algorithm with an example. [7+8]?",
+            "source": "ds6.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Illustrate the Brute force algorithm. [5+10] ---oo0oo --- R18 JNTUH Usedpapers March 2022?",
+            "source": "ds4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain BFS algorithm with example . [5+5]?",
+            "source": "ds8.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain in brief about tr ies with example. [15]?",
+            "source": "ds3.pdf",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    "unmatched": [
+      {
+        "question": "Explain about :?",
+        "source": "ds5.pdf"
+      },
+      {
+        "question": "Explain about :?",
+        "source": "ds6.pdf"
+      },
+      {
+        "question": "Draw and explain it ?",
+        "source": "ds8.pdf"
+      },
+      {
+        "question": "A) What is a Dictionary?",
+        "source": "ds8.pdf"
+      }
+    ]
+  },
+  "oops": {
+    "unit_topics": {
+      "UNIT-I": {
+        "title": "Object Oriented thinking - Different paradigms for pr oblem",
+        "keywords": [
+          "abstraction",
+          "abstraction encapsulation",
+          "abstraction encapsulation inheritance",
+          "allocation",
+          "allocation and",
+          "allocation and deallocation",
+          "and arrays",
+          "and arrays strings",
+          "and deallocation",
+          "and deallocation operators",
+          "and delete",
+          "and delete preprocessor",
+          "and polymorphism",
+          "and polymorphism basics",
+          "and procedure",
+          "and procedure oriented",
+          "arguments",
+          "arguments inline",
+          "arguments inline functions",
+          "arrays",
+          "arrays pointers",
+          "arrays pointers and",
+          "arrays strings",
+          "arrays strings structures",
+          "basics",
+          "basics structure",
+          "basics structure program",
+          "between",
+          "between oop",
+          "between oop and",
+          "break",
+          "break continue",
+          "break continue goto",
+          "concepts",
+          "concepts abstraction",
+          "concepts abstraction encapsulation",
+          "continue",
+          "continue goto",
+          "continue goto statements",
+          "control",
+          "control statement",
+          "control statement switch",
+          "conversions",
+          "conversions pointers",
+          "conversions pointers arrays",
+          "data",
+          "data types",
+          "data types declaration",
+          "deallocation",
+          "deallocation operators"
+        ],
+        "questions": [
+          {
+            "question": "Explain the control statements in Java . [5+5]?",
+            "source": "oops1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "List the various operators in Java. [1]?",
+            "source": "oops1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "A) What is type conversion ?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Illustrate the use of the super keyword in a Java program. [5+5] OR?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain the role of Graphics in drawing and rendering in Java. Write a Java program that demonstrates the use of the Graphics class . [10] OR?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-II": {
+        "title": "C Classes And Data Abstraction",
+        "keywords": [
+          "abstraction",
+          "abstraction adt",
+          "abstraction adt and",
+          "abstraction class",
+          "abstraction class definition",
+          "adt and",
+          "adt and information",
+          "and data",
+          "and data abstraction",
+          "and destruction",
+          "and destruction objects",
+          "and destructors",
+          "and destructors dynamic",
+          "and information",
+          "and information hiding",
+          "class",
+          "class definition",
+          "class definition class",
+          "class members",
+          "class members constant",
+          "class objects",
+          "class objects class",
+          "class scope",
+          "class scope this",
+          "class static",
+          "class static class",
+          "class structure",
+          "class structure class",
+          "classes",
+          "classes and",
+          "classes and data",
+          "constant",
+          "constant member",
+          "constant member functions",
+          "constructors",
+          "constructors and",
+          "constructors and destructors",
+          "creation",
+          "creation and",
+          "creation and destruction",
+          "data",
+          "data abstraction",
+          "data abstraction adt",
+          "data abstraction class",
+          "definition",
+          "definition class",
+          "definition class structure",
+          "destruction",
+          "destruction objects",
+          "destruction objects data"
+        ],
+        "questions": [
+          {
+            "question": "Describe the key features of classes and objects in Java. [5+5] OR?",
+            "source": "oops1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Can a class extend multiple interfaces?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "How can you create your own exception subclass?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Which Swing class is used for creating buttons?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-III": {
+        "title": "Inheritance",
+        "keywords": [
+          "abstract",
+          "abstract classes",
+          "abstract classes implications",
+          "academic",
+          "academic year",
+          "academic year virtual",
+          "access",
+          "access the",
+          "access the base",
+          "and derived",
+          "and derived class",
+          "and dynamic",
+          "and dynamic binding",
+          "and polymorphism",
+          "and polymorphism static",
+          "and rived",
+          "and rived classes",
+          "base",
+          "base and",
+          "base and derived",
+          "base and rived",
+          "base class",
+          "base class dept",
+          "base class members",
+          "binding",
+          "binding through",
+          "binding through virtual",
+          "binding virtual",
+          "binding virtual functions",
+          "call",
+          "call mechanism",
+          "call mechanism pure",
+          "class",
+          "class construction",
+          "class construction destructors",
+          "class dept",
+          "class dept cse",
+          "class hierarchy",
+          "class hierarchy different",
+          "class members",
+          "class members base",
+          "classes",
+          "classes access",
+          "classes access the",
+          "classes implications",
+          "classes implications polymorphic",
+          "classes virtual",
+          "classes virtual destructors",
+          "construction",
+          "construction destructors"
+        ],
+        "questions": [
+          {
+            "question": "What is an abstract class?",
+            "source": "oops1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is an abstract class? [1]?",
+            "source": "oops1.pdf",
+            "score": 2.0
+          }
+        ]
+      },
+      "UNIT-IV": {
+        "title": "C I/O",
+        "keywords": [
+          "and string",
+          "and string streams",
+          "classes",
+          "classes hierarchy",
+          "classes hierarchy stream",
+          "during",
+          "during file",
+          "during file operations",
+          "error",
+          "error handling",
+          "error handling during",
+          "file",
+          "file operations",
+          "file operations formatted",
+          "file streams",
+          "file streams and",
+          "formatted",
+          "functions",
+          "functions stream",
+          "functions stream classes",
+          "handling",
+          "handling during",
+          "handling during file",
+          "hierarchy",
+          "hierarchy stream",
+          "hierarchy stream file",
+          "operations",
+          "operations formatted",
+          "overloading",
+          "overloading perators",
+          "overloading perators error",
+          "perators",
+          "perators error",
+          "perators error handling",
+          "stream",
+          "stream classes",
+          "stream classes hierarchy",
+          "stream file",
+          "stream file streams",
+          "streams",
+          "streams and",
+          "streams and string",
+          "streams overloading",
+          "streams overloading perators",
+          "string",
+          "string streams",
+          "string streams overloading",
+          "using",
+          "using functions",
+          "using functions stream"
+        ],
+        "questions": [
+          {
+            "question": "Discuss the handling of mouse events in Java . [5+5]?",
+            "source": "oops1.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-V": {
+        "title": "Exception Handling",
+        "keywords": [
+          "afore",
+          "afore edition",
+          "afore edition galigotia",
+          "all exceptions",
+          "all exceptions textbooks",
+          "and gilb",
+          "and muganda",
+          "and muganda edition",
+          "approach",
+          "approach using",
+          "approach using forouzan",
+          "benefits",
+          "benefits exception",
+          "benefits exception handling",
+          "block",
+          "block catching",
+          "block catching exception",
+          "catching",
+          "catching all",
+          "catching all exceptions",
+          "catching exception",
+          "catching exception exception",
+          "complete",
+          "complete reference",
+          "complete reference edition",
+          "computer",
+          "computer science",
+          "computer science structured",
+          "dreamtech",
+          "dreamtech press",
+          "dreamtech press object",
+          "edition",
+          "edition galigotia",
+          "edition galigotia publications",
+          "edition herbert",
+          "edition herbert schildt",
+          "edition pearson",
+          "edition pearson education",
+          "edition walter",
+          "edition walter savitch",
+          "edition wiley",
+          "edition wiley dreamtech",
+          "education",
+          "education oop",
+          "education oop gaddis",
+          "education references",
+          "education references the",
+          "exception",
+          "exception catching",
+          "exception catching all"
+        ],
+        "questions": []
+      }
+    },
+    "unmatched": [
+      {
+        "question": "What are annotations in Java?",
+        "source": "oops1.pdf"
+      },
+      {
+        "question": "What are annotations in Java? [1]?",
+        "source": "oops1.pdf"
+      },
+      {
+        "question": "What is the purpose of a ScrollPane in Java GUI?",
+        "source": "oops1.pdf"
+      },
+      {
+        "question": "What is the purpose of a ScrollPane in Java GUI? [1]?",
+        "source": "oops1.pdf"
+      },
+      {
+        "question": "Describe the life cycle of a thread in Java. [5+5] R22?",
+        "source": "oops1.pdf"
+      },
+      {
+        "question": "Compare the features of JApplet and JFrame in Java Swing. [5+5] OR?",
+        "source": "oops1.pdf"
+      },
+      {
+        "question": "Discuss how Combo boxes contribute to a more user -friendly interface in Java Swing. [5+5] ---ooOoo?",
+        "source": "oops1.pdf"
+      }
+    ]
+  },
+  "os": {
+    "unit_topics": {
+      "UNIT-I": {
+        "title": "Introduction to Operating System  Structures - Simple Batch",
+        "keywords": [
+          "batch",
+          "batch multiprogrammed",
+          "batch multiprogrammed time",
+          "calls",
+          "components",
+          "components operating",
+          "components operating system",
+          "computer",
+          "computer parallel",
+          "computer parallel distributed",
+          "distributed",
+          "distributed systems",
+          "distributed systems real",
+          "introduction",
+          "introduction operating",
+          "introduction operating system",
+          "multiprogrammed",
+          "multiprogrammed time",
+          "multiprogrammed time shared",
+          "operating",
+          "operating system",
+          "operating system services",
+          "operating system structures",
+          "parallel",
+          "parallel distributed",
+          "parallel distributed systems",
+          "personal",
+          "personal computer",
+          "personal computer parallel",
+          "real",
+          "real time",
+          "real time systems",
+          "services",
+          "services system",
+          "services system calls",
+          "shared",
+          "shared personal",
+          "shared personal computer",
+          "simple",
+          "simple batch",
+          "simple batch multiprogrammed",
+          "structures",
+          "structures simple",
+          "structures simple batch",
+          "system",
+          "system calls",
+          "system components",
+          "system components operating",
+          "system services",
+          "system services system"
+        ],
+        "questions": [
+          {
+            "question": "What are real time systems?",
+            "source": "os9.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "What are different types of real time systems?",
+            "source": "os9.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "What are real time systems? What are different types of real time systems? Explain them. [10]?",
+            "source": "os9.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "A) What are operating system services?",
+            "source": "os9.pdf",
+            "score": 13.85
+          },
+          {
+            "question": "Define real time system. Explain about real time operating system. [7+8]?",
+            "source": "os3.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "What is a System call? Expl ain the various types of system calls provided by an operating system. [15]?",
+            "source": "os5.pdf",
+            "score": 8.66
+          },
+          {
+            "question": "List out the types of operating system and explain batch OS and time sharing OS in brief . [15]?",
+            "source": "os8.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Distinguish between multi programmed and time shared systems. [10] OR?",
+            "source": "os9.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Distinguish between t he client –server and peer -to-peer models of distributed systems . [5+5]?",
+            "source": "os1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "A) What is a hard real time system?",
+            "source": "os4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Distinguish between client -server and peer -to-peer models of distributed systems . [7+8]?",
+            "source": "os5.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain about the system components of OS. [9+6]?",
+            "source": "os3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Discuss the various System components. [7+8 ]?",
+            "source": "os7.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain the various system calls are used in OS . [7+8]?",
+            "source": "os8.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Can we ensure the same degree of security in a time -shared machine as in a dedicated machine?",
+            "source": "os1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is parallel system?",
+            "source": "os9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is parallel system? [3]?",
+            "source": "os9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is turn around time?",
+            "source": "os9.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is turn around time? [2]?",
+            "source": "os9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-II": {
+        "title": "Process and CPU Scheduling - Process concepts and scheduling",
+        "keywords": [
+          "algorithms",
+          "algorithms multiple",
+          "algorithms multiple processor",
+          "and cpu",
+          "and cpu scheduling",
+          "and scheduling",
+          "and scheduling operations",
+          "and ter",
+          "and ter process",
+          "call",
+          "call interface",
+          "call interface for",
+          "communication",
+          "communication scheduling",
+          "communication scheduling criteria",
+          "concepts",
+          "concepts and",
+          "concepts and scheduling",
+          "cooperating",
+          "cooperating processes",
+          "cooperating processes threads",
+          "cpu scheduling",
+          "cpu scheduling process",
+          "criteria",
+          "criteria scheduling",
+          "criteria scheduling algorithms",
+          "exec",
+          "exit",
+          "exit wait",
+          "exit wait waitpid",
+          "for process",
+          "for process management",
+          "fork",
+          "fork exit",
+          "fork exit wait",
+          "interface",
+          "interface for",
+          "interface for process",
+          "management",
+          "management fork",
+          "management fork exit",
+          "multiple",
+          "multiple processor",
+          "multiple processor scheduling",
+          "operations",
+          "operations processes",
+          "operations processes cooperating",
+          "process",
+          "process and",
+          "process and cpu"
+        ],
+        "questions": [
+          {
+            "question": "Explain about the system calls fork, exit, wait, waitpid and exec. [15]?",
+            "source": "os8.pdf",
+            "score": 9.83
+          },
+          {
+            "question": "Explain and give the differences in how much the following scheduling algorithms discriminate in favor of short processes.?",
+            "source": "os2.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain about fork and exit system calls with examples. [8+7]?",
+            "source": "os3.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What is the use of waitpid() system call?",
+            "source": "os4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What is the use of waitpid() system call? [3]?",
+            "source": "os4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Distinguish between wait() and waitpid() system calls. [3]?",
+            "source": "os9.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Can a multithreaded solution using multiple user -level threads achieve better performa nce on a multiprocessor system than on a single -processor system?",
+            "source": "os1.pdf",
+            "score": 5.0
+          },
+          {
+            "question": "What is a System call?",
+            "source": "os2.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain the preemptive and non -preemptive scheduling criteria. [5+5] OR?",
+            "source": "os4.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a System call?",
+            "source": "os5.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a System call?",
+            "source": "os7.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "List and explain the Scheduling Algorithms. [15]?",
+            "source": "os7.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is symmetric multiprocess or system?",
+            "source": "os4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is symmetric multiprocess or system? List out its characteristics. [3]?",
+            "source": "os4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Why do processes need to communicate?",
+            "source": "os4.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are CPU bound and I/O bound processes?",
+            "source": "os9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What are CPU bound and I/O bound processes? [5+5] R18 JNTUH USED PAPERS-2023?",
+            "source": "os9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "How does priority scheduling differ from round robin method?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain about shortest Job First Scheduling algorithm with an example. [7+8]?",
+            "source": "os3.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What is a process?",
+            "source": "os4.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-III": {
+        "title": "Deadlocks - System Model Deadlocks Characterization Method",
+        "keywords": [
+          "academic",
+          "academic year",
+          "and classical",
+          "and classical problems",
+          "and recovery",
+          "and recovery from",
+          "and synchronization",
+          "and synchronization the",
+          "avoidance",
+          "avoidance deadlock",
+          "avoidance deadlock detection",
+          "between",
+          "between processes",
+          "between processes different",
+          "between processes single",
+          "characterization",
+          "characterization methods",
+          "characterization methods for",
+          "classical",
+          "classical problems",
+          "classical problems synchroniza",
+          "communication",
+          "communication mechanisms",
+          "communication mechanisms ipc",
+          "computer",
+          "computer system",
+          "computer system ipc",
+          "critical",
+          "critical regions",
+          "critical regions monitors",
+          "critical section",
+          "critical section problem",
+          "cse jntuhuceh",
+          "cse jntuhuceh tech",
+          "deadlock",
+          "deadlock avoidance",
+          "deadlock avoidance deadlock",
+          "deadlock detection",
+          "deadlock detection and",
+          "deadlock prevention",
+          "deadlock prevention deadlock",
+          "deadlock process",
+          "deadlock process management",
+          "deadlocks",
+          "deadlocks characterization",
+          "deadlocks characterization methods",
+          "deadlocks deadlock",
+          "deadlocks deadlock prevention",
+          "deadlocks system",
+          "deadlocks system model"
+        ],
+        "questions": [
+          {
+            "question": "What is critical section problem?",
+            "source": "os9.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "What is critical section problem? [2]?",
+            "source": "os9.pdf",
+            "score": 14.85
+          },
+          {
+            "question": "Explain interprocess communication using shared memory. [10]?",
+            "source": "os9.pdf",
+            "score": 12.66
+          },
+          {
+            "question": "What is critical -section problem? Give a classic Peterson’s solution to the critical - section problem. [5+5] OR?",
+            "source": "os1.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "What is critical -section problem?",
+            "source": "os1.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain about deadlock detection. [7+8]?",
+            "source": "os3.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is a deadlock? Explain various deadlock prevention strategies with brief illustrations . [10] OR?",
+            "source": "os4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What are various methods to recover from deadlock?",
+            "source": "os9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What are various methods to recover from deadlock? [3]?",
+            "source": "os9.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is process synchronization? How can it be achieved through monitors? Explain. [10]?",
+            "source": "os4.pdf",
+            "score": 5.0
+          },
+          {
+            "question": "Differentiate between Multi Programming, Multi Tasking and Multi processing systems . [8+7]?",
+            "source": "os6.pdf",
+            "score": 5.0
+          },
+          {
+            "question": "What is a message queues?",
+            "source": "os1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is a message queues? [2]?",
+            "source": "os1.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "List and explain the various methods for pr otection and access control. [15] ---oo0oo --- R18 R18 JNTUH UsedPapers March2022?",
+            "source": "os7.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain banker’s algorithm for deadlock avoidance with an example . [10] OR?",
+            "source": "os9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "A) In a multiprogramming and time -shari ng environment, several users share the system simultaneously. This situation can result in various security problems. What are two such problems?",
+            "source": "os1.pdf",
+            "score": 4.0
+          },
+          {
+            "question": "Discuss the tradeoff between fairness and throughput of operations in the readers - writers problem. Propose a method for solving the readers -writers problem without causing starvation. [10]?",
+            "source": "os1.pdf",
+            "score": 4.0
+          },
+          {
+            "question": "Ven five memory partitions of 100 KB, 500 KB, 200 KB, 300 KB, and 600 KB (in order), how would each of the first -fit, best -fit, and worst -fit algorithms place processes of 212 KB, 417 KB, 112 KB, and 426 KB (in order)?",
+            "source": "os1.pdf",
+            "score": 4.0
+          },
+          {
+            "question": "What is process synchronization?",
+            "source": "os4.pdf",
+            "score": 4.0
+          },
+          {
+            "question": "Is it possible to have a deadlock involving only a single process?",
+            "source": "os5.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Describe about the different types of File al location methods . [15]?",
+            "source": "os6.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "What is Mutual exclusion? Explain Peterson’s solution for mutual exclusion problem . [15] ---ooOoo --- Process Burst Time Priority P1 10 3 P2 1 1 P3 2 3 P4 1 4 P5 5 2 R18 JNTUH Used 27-07-21 AM?",
+            "source": "os6.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "What is Semaphore? Give the implementation of Bounded Buffer Producer Consumer Problem using Semaphore. [15]?",
+            "source": "os8.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Give an example of the situation describing deadlock. [3]?",
+            "source": "os1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Is it possible to apply the Resource allocation graph algorithm to avoid deadlock?",
+            "source": "os2.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Discuss about implementation of Semaphores. [7+8]?",
+            "source": "os3.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Describe the actions taken by a thread library to context -switch between user level threads. [8+7]?",
+            "source": "os5.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is Deadlock? List the cond ition that leads to deadlock. How deadlock can be prevented . [15]?",
+            "source": "os6.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "How does multiprogramming increase CPU utilization?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Define segmentation . [2]?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Why is it important for the scheduler to distinguish I/O -bound programs from C PU- bound programs?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Which algorithm makes the most efficient use of memory?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "A) What are the advantages of Contiguous all ocation?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is resource allocation graph ?",
+            "source": "os4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is resource allocation graph ? Why it is used? [3]?",
+            "source": "os4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is internal fragmentation?",
+            "source": "os4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is internal fragmentation? [2]?",
+            "source": "os4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is a deadlock?",
+            "source": "os4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "How can it be achieved through monitors?",
+            "source": "os4.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is Deadlock?",
+            "source": "os6.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Explain about domain protection mechanism in brief. [8+7] ---ooOoo --- R18 JNTUH USED 21-11-2020PM?",
+            "source": "os8.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Distinguish between a page and frame. [3]?",
+            "source": "os9.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "Illustrate internal and external fragmentation with example. [10]?",
+            "source": "os9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-IV": {
+        "title": "Memory Management and Virtual Memory - Logical versus Physic",
+        "keywords": [
+          "address",
+          "address space",
+          "address space swapping",
+          "algorithms",
+          "allocation",
+          "allocation paging",
+          "allocation paging segmentation",
+          "and virtual",
+          "and virtual memory",
+          "contiguous",
+          "contiguous allocation",
+          "contiguous allocation paging",
+          "demand",
+          "demand paging",
+          "demand paging page",
+          "logical",
+          "logical versus",
+          "logical versus physical",
+          "management",
+          "management and",
+          "management and virtual",
+          "memory",
+          "memory logical",
+          "memory logical versus",
+          "memory management",
+          "memory management and",
+          "page",
+          "page replacement",
+          "page replacement algorithms",
+          "page replacement page",
+          "paging",
+          "paging demand",
+          "paging demand paging",
+          "paging page",
+          "paging page replacement",
+          "paging segmentation",
+          "paging segmentation segmentation",
+          "physical",
+          "physical address",
+          "physical address space",
+          "replacement",
+          "replacement algorithms",
+          "replacement page",
+          "replacement page replacement",
+          "segmentation",
+          "segmentation segmentation",
+          "segmentation segmentation with",
+          "segmentation with",
+          "segmentation with paging",
+          "space"
+        ],
+        "questions": [
+          {
+            "question": "What is demand paging? What is pure demand paging? What are various steps involved in page replacement? [10] OR?",
+            "source": "os9.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Explain about Virtual Memory Management in detail. [7+8]?",
+            "source": "os6.pdf",
+            "score": 8.66
+          },
+          {
+            "question": "Explain segmentation memory management scheme with neat diagrams. [10]?",
+            "source": "os4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Compare the main memory organization schemes of contiguous memory allocation, pure segmentation and pure paging with respect to the following issues:?",
+            "source": "os7.pdf",
+            "score": 6.0
+          },
+          {
+            "question": "Explain the concept of Least Recently Used memory page replacement method and how it is different from First In First Out (FIFO) page replacement method. [10]?",
+            "source": "os1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What are the drawbacks of contiguous allocation of disk space?",
+            "source": "os1.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Find the number of Page Faults with FIFO, Optimal Page replacement and LRU with four free frames which are empty initially. Eva luate which algorithm gives the minimum number of page faults?",
+            "source": "os2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "What is the need of Page replaceme nt? Consider the following reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1. Find the number of Page Faults with FIFO, Optimal Page replacement and LRU with f?",
+            "source": "os2.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Distinguish between logical address and physical address. [3]?",
+            "source": "os4.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "Explain the swapping in memory management. [15]?",
+            "source": "os8.pdf",
+            "score": 5.83
+          },
+          {
+            "question": "List the advantages and disadvantages of Demand Paging. [7+8]?",
+            "source": "os2.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain about performance of demand paging. [8+7]?",
+            "source": "os3.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "A) What is Demand paging?",
+            "source": "os6.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Discuss about segmentation with an example. [7+8]?",
+            "source": "os6.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is demand paging?",
+            "source": "os9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is pure demand paging?",
+            "source": "os9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What are various steps involved in page replacement?",
+            "source": "os9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What is the purpose of paging the page tables?",
+            "source": "os1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is the purpose of paging the page tables? [3]?",
+            "source": "os1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Discuss how LRU and FIFO page repl acement algorithms can be implemented on the following reference string when the numbers of frames are 3. Also, calculate the number of page faults. 3, 2, 1, 0, 2, 2, 1, 7, 6, 7, 0, 1,?",
+            "source": "os7.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is the need of Page replaceme nt?",
+            "source": "os2.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is page fault?",
+            "source": "os9.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "What is page fault? [2]?",
+            "source": "os9.pdf",
+            "score": 1.0
+          }
+        ]
+      },
+      "UNIT-V": {
+        "title": "File System Interface and Operations -Access methods Direct",
+        "keywords": [
+          "abraham",
+          "abraham silberchatz",
+          "abraham silberchatz peter",
+          "access",
+          "access methods",
+          "access methods directory",
+          "advanced",
+          "advanced programming",
+          "advanced programming the",
+          "allocation",
+          "allocation met",
+          "allocation met hods",
+          "and design",
+          "and design principles",
+          "and operations",
+          "and operations access",
+          "and pike",
+          "and pike phi",
+          "andrew",
+          "andrew tanenbaum",
+          "andrew tanenbaum edition",
+          "approach",
+          "approach crowley",
+          "approach crowley tmh",
+          "calls",
+          "calls textbooks",
+          "calls textbooks operating",
+          "close",
+          "close lseek",
+          "close lseek stat",
+          "create",
+          "create read",
+          "create read write",
+          "crowley",
+          "crowley tmh",
+          "crowley tmh modern",
+          "design",
+          "design approach",
+          "design approach crowley",
+          "design principles",
+          "design principles stallings",
+          "directory",
+          "directory structure",
+          "directory structure protection",
+          "edition",
+          "edition john",
+          "edition john wiley",
+          "edition pearson",
+          "edition pearson education",
+          "edition pearson phi"
+        ],
+        "questions": [
+          {
+            "question": "Explain File Free Space management approaches. [15] ---ooOoo --- R18 JNTUH SS Feb 2021?",
+            "source": "os5.pdf",
+            "score": 15.85
+          },
+          {
+            "question": "What is a System call? Discuss major System calls of Operating Systems . [8+7]?",
+            "source": "os7.pdf",
+            "score": 12.49
+          },
+          {
+            "question": "What is a System call? Discuss major Sy stem calls of Operating Systems. [15]?",
+            "source": "os2.pdf",
+            "score": 9.66
+          },
+          {
+            "question": "Discuss the Functionalities of Operating Systems in detail. [8+7]?",
+            "source": "os2.pdf",
+            "score": 8.66
+          },
+          {
+            "question": "A) What are the various objectives and functions of operating systems?",
+            "source": "os6.pdf",
+            "score": 8.66
+          },
+          {
+            "question": "Explain about lseek(), open() and read() system calls. [4+6] ---ooOoo?",
+            "source": "os4.pdf",
+            "score": 7.83
+          },
+          {
+            "question": "List and explain various file allocation methods with their relative merits and demerits . [10] OR?",
+            "source": "os4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "A) How file protection is achieved by operating system?",
+            "source": "os4.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain about lseek( ) and stat( ) system calls. [7+8]?",
+            "source": "os8.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What are various file allocation methods?",
+            "source": "os9.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "What are various file allocation methods? Explain them and list their merits and demerits. [10] OR?",
+            "source": "os9.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "A) What are various file access methods?",
+            "source": "os9.pdf",
+            "score": 6.83
+          },
+          {
+            "question": "Explain acyclic graph directory structure. [3] PART – B (50 Marks)?",
+            "source": "os4.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What are the advantages and disadvantages of acyclic graph directory structure?",
+            "source": "os9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "What are the advantages and disadvantages of acyclic graph directory structure? [2]?",
+            "source": "os9.pdf",
+            "score": 4.83
+          },
+          {
+            "question": "Explain the following commands: lseek, stat, ioctl . [4+6] OR?",
+            "source": "os1.pdf",
+            "score": 3.0
+          },
+          {
+            "question": "Explain in detail about the common schemes for defining the logical structure of a directory . [10] ---ooOoo --- JNTUH Used papers 2023?",
+            "source": "os1.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "Explain how file protection is achieved. [5+5] ---ooOoo --- JNTUH USED PAPERS-2023?",
+            "source": "os9.pdf",
+            "score": 2.0
+          },
+          {
+            "question": "What is a file? [2]?",
+            "source": "os1.pdf",
+            "score": 1.0
+          },
+          {
+            "question": "List down various file attributes . [3] PART – B (50 Marks)?",
+            "source": "os1.pdf",
+            "score": 1.0
+          }
+        ]
+      }
+    },
+    "unmatched": [
+      {
+        "question": "Explain the following:?",
+        "source": "os2.pdf"
+      },
+      {
+        "question": "Explain the following:?",
+        "source": "os3.pdf"
+      },
+      {
+        "question": "What is a binary semaphore?",
+        "source": "os4.pdf"
+      },
+      {
+        "question": "What is a binary semaphore? [2]?",
+        "source": "os4.pdf"
+      },
+      {
+        "question": "What is a bit vector?",
+        "source": "os4.pdf"
+      },
+      {
+        "question": "What is a bit vector? [2]?",
+        "source": "os4.pdf"
+      },
+      {
+        "question": "What is Mutual exclusion?",
+        "source": "os6.pdf"
+      },
+      {
+        "question": "What is Semaphore?",
+        "source": "os8.pdf"
+      }
+    ]
+  }
+}
