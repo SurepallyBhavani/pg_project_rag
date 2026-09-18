@@ -37,7 +37,7 @@ Manually inspecting responses doesn't scale and doesn't catch regressions, so th
 ## Design decisions worth knowing
 
 - **Reranking is a hand-tuned heuristic, not a trained cross-encoder** — a multi-factor score (token overlap, phrase match, topic-pattern bonuses, source-authority weighting) chosen for being fully offline and debuggable at this corpus size; a trained cross-encoder is the natural next step if the corpus grows.
-- **The knowledge graph is a flat JSON adjacency list, not a graph database** — an earlier iteration used Neo4j with a NetworkX fallback and a spaCy/NLTK entity-and-relationship extractor; both were replaced by a much simpler heading-heuristic concept graph once it became clear the added infrastructure wasn't earning its complexity for a corpus this size. Similarly, an earlier TF-IDF + Naive Bayes query classifier was replaced by plain keyword routing. All three earlier attempts are kept in `experiments/` for reference, not deleted, since they represent real design exploration.
+- **The knowledge graph is a lightweight JSON adjacency list** — built directly from the ingested corpus, capturing subject/unit/document/concept containment plus relationship edges, without the overhead of a separate graph database for a corpus this size.
 - **Curriculum and PYQ retrieval deliberately bypass the vector store** — both are structured, discrete data (a syllabus table, a bank of exam questions), and a curated index with keyword scoring is both cheaper and more precise than forcing them through semantic search built for prose.
 
 ## Tech stack
@@ -65,7 +65,6 @@ src/
   vector_database/            # vector_db_manager.py
   web_interface/templates/    # Flask/Jinja2 frontend
 scripts/                    # build_vector_store.py, run_evaluation.py, analyze_feedback.py
-experiments/                # earlier design iterations, superseded — see experiments/README.md
 artifacts/                  # knowledge_graph.json, feedback.jsonl, evaluation runs
 ```
 
