@@ -17,8 +17,8 @@ import openai # type: ignore
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT_ROOT = ROOT.parent
-EDUASSIST_DIR = PROJECT_ROOT / "rag-project-2026-04-09"
-BASELINE_DIR = PROJECT_ROOT / "rag-baseline-2026-04-16"
+EDUASSIST_DIR = PROJECT_ROOT / "rag-hybrid"
+BASELINE_DIR = PROJECT_ROOT / "rag-baseline"
 DATASET_FILE = ROOT / "gold_dataset_50.json"
 CACHE_FILE = ROOT / "evaluation_cache.json"
 RESULTS_DIR = ROOT / "gold_pipeline_three_way"
@@ -192,8 +192,7 @@ def main():
     dataset = json.loads(DATASET_FILE.read_text(encoding="utf-8"))
     valid_pairs = [d for d in dataset if d.get("validation_criteria", {}).get("expected_response") != "Error generating ground truth"]
     
-    # Process 15 valid queries to keep run time manageable but comprehensive
-    eval_pairs = valid_pairs[:15]
+    eval_pairs = valid_pairs
     
     if not eval_pairs:
         print("No valid queries found.")

@@ -66,6 +66,7 @@ def process_query(query: str) -> Dict[str, object]:
     return {
         "answer": answer,
         "sources": list(dict.fromkeys(citations)),
+        "evidence": [{"snippet": snippet} for snippet in snippets],
         "confidence": confidence,
         "confidence_label": _confidence_label(confidence),
         "error": None,
