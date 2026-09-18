@@ -52,18 +52,23 @@ class VectorDatabaseManager:
                 print("[ok] Sentence transformer embeddings loaded")
                 
                 # Initialize ChromaDB
+                # Explicit cosine space: our embeddings (all-MiniLM-L6-v2) are L2-normalized,
+                # so cosine and L2 rank identically, but Chroma's default is L2 unless told
+                # otherwise here — set it explicitly rather than relying on that coincidence.
                 if os.path.exists(self.persist_directory) and os.listdir(self.persist_directory):
                     # Load existing database
                     self.vectorstore = Chroma(
                         persist_directory=self.persist_directory,
-                        embedding_function=self.embeddings
+                        embedding_function=self.embeddings,
+                        collection_metadata={"hnsw:space": "cosine"}
                     )
                     print(f"[ok] Loaded existing vector database from {self.persist_directory}")
                 else:
                     # Create new database
                     self.vectorstore = Chroma(
                         persist_directory=self.persist_directory,
-                        embedding_function=self.embeddings
+                        embedding_function=self.embeddings,
+                        collection_metadata={"hnsw:space": "cosine"}
                     )
                     print("[ok] Created new vector database")
                     
